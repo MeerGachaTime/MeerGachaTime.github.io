@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>＃コンパスクエスト</title>
+    <link href="css/sample01.css" rel="stylesheet"/>
+    <script src="scripts/save.js"></script>
+    <script src="scripts/mekahan.js"></script>
+    <script src="scripts/granat.js"></script>
+    <script src="scripts/libelulu.js"></script>
+    <script src="scripts/kuiro.js"></script>
+    <script src="scripts/yurara.js"></script>
+    <script src="scripts/cerberus.js"></script>
+    <script src="scripts/ankoku.js"></script>
+    <script src="scripts/heimdallr.js"></script>
+    <script src="scripts/errordoll.js"></script>
+    <script src="scripts/tutorial.js"></script>
+    <script src="scripts/sample03.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="base">
+     <div id="titleBase">
+
+      <div id=blackScreen style=position:absolute;top:0%;left:0%;width:100%;height:100%;backGround:#000000;z-index:-60;opacity:0;></div>
+
+      <div id=tutorialScreen>
+       <img id=tutorialAtaSelect src=item/tutorialHeroList.png>
+       <div id="tutorialBlack"></div><div id="tutorialBlackA"></div><div id="tutorialBlackB"></div><div id="tutorialBlackC"></div>
+       <font id=tutorialSentence>＃コンパスクエストへようこそ！<br>チュートリアルを行いますか？<br><br>※チュートリアルはオプションから後で<br>確認することもできます</font>
+       <div id=tutorialButton></div>
+       <div id=tutorialBattleButton onclick=f_tutorial("2")></div>
+       <div id=tutorialNextStageButton onclick=f_tutorial("3")></div>
+       <div id=tutorialSelectButton onclick=f_tutorial("4")></div>
+       <div id=tutorialAttackerSelectBack onclick=f_tutorial("5")></div>
+       <div id=tutorialAttackerSelect onclick=f_tutorial("6")></div>
+       <div id=tutorialPartyDecision onclick=f_tutorial("7")></div>
+       <div id=tutorialAttacker></div>
+       <div id=tutorialGunner></div>
+       <div id=tutorialNext><div class=buttonA><div class=buttonB>次へ</div></div></div>
+       <div id=tutorialNextButton onclick=f_tutorial("10")></div>
+       <div id=tutorialToHomeButton onclick=f_tutorial("12")></div>
+       <div id=tutorialFinish><div class=buttonA><div class=buttonB>チュートリアルを終わる</div></div></div>
+       <div id=tutorialFinishButton onclick=tutorialScreen.style.zIndex=-60;allClear=1;selectSE.play();></div>
+        <div id="tutorialYes">
+         <div class="buttonA">
+          <div class="buttonB">はい</div>
+         </div>
+        </div>
+        <div id="tutorialYesButton" onclick=f_tutorial("1")></div>
+        <div id="tutorialNo">
+         <div class="buttonA">
+          <div class="buttonB">いいえ</div>
+         </div>
+        </div>
+        <div id="tutorialNoButton" onclick=tutorialScreen.style.zIndex=-60;allClear=1;backSE.play();></div>
+      </div>
+
+      <div id="homeScreen">
+       <div id="homeBackCoror"></div>
+       <img id="homeBack"      src="item/ホーム画面デフォルト背景.png"/>
+       <div id=homeWallAcceBase></div>
+       <img id="homeCharacter" src="item/ホーム画面文字等.png"/>
+       <font id=heroCollect></font>
+       <font id=itemCollect></font>
+       <div id="homeFeedBack">
+        <div class="clearResultToHomeA">
+         <div class="clearResultToHomeB">オプション</div>
+        </div>
+       </div>
+       <div id="homeFeedBackButton" onclick=toOption();></div>
+       <div id="homeHeroButton" onclick="toHero()"></div>
+       <div id="homeItemButton" onclick="toItem()"></div>
+       <div id="homeBattleButton" onclick=selectSE.play();toStageSelect()></div>
+       <div id="homeCraftButton" onclick="toCraft()"></div>
+       <div id="homeShopButton" onclick="toShop()"></div>
+       <img src=item/leila.png style=position:absolute;left:0%;top:55%;width:18%;opacity:var(--leila);z-index:-60; id=leila onclick=f_leila();>
+      </div>
+
+      <div id=heroScreen>
+       <div class="BlackBack"></div>
+       <div id=heroToReturn>
+        <div class=buttonA>
+         <div class=buttonB>戻る</div>
+        </div>
+       </div>
+       <div id=heroList></div>
+       <div id=heroStatusDetail></div>
+       <div id=herotReturnButton onclick=backSE.play();toHome()></div>
+      </div>
+
+      <div id=itemListScreen>
+       <div class="BlackBack"></div>
+       <div id=itemReturn>
+        <div class=buttonA>
+         <div class=buttonB>戻る</div>
+        </div>
+       </div>
+       <div id=itemReturnButton onclick=backSE.play();toHome()></div>
+       <div id=itemList></div>
+       <div id=itemStatusDetail></div>
+      </div>
+
+      <div id=craftScreen>
+       <div class="BlackBack"></div>
+       <div id=craftReturn>
+        <div class=buttonA>
+         <div class=buttonB>戻る</div>
+        </div>
+       </div>
+       <div id=craftReturnButton onclick=backSE.play();toHome()></div>
+       <div id=craftList></div>
+       <div id=craftStatusDetail></div>
+
+       <div id=craftCheckSet>
+        <div class=BlackBack></div>
+        <div id=craftCheck>
+         <div class=buttonA>
+          <div class=buttonB>合成を行いますか？<br>※素材となったアイテムは消費されます</div>
+          <div id=craftCheckYes><div class=buttonA><div class=buttonB>はい</div></div></div>
+          <div id=craftCheckNo ><div class=buttonA><div class=buttonB>いいえ</div></div></div>
+          <div id=craftCheckYesButton onclick=itemCraft();></div>
+          <div id=craftCheckNoButton onclick=craftCheckSet.style.zIndex=-60;backSE.play();></div>
+         </div>
+        </div>
+       </div>
+       <div id=craftErrorSet>
+        <div class=BlackBack></div>
+        <div id=craftError>
+         <div class=buttonA><div class=buttonB><br><br>素材が足りません</div></div>
+         <div id=craftErrorOK><div class=buttonA><div class=buttonB>OK</div></div></div>
+         <div id=craftErrorOKButton onclick=craftErrorSet.style.zIndex=-60;selectSE.play();></div>
+        </div>
+       </div>
+
+       <div id=itemCraftSet>
+        <div class=BlackBack></div>
+        <div id=crafted><div class=buttonA><div class=buttonB>アイテムをクラフトしました<div id=craftedItemBase></div><div id=itemCraftOK><div class=buttonA><div class=buttonB>OK</div></div></div><div id=itemCraftOKButton onclick=itemCraftSet.style.zIndex=-60;toCraft();selectSE.play();></div></div></div></div>
+       </div>
+      </div>
+
+
+      <div id=shopScreen>
+       <div class="BlackBack"></div>
+       <div id=shopReturn>
+        <div class=buttonA>
+         <div class=buttonB>戻る</div>
+        </div>
+       </div>
+       <div id=shopReturnButton onclick=backSE.play();toHome()></div>
+       <div id=restMoney></div>
+       <div id=shopList></div>
+       <div id=shopStatusDetail></div>
+
+       <div id=shopCheckSet>
+        <div class=BlackBack></div>
+        <div id=shopCheck>
+         <div class=buttonA>
+          <div class=buttonB>購入しますか？</div>
+          <div id=shopCheckYes><div class=buttonA><div class=buttonB>はい</div></div></div>
+          <div id=shopCheckNo ><div class=buttonA><div class=buttonB>いいえ</div></div></div>
+          <div id=shopCheckYesButton onclick=itemShop();></div>
+          <div id=shopCheckNoButton onclick=shopCheckSet.style.zIndex=-60;backSE.play();></div>
+         </div>
+        </div>
+       </div>
+       <div id=shopErrorSet>
+        <div class=BlackBack></div>
+        <div id=shopError>
+         <div class=buttonA><div class=buttonB><br><br>BMが足りません</div></div>
+         <div id=shopErrorOK><div class=buttonA><div class=buttonB>OK</div></div></div>
+         <div id=shopErrorOKButton onclick=shopErrorSet.style.zIndex=-60;selectSE.play();></div>
+        </div>
+       </div>
+
+       <div id=itemShopSet>
+        <div class=BlackBack></div>
+        <div id=bought><div class=buttonA><div class=buttonB>アイテムを購入しました<div id=boughtItemBase></div><div id=itemShopOK><div class=buttonA><div class=buttonB>OK</div></div></div><div id=itemShopOKButton onclick=itemShopSet.style.zIndex=-60;selectSE.play();></div></div></div></div>
+       </div>
+
+      </div>
+
+
+　　　<div id=optionScreen>
+       <div class=BlackBack></div>
+       <div id=creditBack><br>　原作:#コンパス戦闘摂理解析システム様<br>　BGM :<a href="https://twitter.com/mikannonegoto" style=color#000000>みかんのねごと様</a><br>　効果音 :<a href="https://taira-komori.jpn.org/index.html" style=color#000000>無料効果音で遊ぼう！様</a><br>　その他制作:Meer--</div>
+       <div id=optionReturn>
+        <div class=buttonA>
+         <div class=buttonB>戻る</div>
+        </div>
+       </div>
+       <div id=optionReturnButton onclick=backSE.play();toHome()></div>
+       <div id=homeColorTitle><div class=buttonA><div class=buttonB>ホームカラーに反映</div></div></div>
+       <div id=homeColorTitleButton onclick=homeColorSet();></div>
+       <input type="color" name="home_color" id=colorSelect value=#0012ff>
+       <div id=reTutorial><div class=buttonA><div class=buttonB>チュートリアル</div></div></div>
+       <div id=reTutorialButton onclick=selectSE.play();f_tutorial("0");></div>
+       <div id=opFeedBack><div class=buttonA><div class=buttonB>フィードバック</div></div></div>
+
+       <div id=feedBackScreen>
+        <div class=BlackBack></div>
+        <div id=feedBackReturn>
+        <div class=buttonA>
+         <div class=buttonB>戻る</div>
+         </div>
+        </div>
+        <div id=feedBackReturnButton onclick=feedBackScreen.style.zIndex=-80;feedBackScreen.style.opacity=0;backSE.play();></div>
+        <div id=feedBackSentence><div class=buttonA><div class=buttonB>＃コンパスクエストをプレイしていただき<br>誠にありがとうございます<br><br>本ゲームをプレイしていただいた感想や<br>ご意見を是非お聞かせください<br><a href="https://twitter.com/Meer69774257">製作者X(旧Twitter)</a><br><a href="https://peing.net/ja/meer__">匿名希望の場合はこちらから</a></div></div></div>
+       </div>
+       <div id=opFeedBackButton onclick=feedBackScreen.style.zIndex=10;feedBackScreen.style.opacity=1;selectSE.play();></div>
+       <div id=homeWallBaseBack>
+        <div id=homeWallSentence>ホーム壁紙</div>
+        <div id=homeWallBase></div>
+       </div>
+      </div>
+
+      <div id="stageSelectScreen">
+       <div class="BlackBack"></div>
+       <div id="stageTitle1">
+        <div id="stageTitle2">
+         <h1 id="stageTitleBase"></h1>
+        </div>
+       </div>
+       <h1 id=selectedStageBase></h1>
+       <div id=stageSelectReturn1>
+        <div id=stageSelectReturn2>
+         <div id=stageSelectReturn>戻る</div>
+        </div>
+       </div>
+       <div id=level1Select1>
+        <div id=level1Select2>
+         <div id=level1Select>Level1</div>
+         <div id=level1SelectBase></div>
+        </div>
+       </div>
+       <div id=level1SelectButton onclick="levelSelect(1)"></div>
+
+       <div id=level2Select1>
+        <div id=level2Select2>
+         <div id=level2Select>Level2</div>
+         <div id=level2SelectBase></div>
+        </div>
+       </div>
+       <div id=level2SelectButton onclick="levelSelect(2)"></div>
+
+       <div id=level3Select1>
+        <div id=level3Select2>
+         <div id=level3Select>Level3</div>
+         <div id=level3SelectBase></div>
+        </div>
+       </div>
+       <div id=level3SelectButton onclick="levelSelect(3)"></div>
+
+       <div id="stageSelectReturnButton" onclick=backSE.play();toHome()></div>
+       <div id="toNextStage1">
+        <div id="toNextStage2">
+         <img id="toNextStage3" src="item/→.png"/>
+        </div>
+       </div>
+       <div id="toNextStageButton" onclick="f_nextStage()"></div>
+       <div id="toPreviousStage1">
+        <div id="toPreviousStage2">
+         <img id="toPreviousStage3" src="item/→.png"/>
+        </div>
+       </div>
+       <div id="toPreviousStageButton" onclick="f_previousStage()"></div>
+
+       
+      </div>
+
+      <div id="partySelectScreen">
+
+       <div id="partySelectBack"></div>
+       <div id="partySelectReturn1">
+        <div id="partySelectReturn2">
+         <div id="partySelectReturn">戻る</div>
+        </div>
+       </div>
+
+       <div id="partySelectReturnButton" onclick=backSE.play();toStageSelect()></div>
+
+       <div id="sprinterSelectBack1"><div id="sprinterSelectBack2"><h1 id="sprinterSelectBackBase"></h1></div></div><div id="sprinterSelectBackButton" onclick="selectingRoleFunction('sprinter')"></div>
+       <div id="sprinterSelectBack3">
+        <div id="sprinterSecletBack4">
+         <div id="atariSpSelectButton" onclick="roleSet('sprinter','atari')"><div class="partySelectHero"><img class="partySelectHeroImg" src="item/atari.png"/><span class="partySelectHeroName">十文字アタリ</span><br><div class="partySelectHeroSentence">体力:<font id="atariHP"></font>　攻撃倍率:<font id="atariAttackStatus"></font></div></div></div>
+         <div id="voidollSpSelectButton" onclick="roleSet('sprinter','voidoll')"><div class="partySelectHero"><img class="partySelectHeroImg" src="item/voidoll.png"/><span class="partySelectHeroName">voidoll</span><br><div class="partySelectHeroSentence">体力:<font id="voidollHP"></font>　攻撃倍率:<font id="voidollAttackStatus"></font></div></div></div>
+        </div>
+       </div>
+
+       <div id="attackerSelectBack1"><div id="attackerSelectBack2"><h1 id="attackerSelectBackBase"></h1></div></div><div id="attackerSelectBackButton" onclick="selectingRoleFunction('attacker')"></div>
+       <div id="attackerSelectBack3">
+        <div id="attackerSecletBack4">
+         <div id="nohoAtSelectButton" onclick="roleSet('attacker','noho')"><div class="partySelectHero"><img class="partySelectHeroImg" src="item/noho.png"/><span class="partySelectHeroName">ギャリギャリ</span><br><div class="partySelectHeroSentence">威力:<font id="nohoSkill1status"></font>　硬直:0.2s　射程:2<br>長押し対応</div></div></div>
+         <div id="tadaomiAtSelectButton" onclick="roleSet('attacker','tadaomi')"><div class="partySelectHero"><img class="partySelectHeroImg" src="item/tadaomi.png"/><span class="partySelectHeroName">遠慮なく死ぬがいい！</span><br><div class="partySelectHeroSentence">威力:<font id="tadaomiSkill1status"></font>　硬直:1.2s　射程:2</div></div></div>
+         <div id="lucianoAtSelectButton" onclick="roleSet('attacker','luciano')"><div class="partySelectHero"><img class="partySelectHeroImg" src="item/luciano.png"/><span class="partySelectHeroName">死神の舞踏</span><br><div class="partySelectHeroSentence">威力:<font id="lucianoSkill1status"></font>　硬直:0.5s　射程:6</div></div></div>
+        </div>
+       </div>
+
+       <div id="gunnerSelectBack1"><div id="gunnerSelectBack2"><h1 id="gunnerSelectBackBase"></h1></div></div><div id="gunnerSelectBackButton" onclick="selectingRoleFunction('gunner')"></div>
+       <div id="gunnerSelectBack3">
+        <div id="gunnerSecletBack4">
+         <div id="lyricaGuSelectButton" onclick="roleSet('gunner','lyrica')"><div class="partySelectHero"><img class="partySelectHeroImg" src="item/lyrica.png"/><span class="partySelectHeroName">ドリーム☆バキューン</span><br><div class="partySelectHeroSentence">威力:<font id="lyricaSkill1status"></font>　硬直:1s</div></div></div>
+         <div id="matoiGuSelectButton" onclick="roleSet('gunner','matoi')"><div class="partySelectHero"><img class="partySelectHeroImg" src="item/matoi.png"/><span class="partySelectHeroName">深川印の新型火筒</span><br><div class="partySelectHeroSentence">威力:<font id="matoiSkill1status"></font>　硬直:2s</div></div></div>
+        </div>
+       </div>
+
+       <div id="tankSelectBack1"><div id="tankSelectBack2"><h1 id="tankSelectBackBase"></h1></div></div><div id="tankSelectBackButton" onclick="selectingRoleFunction('tank')"></div>
+       <div id="tankSelectBack3">
+        <div id="tankSecletBack4">
+         <div id="justiceTaSelectButton" onclick="roleSet('tank','justice')"><div class="partySelectHero"><img class="partySelectHeroImg" src="item/justice.png"/><span class="partySelectHeroName">多層型ヘキサバリア</span><br><div class="partySelectHeroSentence">被ダメージ無効化</div></div></div>
+         <div id="jeanneTaSelectButton" onclick="roleSet('tank','jeanne')"><div class="partySelectHero"><img class="partySelectHeroImg" src="item/jeanne.png"/><span class="partySelectHeroName">聖女の祝福</span><br><div class="partySelectHeroSentence">HPを<font id="jeanneSkill1status"></font>回復</div></div></div>
+         <div id="marcosTaSelectButton" onclick="roleSet('tank','marcos')"><div class="partySelectHero"><img class="partySelectHeroImg" src="item/marcos.png"/><span class="partySelectHeroName">スーパーニート</span><br><div class="partySelectHeroSentence">攻撃力を8秒間<font id="marcosSkill1status"></font>倍</div></div></div>
+        </div>
+       </div>
+
+
+       <div id="partySelectDecision">
+        <div class="buttonA">
+         <div class="buttonB">決定</div>
+        </div>
+       </div>
+       <div id="partySelectDecisionButton" onclick=selectSE.play();checkBeforeBattle(0)></div>
+
+       <div id="checkBeforeBattleBox">
+        <div class="BlackBack"></div>
+        <div id="checkBeforeBattleQuestion">
+         <div class="buttonA">
+          <div class="buttonB">バトルを開始します。<br>よろしいですか？</div>
+         </div>
+        </div>
+        <div id="checkBeforeBattleYes">
+         <div class="buttonA">
+          <div class="buttonB">はい</div>
+         </div>
+        </div>
+        <div id="checkBeforeBattleYesButton" onclick="partyClick()"></div>
+        <div id="checkBeforeBattleNo">
+         <div class="buttonA">
+          <div class="buttonB">いいえ</div>
+         </div>
+        </div>
+        <div id="checkBeforeBattleNoButton" onclick=backSE.play();checkBeforeBattle(-10)></div>
+       </div>
+      </div>
+
+      <h1 id="enemySet">
+       <div id=mekahanScreen>
+        <img class="gameBack" src="item/試作版ゲーム画面背景.png"/>
+        <img id="mekahanJet" src="item/メカ反ジェット.png"/>
+        <div id="mekahanSet">
+         <img id="mekahanBody" src="item/メカ反遠景.png"/>
+         <img id="mekahanBodyAttack1" src="item/メカ反近景(attack1).png"/>
+         <img id="mekahanBodyAttack2" src="item/メカ反近景(attack2).png"/>
+         <img id="mekahanBodyAttack3" src="item/メカ反近景(attack1).png"/>
+         <img id="mekahanBodyAttack4" src="item/メカ反近景(attack2).png"/>
+         <img id="mekahanHand" src="item/メカ反近景.png"/>
+         <img id="mekahanHole1" src="item/メカ反ホール.png"/>
+         <img id="mekahanHole2" src="item/メカ反ホール.png"/>
+        </div>
+        <div id="mekahanEndingSet">
+         <img id="mekahanEndingBody" src="item/メカ反遠景.png"/>
+         <img id="mekahanEndingHand" src="item/メカ反近景.png"/>
+        </div>
+        <div id="miniMekahanField">
+         <img id="miniMekahanA1" src="item/ミニメカ反A.png"/>
+         <img id="miniMekahanB1" src="item/ミニメカ反B.png"/>
+         <img id="miniMekahanA2" src="item/ミニメカ反A.png"/>
+         <img id="miniMekahanB2" src="item/ミニメカ反B.png"/>
+        </div>
+        <img class="gameFront"  src="item/試作版ゲーム画面近景.png"/>
+       </div>
+
+       <div id=granatScreen>
+        <img class="gameBack" src="item/グラナート背景.png"/>
+        <div id=granatSet>
+          <img id=granatD src=item/グラナートD.png>
+          <img id=granatC src=item/グラナートC.png>
+          <img id=granatB src=item/グラナートB.png>
+          <img id=granatA src=item/グラナートA.png>
+         <div id=granatIcicleSet1>
+          <img id=granatIcicle1  src=item/氷柱.png>
+          <img id=granatIcicle2  src=item/氷柱.png>
+          <img id=granatIcicle3  src=item/氷柱.png>
+          <img id=granatIcicle4  src=item/氷柱.png>
+          <img id=granatIcicle5  src=item/氷柱.png>
+          <img id=granatIcicle6  src=item/氷柱.png>
+          <img id=granatIcicle7  src=item/氷柱.png>
+          <img id=granatIcicle8  src=item/氷柱.png>
+          <img id=granatIcicle9  src=item/氷柱.png>
+          <img id=granatIcicle10 src=item/氷柱.png>
+         </div>
+         <div id=granatBullet></div>
+        </div>
+        <img id=granatEndingSet src=item/グラナートセット.png>
+        <img class="gameFront" src="item/グラナート近景.png"/>
+       </div>
+
+       <div id=libeluluScreen>
+        <img id="libeluluGameBack" src="item/リベルル背景.png"/>
+        <div id=libeluluSet>
+         <div id=libeluluImgBase>
+          <img src=item/リベルル.png id=libeluluImg>
+          <div id=libeluluFlash></div>
+         </div>
+         <div id=libeluluAttackEffect1 ></div>
+         <div id=libeluluAttackEffect2a></div>
+         <div id=libeluluAttackEffect2b></div>
+         <div id=libeluluAttackEffect2c></div>
+         <div id=libeluluAttackEffect2d></div>
+         <div id=libeluluAttackEffect2e></div>
+         <div id=libeluluAttackEffect2f></div>
+         <div id=libeluluAttackEffect3 ></div>
+        </div>
+        <img id=libeluluEndingSet src=item/リベルル.png>
+        <img id="libeluluGameFront" src="item/リベルル近景.png"/>
+       </div>
+
+       <div id=kuiroScreen>
+        <img id="kuiroGameBack" src="item/喰色背景.png"/>
+        <div id=kuiroSet>
+         <div id=kuiroTanukiSet>
+          <img src=item/喰色デカ狸.png style=height:100%;>
+          <img src=item/喰色ビーム.png id=kuiroBeam style=position:absolute;height:100%;top:0%;left:0%;opacity:0;>
+         </div>
+         <div id=kuiroHitoSet>
+          <img src=item/喰色ヒト.png style=position:absolute;bottom:0%;width:100%;z-index:5;>
+          <img src=item/喰色人魂.png id=kuiroAta1>
+          <img src=item/喰色人魂.png id=kuiroAta2>
+          <img src=item/喰色人魂.png id=kuiroAta3>
+          <div id=kuiroHeal style=position:absolute;z-index:10;></div>
+         </div>
+        </div>
+        <img id="kuiroGameFront" src="item/喰色近景.png"/>
+        <img id="kuiroEndingSet" src="item/喰色セット.png"/>
+       </div>
+
+       <div id=yuraraScreen>
+        <img class=gameBack src="item/喰色背景.png"/>
+        <div id=yuraraSet>
+         <div id=yuraraImgBase>
+          <img src=item/ゆらら.png id=yuraraImg>
+          <img src=item/ゆらら煙幕.png id=yuraraFlash>
+         </div>
+         <div id=yuraraParturitionBase1>
+          <img src=item/ゆらら.png id=yuraraParturition1>
+          <img src=item/ゆらら煙幕.png id=yuraraParturitionFlash1>
+         </div>
+         <div id=yuraraParturitionBase2>
+          <img src=item/ゆらら.png id=yuraraParturition2>
+          <img src=item/ゆらら煙幕.png id=yuraraParturitionFlash2>
+         </div>
+         <img src=item/ゆららエフェクト2.png id="yuraraAttack2">
+         <img src=item/ゆららエフェクト2.png id="yuraraAttack3">
+         <img src=item/ゆららエフェクト2.png id="yuraraAttack4">
+         <img src=item/ゆららエフェクト2.png id="yuraraAttack5">
+        </div>
+        <img class=gameFront src="item/喰色近景.png"/>
+        <img id="yuraraEndingSet" src="item/ゆらら.png"/>
+       </div>
+
+       <div id="cerberusScreen">
+        <img class=gameBack src=item/ケルベロス背景.png>
+        <div id=cerberusSet>
+         <div id=cerberusImgBase>
+          <img id=cerberusImg src=item/ケルベロスB.png>
+         </div>
+         <img id=cerberusAttackA src=item/ケルベロス火炎放射A.png>
+         <img id=cerberusAttackB src=item/ケルベロス火炎放射B.png>
+         <div id=cerberusSmoke></div>
+         <img id=cerberusAttackC src=item/ケルベロスD.png>
+         <img id=cerberusAttackD src=item/ケルベロスE.png>
+         <img id=cerberusAttackE src=item/ケルベロス火炎玉.png>
+         <img id=cerberusAttackF src=item/ケルベロス火炎玉.png>
+         <img id=cerberusAttackG src=item/ケルベロス火炎玉.png>
+         <img id=cerberusAttackH src=item/ケルベロスG.png>
+         <div id=cerberusAttackIBase></div>
+        </div>
+        <img id=cerberusEndingSet src=item/ケルベロスB.png>
+       </div>
+
+       <div id=ankokuScreen>
+        <img class=gameBack src=item/暗黒騎士背景.png>
+        <div id=ankokuSet>
+         <div id=ankokuImgBase>
+          <img id=ankokuImg src=item/暗黒騎士.png>
+         </div>
+         <img id=ankokuBuff src=item/強化エフェクト.png>
+         <img id=ankokuHeal src=item/回復エフェクト.png>
+         <div id=ankokuEffect></div>
+         <div id=ankokuThunderSet>
+          <img class=ankokuThunderA src=item/暗黒騎士雷.png>
+          <img class=ankokuThunderB src=item/暗黒騎士雷.png>
+          <img class=ankokuThunderC src=item/暗黒騎士雷.png>
+          <img class=ankokuThunderD src=item/暗黒騎士雷.png>
+          <img class=ankokuThunderE src=item/暗黒騎士雷.png>
+         </div>
+         <div id=ankokuCloudSet>
+          <img class=ankokuThunderA src=item/暗黒騎士雲.png>
+          <img class=ankokuThunderB src=item/暗黒騎士雲.png>
+          <img class=ankokuThunderC src=item/暗黒騎士雲.png>
+          <img class=ankokuThunderD src=item/暗黒騎士雲.png>
+          <img class=ankokuThunderE src=item/暗黒騎士雲.png>
+         </div>
+        </div>
+        <img id=ankokuEndingSet src=item/暗黒騎士.png>
+       </div>
+
+       <div id=heimdallrScreen>
+        <img class=gameBack src=item/ヘイムダル背景.png>
+         <div id=heimdallrSet>
+          <div id=heimdallrAttackB></div>
+          <div id=heimdallrAttackC></div>
+          <div id=heimdallrAttackD></div>
+          <div id=heimdallrAttackE></div>
+          <div id=heimdallrBeamSet style=opacity:0;>
+           <img id=heimdallrFanA src=item/ヘイムダルファンネル.png>
+           <img id=heimdallrFanB src=item/ヘイムダルファンネル.png>
+           <img id=heimdallrFanC src=item/ヘイムダルファンネル.png>
+           <img id=heimdallrFanD src=item/ヘイムダルファンネル.png>
+          </div>
+          <div id=heimdallrAttackA></div>
+          <div id=heimdallrImgBase>
+           <img id=heimdallrImg src=item/ヘイムダル.png>
+          </div>
+         </div>
+         <img id=heimdallrEndingSet src=item/ヘイムダルスキル5.png>
+        <img class=gameFront src="item/ヘイムダル近景.png"/>
+       </div>
+
+       <div id=errordollScreen>
+        <img id=errordollBack src="item/errordoll背景.png"/>
+        <div id=errordollSet>
+        </div>
+        <img id=errordollEndingSet src=item/errordollEndingSet.png>
+       </div>
+
+       <div id=tutorialBattleScreen>
+        <img class=gameBack src=item/チュートリアル背景.png>
+        <img id=tutorialSet src=item/チュートリアルイレギュラー.png>
+        <img id=tutorialEndingSet src=item/チュートリアルイレギュラー.png>
+       </div>
+
+       <img id="gameClearScreen" src="item/ゲームクリア画面.png"/>
+
+      </h1>
+
+      <div id="actionGameScreen">
+        <div class="BlackBack" id=skillBlackBack style=opacity:0;></div>
+        <div id=skillWhiteBack></div>
+        <div id=thirteenSkillBack1><div id=thirteenSkillBack2></div></div>
+        <img id="EndingExplosion1" src="item/爆発.png"/>
+        <img id="EndingExplosion2" src="item/爆発.png"/>
+        <img id="EndingExplosion3" src="item/爆発.png"/>
+        <img id="enemyNatadecoco1" src="item/敵ナタデココ化1.png"/>
+        <img id="enemyNatadecoco2" src="item/敵ナタデココ化2.png"/>
+        <img id="enemyNatadecoco3" src="item/敵ナタデココ化3.png"/>
+       <img id="gameStartCount3" src="item/ゲーム開始カウント3.png"/>
+       <img id="gameStartCount2" src="item/ゲーム開始カウント2.png"/>
+       <img id="gameStartCount1" src="item/ゲーム開始カウント1.png"/>
+       <img id="gameStartCount0" src="item/ゲーム開始カウントStart.png"/>
+       <div id="skillBulletBase">
+        <img src=item/thorne_buffEffect.png id=thorneBuff>
+        <div id="GBGSkillBulletBase"></div>
+        <div id="pororotchoSkillBulletBase"></div>
+        <div id="gustafSkillBulletBase"></div>
+        <div id="gustafSkillBulletBase1"></div>
+        <img id="dragonSkillBullet" src=item/dragon_skill1.png>
+        <img id="kiraraSkillBullet" src=item/kirara_skill1Effect.png>
+        <div id="mariaSkillBulletBase"></div>
+       </div>
+       <img id="gameButton" src="item/試作版ゲーム画面ボタン.png"/>
+       <div id="cover"></div>
+       <div id="partySet"></div>
+       <div id="pushToLeft"></div>
+       <div id="pushToRight"></div>
+       <div id="pushAtaBut"></div>
+       <div id="pushGunBut"></div>
+       <div id="pushTanBut"></div>
+       <img id="backDamageEffect" src="item/爆発.png"/>
+       <div id="whiteOut"></div>
+       <h1 id="damageEffectBase"></h1>
+       <h1 id="damageEffect"></h1>
+       <h1 id="lyricaSkillBulletBase"></h1>
+       <div id="bugdollSkillBulletBase1"></div>
+       <div id="bugdollSkillBulletBase2"></div>
+       <div id="bugdollSkillBulletBase3"></div>
+       <div id="bugdollSkillBulletBase4"></div>
+       <div id="bugdollSkillBulletBase5"></div>
+       <div id="bugdollSkillBulletBase6"></div>
+       <h1 id="matoiSkillBulletBase"></h1>
+       <div id="matoiSkillBulletBaseI"></div>
+       <h1 id="lulucaSkillBulletBase"></h1>
+       <div id=istaqaBulletBase></div>
+       <div id="rinneSkillBulletBase"></div>
+       <img id="thorneSkillBullet" src=item/氷柱.png>
+       <img id=yushaSkillBullet src=item/暗黒騎士雷.png>
+       <div id="field">
+        <h1 id="damageHitBase"></h1>
+        <h1 id="attackBuffEffect"></h1>
+        <h1 id="defendBuffEffect"></h1>
+        <h1 id="healBuffEffect"></h1>
+        <img  src=item/thomas_skill2.png id=thomasBuffEffect>
+        <div id=atariBuffEffect></div>
+        <img src=item/luciano_skill1.png id=lucianoWife>
+        <h1 id="selectedSp"></h1>
+        <div id=lucianoWifeEffect></div>
+       </div>
+       <img id="heroHPbarBase" src="item/ヒーローHPバー.png"/>
+       <img id="enemyHPbarBase" src="item/エネミーHPバー.png"/>
+       <div id="heroHPbar"></div>
+       <div id="enemyHPbar"></div>
+       <h1 id="selectedAt"></h1>
+       <h1 id="selectedGu"></h1>
+       <h1 id="selectedTa"></h1>
+       <div id="toLeft"></div>
+       <div id="toRight"></div>
+       <div id="ataBut"></div>
+       <div id="gunBut"></div>
+       <div id="tanBut"></div>
+       <div id=heroMoveId></div>
+      </div>
+
+      <div id="clearResultScreen">
+       <div class="BlackBack"></div>
+       <div id="getItemBack">
+        <div class="buttonA"><div class="buttonB">獲得アイテム</div></div>
+       </div>
+       <h1 id="getItemBase"></h1>
+       <div id="getBMBack">
+        <div class="buttonA"><div class="buttonB">獲得BM:<img id="clearResultBM" src="item/BM.png"/><font id="clearGetBM"></font>BM</div></div>
+       </div>
+       <h1 id="spExperienceBase"></h1>
+       <h1 id="atExperienceBase"></h1>
+       <h1 id="guExperienceBase"></h1>
+       <h1 id="taExperienceBase"></h1>
+       <h1 id="firstClearBase"></h1>
+
+       <div id="clearResultToHome">
+        <div class="clearResultToHomeA">
+         <div class="clearResultToHomeB">ホームに帰る</div>
+        </div>
+       </div>
+       <div id="clearResultToHomeButton" onclick=selectSE.play();defaultBGM.currentTime=0;toHome()></div>
+      </div>
+
+      <img id="gameOverScreen" src="item/ゲームオーバー画面.png" onclick=selectSE.play();defaultBGM.currentTime=0;toHome()>
+
+      <div id=heroLiberateScreen>
+       <div class="BlackBack"></div>
+       <div id="heroLiberate">
+        <div class="buttonA">
+         <div class="buttonB"><br><font id=liberateCondition></font><div id=heroLiberateImgBase></div></div>
+        </div>
+       </div>
+       <div id="heroLiberateOK">
+        <div class="buttonA">
+         <div class="buttonB">OK</div>
+        </div>
+       </div>
+       <div id="heroLiberateOKButton" onclick=selectSE.play();heroLiberateBack()></div>
+      </div>
+
+      <div id=popUpScreenN></div>
+
+     </div>
+    </div>
+
+
+  </body>
+
+
+
+</html>
