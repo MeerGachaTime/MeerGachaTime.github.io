@@ -136,6 +136,7 @@
   --craftCheckYesButton:0;
   --craftCheckNoButton:0;
   --craftErrorOKButton:0;
+  --craftHintButton:0;
   --itemCraftOKButton:0;
   --shopReturnButton:0;
   --shopCheckYesButton:0;
@@ -1683,6 +1684,30 @@ left:30%;
 bottom:5%;
 height:20%;
 width:40%;
+backGround:#ffffff;
+}
+
+#craftHint{
+position:absolute;
+left:25%;
+top:5%;
+width:23%;
+height:10%;
+font-size:4.5vh;
+text-align: center;
+color: var(--homeColor);
+border-radius:3%;
+backGround:#35ff8a;
+}
+
+#craftHintButton{
+position:absolute;
+opacity:var(--craftHintButton);
+left:25%;
+top:5%;
+width:23%;
+height:10%;
+border-radius:3%;
 backGround:#ffffff;
 }
 

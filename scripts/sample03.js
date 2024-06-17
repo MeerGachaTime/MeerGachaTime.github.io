@@ -150,19 +150,19 @@ let items={
     "cloth"     :{name:"頑丈な布"            ,num:0  ,recipe:0,made:1,sentence:"レア素材"                ,value:500},
     "bento"     :{name:"美味しいお弁当"      ,num:0  ,recipe:0,made:1,sentence:"レア素材"                ,value:500},
     "donation"  :{name:"孤児院へ寄付"          ,num:0  ,recipe:0,made:1,sentence:"寄付するとセット中のヒーローが経験値獲得"             ,value:0},
-    "silverData"  :{name:"シルバーデータ"      ,num:0  ,recipe:1,made:1,sentence:"次のバトルで青枠ヒーローが得る経験値を1.5倍。消耗品",value:0  ,materialA:"bravery"     ,Anum:2,materialB:"null"     ,Bnum:0},
-    "goldData"    :{name:"ゴールドデータ"      ,num:0  ,recipe:1,made:1,sentence:"次のバトルで青枠ヒーローが得る経験値を2倍。消耗品"  ,value:0  ,materialA:"silverData"  ,Anum:1,materialB:"bravery"  ,Bnum:2},
-    "platinumData":{name:"プラチナデータ"      ,num:0  ,recipe:1,made:1,sentence:"次のバトルで青枠ヒーローが得る経験値を3倍。消耗品"  ,value:0  ,materialA:"goldData"    ,Anum:1,materialB:"junk"     ,Bnum:1},
-    "energy1000"  :{name:"エナジー缶1000ml"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで赤枠ヒーローが得る経験値を1.5倍。消耗品",value:0  ,materialA:"aloneness"   ,Anum:2,materialB:"null"     ,Bnum:0},
-    "energy4000"  :{name:"エナジー缶4000ml"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで赤枠ヒーローが得る経験値を2倍。消耗品"  ,value:0  ,materialA:"energy1000"  ,Anum:1,materialB:"aloneness",Bnum:2},
-    "energy100000":{name:"エナジー缶100000ml"  ,num:0  ,recipe:1,made:1,sentence:"次のバトルで赤枠ヒーローが得る経験値を3倍。消耗品"  ,value:0  ,materialA:"energy4000"  ,Anum:1,materialB:"wand"     ,Bnum:1},
-    "cube3"       :{name:"限界突破キューブ★3" ,num:0  ,recipe:1,made:1,sentence:"次のバトルで黄枠ヒーローが得る経験値を1.5倍。消耗品",value:0  ,materialA:"love"        ,Anum:2,materialB:"null"     ,Bnum:0},
-    "cube4"       :{name:"限界突破キューブ★4" ,num:0  ,recipe:1,made:1,sentence:"次のバトルで黄枠ヒーローが得る経験値を2倍。消耗品"  ,value:0  ,materialA:"cube3"       ,Anum:1,materialB:"love"     ,Bnum:2},
-    "cube5"       :{name:"限界突破キューブ★5" ,num:0  ,recipe:1,made:1,sentence:"次のバトルで黄枠ヒーローが得る経験値を3倍。消耗品"  ,value:0  ,materialA:"cube4"       ,Anum:1,materialB:"blade"    ,Bnum:1},
-    "littleLack"  :{name:"ラックの欠片　小"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで緑枠ヒーローが得る経験値を1.5倍。消耗品",value:0  ,materialA:"justice"     ,Anum:2,materialB:"null"     ,Bnum:0},
-    "middleLack"  :{name:"ラックの欠片　中"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで緑枠ヒーローが得る経験値を2倍。消耗品"  ,value:0  ,materialA:"littleLack"  ,Anum:1,materialB:"justice"  ,Bnum:2},
-    "bigLack"     :{name:"ラックの欠片　大"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで緑枠ヒーローが得る経験値を3倍。消耗品"  ,value:0  ,materialA:"middleLack"  ,Anum:1,materialB:"seed"     ,Bnum:1},
-    "doughnut"    :{name:"マジカルドーナツ"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで攻撃力が1.5倍。消耗品"                  ,value:0  ,materialA:"cloth"       ,Anum:1,materialB:"bento"    ,Bnum:1},
+    "silverData"  :{name:"シルバーデータ"      ,num:0  ,recipe:1,made:1,sentence:"次のバトルで青枠ヒーローが得る経験値を1.5倍。消耗品のため効果を発揮すると消える",value:0  ,materialA:"bravery"     ,Anum:2,materialB:"null"     ,Bnum:0},
+    "goldData"    :{name:"ゴールドデータ"      ,num:0  ,recipe:1,made:1,sentence:"次のバトルで青枠ヒーローが得る経験値を2倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"silverData"  ,Anum:1,materialB:"bravery"  ,Bnum:2},
+    "platinumData":{name:"プラチナデータ"      ,num:0  ,recipe:1,made:1,sentence:"次のバトルで青枠ヒーローが得る経験値を3倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"goldData"    ,Anum:1,materialB:"junk"     ,Bnum:1},
+    "energy1000"  :{name:"エナジー缶1000ml"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで赤枠ヒーローが得る経験値を1.5倍。消耗品のため効果を発揮すると消える",value:0  ,materialA:"aloneness"   ,Anum:2,materialB:"null"     ,Bnum:0},
+    "energy4000"  :{name:"エナジー缶4000ml"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで赤枠ヒーローが得る経験値を2倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"energy1000"  ,Anum:1,materialB:"aloneness",Bnum:2},
+    "energy100000":{name:"エナジー缶100000ml"  ,num:0  ,recipe:1,made:1,sentence:"次のバトルで赤枠ヒーローが得る経験値を3倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"energy4000"  ,Anum:1,materialB:"wand"     ,Bnum:1},
+    "cube3"       :{name:"限界突破キューブ★3" ,num:0  ,recipe:1,made:1,sentence:"次のバトルで黄枠ヒーローが得る経験値を1.5倍。消耗品のため効果を発揮すると消える",value:0  ,materialA:"love"        ,Anum:2,materialB:"null"     ,Bnum:0},
+    "cube4"       :{name:"限界突破キューブ★4" ,num:0  ,recipe:1,made:1,sentence:"次のバトルで黄枠ヒーローが得る経験値を2倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"cube3"       ,Anum:1,materialB:"love"     ,Bnum:2},
+    "cube5"       :{name:"限界突破キューブ★5" ,num:0  ,recipe:1,made:1,sentence:"次のバトルで黄枠ヒーローが得る経験値を3倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"cube4"       ,Anum:1,materialB:"blade"    ,Bnum:1},
+    "littleLack"  :{name:"ラックの欠片　小"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで緑枠ヒーローが得る経験値を1.5倍。消耗品のため効果を発揮すると消える",value:0  ,materialA:"justice"     ,Anum:2,materialB:"null"     ,Bnum:0},
+    "middleLack"  :{name:"ラックの欠片　中"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで緑枠ヒーローが得る経験値を2倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"littleLack"  ,Anum:1,materialB:"justice"  ,Bnum:2},
+    "bigLack"     :{name:"ラックの欠片　大"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで緑枠ヒーローが得る経験値を3倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"middleLack"  ,Anum:1,materialB:"seed"     ,Bnum:1},
+    "doughnut"    :{name:"マジカルドーナツ"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで攻撃力が1.5倍。消耗品のため効果を発揮すると消える"                  ,value:0  ,materialA:"cloth"       ,Anum:1,materialB:"bento"    ,Bnum:1},
     "shield"    :{name:"聖王盾トルトゥーガ"  ,num:0  ,recipe:1,made:0,sentence:"クラフトでアミスター解放"          ,value:0  ,materialA:"justice"  ,Anum:2,materialB:"wand"     ,Bnum:1},
     "nyark"     :{name:"NYARK"               ,num:0  ,recipe:1,made:0,sentence:"クラフトでクー・シー解放"          ,value:0  ,materialA:"love"     ,Anum:2,materialB:"junk"     ,Bnum:1},
     "sword"     :{name:"呪われた宝剣"        ,num:0  ,recipe:1,made:0,sentence:"クラフトでアル解放"                ,value:0  ,materialA:"aloneness",Anum:2,materialB:"blade"    ,Bnum:1},
@@ -2543,6 +2543,7 @@ var info=[
   ['craftCheckYesButton'       ,f_chgOpacity1],
   ['craftCheckNoButton'        ,f_chgOpacity1],
   ['craftErrorOKButton'        ,f_chgOpacity1],
+  ['craftHintButton'           ,f_chgOpacity1],
   ['itemCraftOKButton'         ,f_chgOpacity1],
   ['shopReturnButton'          ,f_chgOpacity1],
   ['shopCheckYesButton'        ,f_chgOpacity1],
@@ -6784,15 +6785,15 @@ function tutorialGameClear(){
    setTimeout(function(){
     document.documentElement.style.setProperty('--EndingExplosion1', "1");
     bombSE.pause();bombSE.currentTime=0;bombSE.play();
-　　battleBGM2.volume=0.8;
+    battleBGM1.volume=0.8;
     setTimeout(function(){
      document.documentElement.style.setProperty('--EndingExplosion2', "1");
      bombSE.pause();bombSE.currentTime=0;bombSE.play();
-     battleBGM2.volume=0.6;
+     battleBGM1.volume=0.6;
      setTimeout(function(){
       document.documentElement.style.setProperty('--EndingExplosion3', "1");
       bombSE.pause();bombSE.currentTime=0;bombSE.play();
-      battleBGM2.volume=0.4;
+      battleBGM1.volume=0.4;
       setTimeout(function(){
        document.documentElement.style.setProperty('--whiteOut', "1");
        document.documentElement.style.setProperty('--EndingExplosion1', "0");
@@ -6808,12 +6809,12 @@ function tutorialGameClear(){
           setTimeout(function(){
            bigBombSE.play();
            document.documentElement.style.setProperty('--enemyNatadecoco1', "1");
-	   battleBGM2.volume=0.2;
+	       battleBGM1.volume=0.2;
            setTimeout(function(){
             document.documentElement.style.setProperty('--enemyNatadecoco1', "0");
             document.documentElement.style.setProperty('--enemyNatadecoco2', "1");
-	    battleBGM2.volume=0;
-	    battleBGM2.pause();
+	        battleBGM1.volume=0;
+	        battleBGM1.pause();
             setTimeout(function(){
              document.documentElement.style.setProperty('--enemyNatadecoco2', "0");
              document.documentElement.style.setProperty('--enemyNatadecoco3', "1");
