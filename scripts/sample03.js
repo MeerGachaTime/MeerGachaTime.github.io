@@ -1,4 +1,4 @@
-
+console.log("test_check");
 
 
 phase=0;
