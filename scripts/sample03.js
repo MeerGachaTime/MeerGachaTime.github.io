@@ -6785,12 +6785,15 @@ function tutorialGameClear(){
    setTimeout(function(){
     document.documentElement.style.setProperty('--EndingExplosion1', "1");
     bombSE.pause();bombSE.currentTime=0;bombSE.play();
+　　battleBGM2.volume=0.8;
     setTimeout(function(){
      document.documentElement.style.setProperty('--EndingExplosion2', "1");
      bombSE.pause();bombSE.currentTime=0;bombSE.play();
+     battleBGM2.volume=0.6;
      setTimeout(function(){
       document.documentElement.style.setProperty('--EndingExplosion3', "1");
       bombSE.pause();bombSE.currentTime=0;bombSE.play();
+      battleBGM2.volume=0.4;
       setTimeout(function(){
        document.documentElement.style.setProperty('--whiteOut', "1");
        document.documentElement.style.setProperty('--EndingExplosion1', "0");
@@ -6806,9 +6809,12 @@ function tutorialGameClear(){
           setTimeout(function(){
            bigBombSE.play();
            document.documentElement.style.setProperty('--enemyNatadecoco1', "1");
+	   battleBGM2.volume=0.2;
            setTimeout(function(){
             document.documentElement.style.setProperty('--enemyNatadecoco1', "0");
             document.documentElement.style.setProperty('--enemyNatadecoco2', "1");
+	    battleBGM2.volume=0;
+	    battleBGM2.pause();
             setTimeout(function(){
              document.documentElement.style.setProperty('--enemyNatadecoco2', "0");
              document.documentElement.style.setProperty('--enemyNatadecoco3', "1");
