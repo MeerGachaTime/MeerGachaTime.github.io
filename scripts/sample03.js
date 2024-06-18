@@ -28,6 +28,7 @@ atSet="noho";
 guSet="lyrica";
 taSet="justice";
 
+attackSuccess=0;
 justiceSkill1Check=0;
 pierreSkillCheck=0;
 aliceSkill1Check=0;
@@ -150,19 +151,19 @@ let items={
     "cloth"     :{name:"頑丈な布"            ,num:0  ,recipe:0,made:1,sentence:"レア素材"                ,value:500},
     "bento"     :{name:"美味しいお弁当"      ,num:0  ,recipe:0,made:1,sentence:"レア素材"                ,value:500},
     "donation"  :{name:"孤児院へ寄付"          ,num:0  ,recipe:0,made:1,sentence:"寄付するとセット中のヒーローが経験値獲得"             ,value:0},
-    "silverData"  :{name:"シルバーデータ"      ,num:0  ,recipe:1,made:1,sentence:"次のバトルで青枠ヒーローが得る経験値を1.5倍。消耗品のため効果を発揮すると消える",value:0  ,materialA:"bravery"     ,Anum:2,materialB:"null"     ,Bnum:0},
-    "goldData"    :{name:"ゴールドデータ"      ,num:0  ,recipe:1,made:1,sentence:"次のバトルで青枠ヒーローが得る経験値を2倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"silverData"  ,Anum:1,materialB:"bravery"  ,Bnum:2},
-    "platinumData":{name:"プラチナデータ"      ,num:0  ,recipe:1,made:1,sentence:"次のバトルで青枠ヒーローが得る経験値を3倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"goldData"    ,Anum:1,materialB:"junk"     ,Bnum:1},
-    "energy1000"  :{name:"エナジー缶1000ml"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで赤枠ヒーローが得る経験値を1.5倍。消耗品のため効果を発揮すると消える",value:0  ,materialA:"aloneness"   ,Anum:2,materialB:"null"     ,Bnum:0},
-    "energy4000"  :{name:"エナジー缶4000ml"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで赤枠ヒーローが得る経験値を2倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"energy1000"  ,Anum:1,materialB:"aloneness",Bnum:2},
-    "energy100000":{name:"エナジー缶100000ml"  ,num:0  ,recipe:1,made:1,sentence:"次のバトルで赤枠ヒーローが得る経験値を3倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"energy4000"  ,Anum:1,materialB:"wand"     ,Bnum:1},
-    "cube3"       :{name:"限界突破キューブ★3" ,num:0  ,recipe:1,made:1,sentence:"次のバトルで黄枠ヒーローが得る経験値を1.5倍。消耗品のため効果を発揮すると消える",value:0  ,materialA:"love"        ,Anum:2,materialB:"null"     ,Bnum:0},
-    "cube4"       :{name:"限界突破キューブ★4" ,num:0  ,recipe:1,made:1,sentence:"次のバトルで黄枠ヒーローが得る経験値を2倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"cube3"       ,Anum:1,materialB:"love"     ,Bnum:2},
-    "cube5"       :{name:"限界突破キューブ★5" ,num:0  ,recipe:1,made:1,sentence:"次のバトルで黄枠ヒーローが得る経験値を3倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"cube4"       ,Anum:1,materialB:"blade"    ,Bnum:1},
-    "littleLack"  :{name:"ラックの欠片　小"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで緑枠ヒーローが得る経験値を1.5倍。消耗品のため効果を発揮すると消える",value:0  ,materialA:"justice"     ,Anum:2,materialB:"null"     ,Bnum:0},
-    "middleLack"  :{name:"ラックの欠片　中"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで緑枠ヒーローが得る経験値を2倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"littleLack"  ,Anum:1,materialB:"justice"  ,Bnum:2},
-    "bigLack"     :{name:"ラックの欠片　大"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで緑枠ヒーローが得る経験値を3倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"middleLack"  ,Anum:1,materialB:"seed"     ,Bnum:1},
-    "doughnut"    :{name:"マジカルドーナツ"    ,num:0  ,recipe:1,made:1,sentence:"次のバトルで攻撃力が1.5倍。消耗品のため効果を発揮すると消える"                  ,value:0  ,materialA:"cloth"       ,Anum:1,materialB:"bento"    ,Bnum:1},
+    "silverData"  :{name:"シルバーデータ"      ,num:0  ,recipe:1,made:1,sentence:"使用すると次のバトルで青枠ヒーローが得る経験値を1.5倍。消耗品のため効果を発揮すると消える",value:0  ,materialA:"bravery"     ,Anum:2,materialB:"null"     ,Bnum:0},
+    "goldData"    :{name:"ゴールドデータ"      ,num:0  ,recipe:1,made:1,sentence:"使用すると次のバトルで青枠ヒーローが得る経験値を3倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"silverData"  ,Anum:1,materialB:"bravery"  ,Bnum:2},
+    "platinumData":{name:"プラチナデータ"      ,num:0  ,recipe:1,made:1,sentence:"使用すると次のバトルで青枠ヒーローが得る経験値を12倍。消耗品のため効果を発揮すると消える" ,value:0  ,materialA:"goldData"    ,Anum:1,materialB:"junk"     ,Bnum:1},
+    "energy1000"  :{name:"エナジー缶1000ml"    ,num:0  ,recipe:1,made:1,sentence:"使用すると次のバトルで赤枠ヒーローが得る経験値を1.5倍。消耗品のため効果を発揮すると消える",value:0  ,materialA:"aloneness"   ,Anum:2,materialB:"null"     ,Bnum:0},
+    "energy4000"  :{name:"エナジー缶4000ml"    ,num:0  ,recipe:1,made:1,sentence:"使用すると次のバトルで赤枠ヒーローが得る経験値を3倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"energy1000"  ,Anum:1,materialB:"aloneness",Bnum:2},
+    "energy100000":{name:"エナジー缶100000ml"  ,num:0  ,recipe:1,made:1,sentence:"使用すると次のバトルで赤枠ヒーローが得る経験値を12倍。消耗品のため効果を発揮すると消える" ,value:0  ,materialA:"energy4000"  ,Anum:1,materialB:"wand"     ,Bnum:1},
+    "cube3"       :{name:"限界突破キューブ★3" ,num:0  ,recipe:1,made:1,sentence:"使用すると次のバトルで黄枠ヒーローが得る経験値を1.5倍。消耗品のため効果を発揮すると消える",value:0  ,materialA:"love"        ,Anum:2,materialB:"null"     ,Bnum:0},
+    "cube4"       :{name:"限界突破キューブ★4" ,num:0  ,recipe:1,made:1,sentence:"使用すると次のバトルで黄枠ヒーローが得る経験値を3倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"cube3"       ,Anum:1,materialB:"love"     ,Bnum:2},
+    "cube5"       :{name:"限界突破キューブ★5" ,num:0  ,recipe:1,made:1,sentence:"使用すると次のバトルで黄枠ヒーローが得る経験値を12倍。消耗品のため効果を発揮すると消える" ,value:0  ,materialA:"cube4"       ,Anum:1,materialB:"blade"    ,Bnum:1},
+    "littleLack"  :{name:"ラックの欠片　小"    ,num:0  ,recipe:1,made:1,sentence:"使用すると次のバトルで緑枠ヒーローが得る経験値を1.5倍。消耗品のため効果を発揮すると消える",value:0  ,materialA:"justice"     ,Anum:2,materialB:"null"     ,Bnum:0},
+    "middleLack"  :{name:"ラックの欠片　中"    ,num:0  ,recipe:1,made:1,sentence:"使用すると次のバトルで緑枠ヒーローが得る経験値を3倍。消耗品のため効果を発揮すると消える"  ,value:0  ,materialA:"littleLack"  ,Anum:1,materialB:"justice"  ,Bnum:2},
+    "bigLack"     :{name:"ラックの欠片　大"    ,num:0  ,recipe:1,made:1,sentence:"使用すると次のバトルで緑枠ヒーローが得る経験値を12倍。消耗品のため効果を発揮すると消える" ,value:0  ,materialA:"middleLack"  ,Anum:1,materialB:"seed"     ,Bnum:1},
+    "doughnut"    :{name:"マジカルドーナツ"    ,num:0  ,recipe:1,made:1,sentence:"使用すると次のバトルで攻撃力が1.5倍。消耗品のため効果を発揮すると消える"                  ,value:0  ,materialA:"cloth"       ,Anum:1,materialB:"bento"    ,Bnum:1},
     "shield"    :{name:"聖王盾トルトゥーガ"  ,num:0  ,recipe:1,made:0,sentence:"クラフトでアミスター解放"          ,value:0  ,materialA:"justice"  ,Anum:2,materialB:"wand"     ,Bnum:1},
     "nyark"     :{name:"NYARK"               ,num:0  ,recipe:1,made:0,sentence:"クラフトでクー・シー解放"          ,value:0  ,materialA:"love"     ,Anum:2,materialB:"junk"     ,Bnum:1},
     "sword"     :{name:"呪われた宝剣"        ,num:0  ,recipe:1,made:0,sentence:"クラフトでアル解放"                ,value:0  ,materialA:"aloneness",Anum:2,materialB:"blade"    ,Bnum:1},
@@ -622,6 +623,25 @@ function toOption(){
  actionGameScreen.style.zIndex=-60;
  clearResultScreen.style.zIndex=-60;
  
+ var denominator=0;
+ var numerator=0;
+ 
+ for(var elem in heros){
+  denominator++;
+  if(heros[elem].usable>=1){
+   numerator++;
+  }
+  if(heros[elem].skillBusable>=1){
+   numerator++;
+  }
+ }
+ 
+ denominator=denominator-10;
+ numerator=numerator-10;
+ 
+ var myh = document.getElementById("clearRateNum");
+ myh.innerHTML = 100*numerator/denominator;
+ 
  var myh = document.getElementById("homeWallBase");
  myh.innerHTML = " ";
  
@@ -1036,32 +1056,164 @@ function heroDetailCheck(checkHero){
   if(heros[checkHero].skillBusable>=1){
    if(checkHero=="maria"&&atSet=="maria"&&taSet=="amister"){
     var myh = document.getElementById("heroStatusDetail");
-    myh.innerHTML = "<img src=item/maria&amister.png id=heroStatusDetailImg><div id=heroStatusDetailName>"+heros[checkHero].name+"</div><div id=heroStatusDetailLv>Level</div><div id=heroStatusDetailLvN>"+heros[checkHero].level+"</div><div id=heroStatusDetailSkill1>skill</div><div id=heroStatusDetailSkill1Name>"+heros[checkHero].lv1+"</div><div id=heroStatusDetailSkill2Name>"+heros[checkHero].skillB+"</div>";
+    myh.innerHTML = "<img src=item/maria&amister.png id=heroStatusDetailImg onclick=nextLevelCheck('"+checkHero+"');selectSE.play();><div id=heroStatusDetailName>"+heros[checkHero].name+"</div><div id=heroStatusDetailLv>Level</div><div id=heroStatusDetailLvN>"+heros[checkHero].level+"</div><div id=heroStatusDetailSkill1>skill</div><div id=heroStatusDetailSkill1Name>"+heros[checkHero].lv1+"</div><div id=heroStatusDetailSkill2Name>"+heros[checkHero].skillB+"</div>";
    }
    else{
     var myh = document.getElementById("heroStatusDetail");
-    myh.innerHTML = "<img src=item/"+checkHero+".png id=heroStatusDetailImg><div id=heroStatusDetailName>"+heros[checkHero].name+"</div><div id=heroStatusDetailLv>Level</div><div id=heroStatusDetailLvN>"+heros[checkHero].level+"</div><div id=heroStatusDetailSkill1>skill</div><div id=heroStatusDetailSkill1Name>"+heros[checkHero].lv1+"</div><div id=heroStatusDetailSkill2Name>"+heros[checkHero].skillB+"</div>";
+    myh.innerHTML = "<img src=item/"+checkHero+".png id=heroStatusDetailImg onclick=nextLevelCheck('"+checkHero+"');selectSE.play();><div id=heroStatusDetailName>"+heros[checkHero].name+"</div><div id=heroStatusDetailLv>Level</div><div id=heroStatusDetailLvN>"+heros[checkHero].level+"</div><div id=heroStatusDetailSkill1>skill</div><div id=heroStatusDetailSkill1Name>"+heros[checkHero].lv1+"</div><div id=heroStatusDetailSkill2Name>"+heros[checkHero].skillB+"</div>";
    }
   }
   else{
    if(checkHero=="maria"&&atSet=="maria"&&taSet=="amister"){
     var myh = document.getElementById("heroStatusDetail");
-    myh.innerHTML = "<img src=item/maria&amister.png id=heroStatusDetailImg><div id=skillHint><div class=buttonA><div class=buttonB>スキル解放のヒント</div></div></div></div><div id=skillHintButton onclick=f_popUpN('"+checkHero+"','"+heros[checkHero].skillHint+"');selectSE.play();></div><div id=heroStatusDetailName>"+heros[checkHero].name+"</div><div id=heroStatusDetailLv>Level</div><div id=heroStatusDetailLvN>"+heros[checkHero].level+"</div><div id=heroStatusDetailSkill1>skill</div><div id=heroStatusDetailSkill1Name>"+heros[checkHero].lv1+"</div>";
+    myh.innerHTML = "<img src=item/maria&amister.png id=heroStatusDetailImg onclick=nextLevelCheck('"+checkHero+"');selectSE.play();><div id=skillHint><div class=buttonA><div class=buttonB>スキル解放のヒント</div></div></div></div><div id=skillHintButton onclick=f_popUpN('"+checkHero+"','"+heros[checkHero].skillHint+"');selectSE.play();></div><div id=heroStatusDetailName>"+heros[checkHero].name+"</div><div id=heroStatusDetailLv>Level</div><div id=heroStatusDetailLvN>"+heros[checkHero].level+"</div><div id=heroStatusDetailSkill1>skill</div><div id=heroStatusDetailSkill1Name>"+heros[checkHero].lv1+"</div>";
    }
    else{
     var myh = document.getElementById("heroStatusDetail");
-    myh.innerHTML = "<img src=item/"+checkHero+".png id=heroStatusDetailImg><div id=skillHint><div class=buttonA><div class=buttonB>スキル解放のヒント</div></div></div><div id=skillHintButton onclick=f_popUpN('"+checkHero+"','"+heros[checkHero].skillHint+"');selectSE.play();></div><div id=heroStatusDetailName>"+heros[checkHero].name+"</div><div id=heroStatusDetailLv>Level</div><div id=heroStatusDetailLvN>"+heros[checkHero].level+"</div><div id=heroStatusDetailSkill1>skill</div><div id=heroStatusDetailSkill1Name>"+heros[checkHero].lv1+"</div>";
+    myh.innerHTML = "<img src=item/"+checkHero+".png id=heroStatusDetailImg onclick=nextLevelCheck('"+checkHero+"');selectSE.play();><div id=skillHint><div class=buttonA><div class=buttonB>スキル解放のヒント</div></div></div><div id=skillHintButton onclick=f_popUpN('"+checkHero+"','"+heros[checkHero].skillHint+"');selectSE.play();></div><div id=heroStatusDetailName>"+heros[checkHero].name+"</div><div id=heroStatusDetailLv>Level</div><div id=heroStatusDetailLvN>"+heros[checkHero].level+"</div><div id=heroStatusDetailSkill1>skill</div><div id=heroStatusDetailSkill1Name>"+heros[checkHero].lv1+"</div>";
    }
    var tag="skillHintButton";
    var dv=document.getElementById(tag);
    dv.addEventListener('pointerover',f_chgOpacity1(tag,1),false);
    dv.addEventListener('pointerout' ,f_chgOpacity1(tag,0),false);
   }
+  var tag="heroStatusDetailImg";
+  var dv=document.getElementById(tag);
+  dv.addEventListener('pointerover',f_chgOpacity2(tag,1),false);
+  dv.addEventListener('pointerout' ,f_chgOpacity2(tag,0),false);
+}
+
+function nextLevelCheck(checkHero){
+ f_popUpN(checkHero,"<font id=nextLevelCheck></font>");
+   var myh = document.getElementById("nextLevelCheck");
+   myh.innerHTML = "<font id=totalExp></font><br><font id=nextExp></font>";
+   var myh = document.getElementById("totalExp");
+   myh.innerHTML = "総獲得経験値："+heros[checkHero].exp;
+   var nextExp=50*2.2**(heros[checkHero].level-1)-heros[checkHero].exp;console.log("メモ"+2.2^1);
+   var myh = document.getElementById("nextExp");
+   myh.innerHTML = "次のレベルまでに必要な経験値："+Math.round(nextExp);
 }
 
 function itemDetailCheck(checkItem){
-   var myh = document.getElementById("itemStatusDetail");
-   myh.innerHTML = "<img src=item/"+items[checkItem].name+".png id=itemStatusDetailImg><div id=itemStatusDetailName>"+items[checkItem].name+"</div><div id=itemStatusDetailLv>所持数</div><div id=itemStatusDetailLvN>"+items[checkItem].num+"</div><div id=itemStatusDetailSkill1>"+items[checkItem].sentence+"</div>";
+ var myh = document.getElementById("itemStatusDetail");
+ myh.innerHTML = "<img src=item/"+items[checkItem].name+".png id=itemStatusDetailImg onclick=useItemCheck('"+checkItem+"');><div id=itemStatusDetailName>"+items[checkItem].name+"</div><div id=itemStatusDetailLv>所持数</div><div id=itemStatusDetailLvN>"+items[checkItem].num+"</div><div id=itemStatusDetailSkill1>"+items[checkItem].sentence+"</div>";
+ var tag="itemStatusDetailImg";
+ var dv=document.getElementById(tag);
+ dv.addEventListener('pointerover',f_chgOpacity2(tag,1),false);
+ dv.addEventListener('pointerout' ,f_chgOpacity2(tag,0),false);
+}
+
+function useItemCheck(checkItem){
+ if(checkItem=="doughnut"||checkItem=="silverData"||checkItem=="goldData"||checkItem=="platinumData"||checkItem=="energy1000"||checkItem=="energy4000"||checkItem=="energy100000"||checkItem=="cube3"||checkItem=="cube4"||checkItem=="cube5"||checkItem=="littleLack"||checkItem=="middleLack"||checkItem=="bigLack"){
+ selectSE.play();
+ var myh = document.getElementById("useItemCheck");
+ myh.innerHTML ="<div class=BlackBack></div><div id=useItemCheckBase><div class=buttonA><div class=buttonB>"+items[checkItem].name+"を使用しますか？<br>※使用したアイテムは消費されます</div><div id=useCheckItemYes><div class=buttonA><div class=buttonB>はい</div></div></div><div id=useCheckItemNo><div class=buttonA><div class=buttonB>いいえ</div></div></div><div id=useCheckItemYesButton onclick=f_useItem(1,'"+checkItem+"');></div><div id=useCheckItemNoButton onclick=f_useItem(0,'"+checkItem+"');></div></div></div><style>#useItemCheck{position:absolute;width:100%;height:100%;}#useItemCheckBase{position:absolute;top:20%;left:10%;width:80%;height:60%;border-radius:10%;backGround:var(--homeColor);}#useCheckItemYes{position:absolute;top:60%;left:20%;width:20%;height:15%;border-radius:10%;backGround:var(--homeColor);}#useCheckItemYesButton{position:absolute;opacity:var(--useCheckItemYesButton);top:60%;left:20%;width:20%;height:15%;border-radius:10%;backGround:#ffffff;}#useCheckItemNo{position:absolute;top:60%;right:20%;width:20%;height:15%;border-radius:10%;backGround:var(--homeColor);}#useCheckItemNoButton{position:absolute;opacity:var(--useCheckItemNoButton);top:60%;right:20%;width:20%;height:15%;border-radius:10%;backGround:#ffffff;}</style>";
+ document.documentElement.style.setProperty('--useCheckItemYesButton', "0");
+ document.documentElement.style.setProperty('--useCheckItemNoButton', "0");
+ var tag="useCheckItemYesButton";
+ var dv=document.getElementById(tag);
+ dv.addEventListener('pointerover',f_chgOpacity1(tag,1),false);
+ dv.addEventListener('pointerout' ,f_chgOpacity1(tag,0),false);
+ var tag="useCheckItemNoButton";
+ var dv=document.getElementById(tag);
+ dv.addEventListener('pointerover',f_chgOpacity1(tag,1),false);
+ dv.addEventListener('pointerout' ,f_chgOpacity1(tag,0),false);
+ }
+ else{
+  backSE.play();
+ }
+}
+
+function f_useItem(YesNo,checkItem){
+ var myh = document.getElementById("useItemCheck");
+ myh.innerHTML = " ";
+ if(YesNo==0){
+  backSE.play();
+ }
+ else{
+  selectSE.play();
+  items[checkItem].num--;
+  toHome();
+  toItem();
+  if(checkItem=="silverData"){
+   spBonus=spBonus*1.5;
+   f_popUpN("null","次のバトルで得られる青枠の経験値が<font id=itemBonus></font>倍になります");
+   var myh = document.getElementById("itemBonus");
+   myh.innerHTML = spBonus;
+  }
+  if(checkItem=="goldData"){
+   spBonus=spBonus*3;
+   f_popUpN("null","次のバトルで得られる青枠の経験値が<font id=itemBonus></font>倍になります");
+   var myh = document.getElementById("itemBonus");
+   myh.innerHTML = spBonus;
+  }
+  if(checkItem=="platinumData"){
+   spBonus=spBonus*12;
+   f_popUpN("null","次のバトルで得られる青枠の経験値が<font id=itemBonus></font>倍になります");
+   var myh = document.getElementById("itemBonus");
+   myh.innerHTML = spBonus;
+  }
+  if(checkItem=="energy1000"){
+   atBonus=atBonus*1.5;
+   f_popUpN("null","次のバトルで得られる赤枠の経験値が<font id=itemBonus></font>倍になります");
+   var myh = document.getElementById("itemBonus");
+   myh.innerHTML = atBonus;
+  }
+  if(checkItem=="energy4000"){
+   atBonus=atBonus*3;
+   f_popUpN("null","次のバトルで得られる赤枠の経験値が<font id=itemBonus></font>倍になります");
+   var myh = document.getElementById("itemBonus");
+   myh.innerHTML = atBonus;
+  }
+  if(checkItem=="energy100000"){
+   atBonus=atBonus*12;
+   f_popUpN("null","次のバトルで得られる赤枠の経験値が<font id=itemBonus></font>倍になります");
+   var myh = document.getElementById("itemBonus");
+   myh.innerHTML = atBonus;
+  }
+  if(checkItem=="cube3"){
+   guBonus=guBonus*1.5;
+   f_popUpN("null","次のバトルで得られる黄枠の経験値が<font id=itemBonus></font>倍になります");
+   var myh = document.getElementById("itemBonus");
+   myh.innerHTML = guBonus;
+  }
+  if(checkItem=="cube4"){
+   guBonus=guBonus*3;
+   f_popUpN("null","次のバトルで得られる黄枠の経験値が<font id=itemBonus></font>倍になります");
+   var myh = document.getElementById("itemBonus");
+   myh.innerHTML = guBonus;
+  }
+  if(checkItem=="cube5"){
+   guBonus=guBonus*12;
+   f_popUpN("null","次のバトルで得られる黄枠の経験値が<font id=itemBonus></font>倍になります");
+   var myh = document.getElementById("itemBonus");
+   myh.innerHTML = guBonus;
+  }
+  if(checkItem=="littleLack"){
+   taBonus=taBonus*1.5;
+   f_popUpN("null","次のバトルで得られる緑枠の経験値が<font id=itemBonus></font>倍になります");
+   var myh = document.getElementById("itemBonus");
+   myh.innerHTML = taBonus;
+  }
+  if(checkItem=="middleLack"){
+   taBonus=taBonus*3;
+   f_popUpN("null","次のバトルで得られる緑枠の経験値が<font id=itemBonus></font>倍になります");
+   var myh = document.getElementById("itemBonus");
+   myh.innerHTML = taBonus;
+  }
+  if(checkItem=="bigLack"){
+   taBonus=taBonus*12;
+   f_popUpN("null","次のバトルで得られる緑枠の経験値が<font id=itemBonus></font>倍になります");
+   var myh = document.getElementById("itemBonus");
+   myh.innerHTML = taBonus;
+  }
+  if(checkItem=="doughnut"){
+   doughnutBuff=doughnutBuff*1.5;
+   f_popUpN("null","次のバトルで攻撃力が<font id=itemBonus></font>倍になります");
+   var myh = document.getElementById("itemBonus");
+   myh.innerHTML = doughnutBuff;
+  }
+ }
 }
 
 function toCraft(){
@@ -1126,20 +1278,8 @@ function itemCraft(){
  goodSE.play();
  craftCheckSet.style.zIndex=-60;
  itemCraftSet.style.zIndex=0;
- if(craftedItem=="doughnut"){
-  f_popUpN(items[craftedItem].name,"特定のクラフトを行ったため<br>次のバトルで攻撃力が増加します");
- }
- if(craftedItem=="silverData"||craftedItem=="goldData"||craftedItem=="platinumData"){
-  f_popUpN(items[craftedItem].name,"特定のクラフトを行ったため<br>次のバトルで青枠ヒーローの経験値が増加します");
- }
- if(craftedItem=="energy1000"||craftedItem=="energy4000"||craftedItem=="energy100000"){
-  f_popUpN(items[craftedItem].name,"特定のクラフトを行ったため<br>次のバトルで赤枠ヒーローの経験値が増加します");
- }
- if(craftedItem=="cube3"||craftedItem=="cube4"||craftedItem=="cube5"){
-  f_popUpN(items[craftedItem].name,"特定のクラフトを行ったため<br>次のバトルで黄枠ヒーローの経験値が増加します");
- }
- if(craftedItem=="littleLack"||craftedItem=="middleLack"||craftedItem=="bigLack"){
-  f_popUpN(items[craftedItem].name,"特定のクラフトを行ったため<br>次のバトルで緑枠ヒーローの経験値が増加します");
+ if(craftedItem=="doughnut"||craftedItem=="silverData"||craftedItem=="goldData"||craftedItem=="platinumData"||craftedItem=="energy1000"||craftedItem=="energy4000"||craftedItem=="energy100000"||craftedItem=="cube3"||craftedItem=="cube4"||craftedItem=="cube5"||craftedItem=="littleLack"||craftedItem=="middleLack"||craftedItem=="bigLack"){
+  f_popUpN(items[craftedItem].name,"クラフトしたアイテムは<br>ホーム→アイテムから使用可能です。");
  }
  if(craftedItem=="shield"&&heros["amister"].usable==0){
   liberateHero("amister","特定のクラフトを行ったため<br>以下のヒーローが解放されました。");
@@ -1751,11 +1891,11 @@ function heroSkillStatus(){
   }
   if(heros["megmeg"].usable==1){
   
-   addHero("megmeg","attacker","ばっちーのショードク","最低威力:<font id='megmegSkill1status'></font>　硬直:0.5s<br>長押し対応　近距離で威力UP");
+   addHero("megmeg","attacker","ばっちーのショードク","威力:1～<font id='megmegSkill1status'></font>　硬直:0.5s　長押し対応<br>距離で威力変化（近いほど高威力）");
    
-   megmegSkill1status=5+(1*(heros["megmeg"].level-1));
+   megmegSkill1status=2.5+(0.5*(heros["megmeg"].level-1));
    var elem = document.getElementById("megmegSkill1status");
-   elem.innerHTML = megmegSkill1status;
+   elem.innerHTML = megmegSkill1status*5;
   }
   if(heros["bugdoll"].usable==1){
   
@@ -2418,10 +2558,6 @@ function partyClick(){
  matoiCheck=1;
  loveyCheck=1;
  enemyBack=1;
- if(items["doughnut"].num>=1){
-  doughnutBuff=1.5;
-  items["doughnut"].num--;
- }
  const rootEnemyHP = document.querySelector(':root');
  rootEnemyHP.style.setProperty("--enemyHPbar", "46.5%");
  enemyFront=[];
@@ -2539,6 +2675,8 @@ var info=[
   ['herotReturnButton'         ,f_chgOpacity1],
   ['heroLiberateOKButton'      ,f_chgOpacity1],
   ['itemReturnButton'          ,f_chgOpacity1],
+  ['itemHintButton'            ,f_chgOpacity1],
+  ['heroHintButton'            ,f_chgOpacity1],
   ['craftReturnButton'         ,f_chgOpacity1],
   ['craftCheckYesButton'       ,f_chgOpacity1],
   ['craftCheckNoButton'        ,f_chgOpacity1],
@@ -3670,11 +3808,12 @@ function megmegSkill1(){
   skillSE.play();
   var myh1 = document.getElementById("selectedSp");
   myh1.innerHTML = "<img id=spDef src=item/megmeg.png>";
-  heroAttack(megmegSkill1status*heroAttackStatus,direction,2);
-  heroAttack(megmegSkill1status*heroAttackStatus,direction,3);
-  heroAttack(megmegSkill1status*heroAttackStatus,direction,4);
-  heroAttack(megmegSkill1status*heroAttackStatus,direction,5);
+  heroAttack(megmegSkill1status*heroAttackStatus*5,direction,2);
+  heroAttack(megmegSkill1status*heroAttackStatus*4,direction,3);
+  heroAttack(megmegSkill1status*heroAttackStatus*3,direction,4);
+  heroAttack(megmegSkill1status*heroAttackStatus*2,direction,5);
   heroAttack(megmegSkill1status*heroAttackStatus,direction,6);
+  heroAttack(1,direction,20);
   if(attackerOn&&phase){
    setTimeout(function(){
     SkillCheck=0;
@@ -4137,8 +4276,8 @@ function gustafSkill2(){
       var myh1 = document.getElementById("gustafSkillBulletBase1");
       myh1.innerHTML = "<img class=gustafSkillBullet1Ani id=gustafSkillBullet1B src=item/gustaf_skill2Effect.png><img id=gustafSkillBullet1A src=item/gustaf_skill3.png>";
       setTimeout(function(){
-       heroAttack(gustafSkill2status*heroAttackStatus/2,direction,20);
-       heroAttack(gustafSkill2status*heroAttackStatus/2,-direction,20);
+       heroAttack(gustafSkill2status*heroAttackStatus,direction,20);
+       heroAttack(gustafSkill2status*heroAttackStatus,-direction,20);
       },200);
       setTimeout(function(){
        skillBlackBack.style.opacity=0;
@@ -6016,67 +6155,73 @@ function getDamage(damageN){
 }
 
 function heroAttack(heroAttack,heroAttackDirection,heroAttackRange){
- attackSuccess=0;
- var damageEffect = document.getElementById("damageEffectBase");
- damageEffect.innerHTML = " ";
- for(makeArray=0;makeArray<heroAttackRange;makeArray++){
-  if(heroAttackDirection==1){
-   sidePosiN=Number(sidePosi);
-   attackSuccessMark=5*makeArray+sidePosiN;
-   if(enemyFront.includes(attackSuccessMark)){
-    if(tankKeep==1&&taSet=="lovey"){
-     tankKeep=0;
+ if(attackSuccess!=2){
+  attackSuccess=0;
+  var damageEffect = document.getElementById("damageEffectBase");
+  damageEffect.innerHTML = " ";
+  for(makeArray=0;makeArray<heroAttackRange;makeArray++){
+   if(heroAttackDirection==1){
+    sidePosiN=Number(sidePosi);
+    attackSuccessMark=5*makeArray+sidePosiN;
+    if(enemyFront.includes(attackSuccessMark)){
+     if(tankKeep==1&&taSet=="lovey"){
+      tankKeep=0;
+     }
+     attackSuccess=1;
+     const rootDamageEffect = document.querySelector(':root');
+     damagrEffectPosi=attackSuccessMark-2.5;
+     damagrEffectPosi=String(damagrEffectPosi)+"%";
+     rootDamageEffect.style.setProperty("--damageEffect", damagrEffectPosi);console.log(damagrEffectPosi);
+     var damageEffect = document.getElementById("damageEffectBase");
+     damageEffect.innerHTML = "<img id=damageEffect src=item/爆発.png>";
+     damageEffect.style.zIndex = 10;
+     setTimeout(function(){
+      var damageEffect = document.getElementById("damageEffectBase");
+      damageEffect.innerHTML = " ";
+     },200);
     }
-    attackSuccess=1;
-    const rootDamageEffect = document.querySelector(':root');
-    damagrEffectPosi=attackSuccessMark-2.5;
-    damagrEffectPosi=String(damagrEffectPosi)+"%";
-    rootDamageEffect.style.setProperty("--damageEffect", damagrEffectPosi);console.log(damagrEffectPosi);
-    var damageEffect = document.getElementById("damageEffectBase");
-    damageEffect.innerHTML = "<img id=damageEffect src=item/爆発.png>";
-    damageEffect.style.zIndex = 10;
-    setTimeout(function(){
+   }
+   else{
+    sidePosiN=Number(sidePosi);
+    attackSuccessMark=-5*makeArray+sidePosiN;console.log(makeArray);
+    if(enemyFront.includes(attackSuccessMark)){
+     attackSuccess=1;
+     const rootDamageEffect = document.querySelector(':root');
+     damagrEffectPosi=attackSuccessMark-2.5;
+     damagrEffectPosi=String(damagrEffectPosi)+"%";
+     rootDamageEffect.style.setProperty("--damageEffect", damagrEffectPosi);console.log(damagrEffectPosi);
      var damageEffect = document.getElementById("damageEffectBase");
-     damageEffect.innerHTML = " ";
-    },200);
+     damageEffect.innerHTML = "<img id=damageEffect src=item/爆発.png>";
+     damageEffect.style.zIndex = 10;
+     setTimeout(function(){
+      var damageEffect = document.getElementById("damageEffectBase");
+      damageEffect.innerHTML = " ";
+     },200);
+    }
    }
   }
-  else{
-   sidePosiN=Number(sidePosi);
-   attackSuccessMark=-5*makeArray+sidePosiN;console.log(makeArray);
-   if(enemyFront.includes(attackSuccessMark)){
-    attackSuccess=1;
-    const rootDamageEffect = document.querySelector(':root');
-    damagrEffectPosi=attackSuccessMark-2.5;
-    damagrEffectPosi=String(damagrEffectPosi)+"%";
-    rootDamageEffect.style.setProperty("--damageEffect", damagrEffectPosi);console.log(damagrEffectPosi);
-    var damageEffect = document.getElementById("damageEffectBase");
-    damageEffect.innerHTML = "<img id=damageEffect src=item/爆発.png>";
-    damageEffect.style.zIndex = 10;
-    setTimeout(function(){
-     var damageEffect = document.getElementById("damageEffectBase");
-     damageEffect.innerHTML = " ";
-    },200);
+  if(attackSuccess==1){
+   matoiCheck=0;
+   bombSE.pause();bombSE.currentTime=0;bombSE.play();
+   enemyHP=enemyHP-(heroAttack*heroAttackStatus*attackBuff*doughnutBuff);
+   if(enemyHP<=0){
+    const rootEnemyHP = document.querySelector(':root');
+    rootEnemyHP.style.setProperty("--enemyHPbar", "0%");
+    if(!gameClearCheck){
+     clearRoot();
+    }
    }
-  }
- }
- if(attackSuccess==1){
-  matoiCheck=0;
-  bombSE.pause();bombSE.currentTime=0;bombSE.play();
-  enemyHP=enemyHP-(heroAttack*heroAttackStatus*attackBuff*doughnutBuff);
-  if(enemyHP<=0){
-   const rootEnemyHP = document.querySelector(':root');
-   rootEnemyHP.style.setProperty("--enemyHPbar", "0%");
-   if(!gameClearCheck){
-    clearRoot();
+   else{
+    tadaomiCheck=0;
+    enemyHPchange=enemyHP*46.5/defaultEnemyHP;
+    enemyHPchange=String(enemyHPchange);
+    const rootEnemyHP = document.querySelector(':root');
+    rootEnemyHP.style.setProperty("--enemyHPbar", enemyHPchange+"%");
    }
-  }
-  else{
-   tadaomiCheck=0;
-   enemyHPchange=enemyHP*46.5/defaultEnemyHP;
-   enemyHPchange=String(enemyHPchange);
-   const rootEnemyHP = document.querySelector(':root');
-   rootEnemyHP.style.setProperty("--enemyHPbar", enemyHPchange+"%");
+   attackSuccess=2;
+   setTimeout(function(){
+    attackSuccess=0;
+   },50);
   }
  }
 }
@@ -6853,18 +6998,6 @@ function toClearResult(){
    var beforeAtLv=heros[atSet].level;
    var beforeGuLv=heros[guSet].level;
    var beforeTaLv=heros[taSet].level;
-   if     (items["platinumData"].num>=1){spBonus=3;  items["platinumData"].num--;}
-   else if(items["goldData"].num>=1)    {spBonus=2;  items["goldData"].num--;}
-   else if(items["silverData"].num>=1)  {spBonus=1.5;items["silverData"].num--;}
-   if     (items["energy100000"].num>=1)  {atBonus=3;items["energy100000"].num--;}
-   else if(items["energy4000"].num>=1)  {atBonus=2;  items["energy4000"].num--;}
-   else if(items["energy1000"].num>=1){atBonus=1.5;  items["energy1000"].num--;}
-   if     (items["cube5"].num>=1)  {guBonus=3;  items["cube5"].num--;}
-   else if(items["cube4"].num>=1)  {guBonus=2;  items["cube4"].num--;}
-   else if(items["cube3"].num>=1)  {guBonus=1.5;items["cube3"].num--;}
-   if     (items["bigLack"].num>=1)     {guBonus=3;  items["bigLack"].num--;}
-   else if(items["middleLack"].num>=1)  {guBonus=2;  items["middleLack"].num--;}
-   else if(items["littleLack"].num>=1)  {guBonus=1.5;items["littleLack"].num--;}
    getExperience(spSet,50*stageLevel*spBonus);
    getExperience(atSet,50*stageLevel*atBonus);
    getExperience(guSet,50*stageLevel*guBonus);
@@ -7304,9 +7437,11 @@ function f_popUpN(imgName,sentence){
  heroLiberateImgBase.setAttribute('id',imgName+"popUpBase");
  var parentDiv = document.getElementById(imgName+"popUpImgBase");
  parentDiv.appendChild(heroLiberateImgBase);
-   
- var myh = document.getElementById(imgName+"popUpBase");
- myh.innerHTML = "<img src=item/"+imgName+".png class=popUpImg>";
+ 
+ if(imgName!="null"){
+  var myh = document.getElementById(imgName+"popUpBase");
+  myh.innerHTML = "<img src=item/"+imgName+".png class=popUpImg>";
+ }
  
  var tag=imgName+"popUpOKButton";
  var dv=document.getElementById(tag);

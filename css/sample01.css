@@ -132,6 +132,12 @@
   --cerberusSet:1;
   --cerberusAttackD:50%;
   --itemReturnButton:0;
+  --useCheckItemYesButton:0;
+  --useCheckItemNoButton:0;
+  --heroHintButton:0;
+  --heroStatusDetailImg:1;
+  --itemStatusDetailImg:1;
+  --itemHintButton:0;
   --craftReturnButton:0;
   --craftCheckYesButton:0;
   --craftCheckNoButton:0;
@@ -733,6 +739,18 @@ border-radius:10%;
 backGround:#ffffff;
 }
 
+#clearRate{
+position:absolute;
+top:2.5%;
+left:50%;
+width:40%;
+height:18%;
+text-align: center;
+font-size:6vh;
+color:#ffffff;
+backGround:var(--homeColor);
+}
+
 #homeColorTitle{
 position:absolute;
 top:32%;
@@ -761,7 +779,7 @@ height:10%;
 
 #reTutorial{
 position:absolute;
-top:10%;
+top:25%;
 left:50%;
 width:40%;
 height:10%;
@@ -770,7 +788,7 @@ height:10%;
 #reTutorialButton{
 position:absolute;
 opacity:var(--reTutorialButton);
-top:10%;
+top:25%;
 left:50%;
 width:40%;
 height:10%;
@@ -779,7 +797,7 @@ backGround:#ffffff;
 
 #opFeedBack{
 position:absolute;
-top:30%;
+top:38%;
 left:50%;
 width:40%;
 height:10%;
@@ -788,7 +806,7 @@ height:10%;
 #opFeedBackButton{
 position:absolute;
 opacity:var(--opFeedBackButton);
-top:30%;
+top:38%;
 left:50%;
 width:40%;
 height:10%;
@@ -1261,6 +1279,29 @@ border-radius:10%;
 backGround:#ffffff;
 }
 
+#heroHint{
+position:absolute;
+left:25%;
+top:5%;
+width:23%;
+height:10%;
+font-size:4.5vh;
+text-align: center;
+color: #ffffff;
+border-radius:3%;
+backGround:var(--homeColor);
+}
+
+#heroHintButton{
+position:absolute;
+opacity:var(--heroHintButton);
+left:25%;
+top:5%;
+width:23%;
+height:10%;
+border-radius:3%;
+backGround:#ffffff;
+}
 
 #itemListScreen{
 position:absolute;
@@ -1323,6 +1364,7 @@ backGround:#ffffff;
 
 #itemStatusDetailImg{
 position:absolute;
+opacity:var(--itemStatusDetailImg);
 top:2%;
 left:35%;
 width:30%;
@@ -1380,6 +1422,30 @@ text-align: center;
 color: var(--homeColor);
 backGround:#ffffff;
 border-radius:5%;
+}
+
+#itemHint{
+position:absolute;
+left:25%;
+top:5%;
+width:23%;
+height:10%;
+font-size:4.5vh;
+text-align: center;
+color:#ffffff;
+border-radius:3%;
+backGround: var(--homeColor);
+}
+
+#itemHintButton{
+position:absolute;
+opacity:var(--itemHintButton);
+left:25%;
+top:5%;
+width:23%;
+height:10%;
+border-radius:3%;
+backGround:#ffffff;
 }
 
 #craftScreen{
@@ -2634,6 +2700,7 @@ backGround:#ffffff;
 
 #heroStatusDetailImg{
 position:absolute;
+opacity:var(--heroStatusDetailImg);
 top:2%;
 left:35%;
 width:30%;

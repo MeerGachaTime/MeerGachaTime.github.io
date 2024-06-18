@@ -89,6 +89,8 @@
        <div id=heroList></div>
        <div id=heroStatusDetail></div>
        <div id=herotReturnButton onclick=backSE.play();toHome()></div>
+       <div id=heroHint>ヒント</div>
+       <div id=heroHintButton onclick=f_popUpN("はてな","ステージをクリアする、特定のクラフトを行う、特定のヒーローのレベルを3まで上げる、これらを達成するとヒーローが解放されます。");selectSE.play();></div>
       </div>
 
       <div id=itemListScreen>
@@ -99,8 +101,11 @@
         </div>
        </div>
        <div id=itemReturnButton onclick=backSE.play();toHome()></div>
+       <div id=itemHint>ヒント</div>
+       <div id=itemHintButton onclick=f_popUpN("はてな","画面右上のアイコンをタップ（クリック）で一部のアイテムを使用できます。");selectSE.play();></div>
        <div id=itemList></div>
        <div id=itemStatusDetail></div>
+       <div id=useItemCheck></div>
       </div>
 
       <div id=craftScreen>
@@ -185,9 +190,10 @@
       </div>
 
 
-　　　<div id=optionScreen>
+      <div id=optionScreen>
        <div class=BlackBack></div>
-       <div id=creditBack><br>　原作:#コンパス戦闘摂理解析システム様<br>　BGM :<a href="https://twitter.com/mikannonegoto" style=color#000000>みかんのねごと様</a><br>　効果音 :<a href="https://taira-komori.jpn.org/index.html" style=color#000000>無料効果音で遊ぼう！様</a><br>　その他制作:Meer--</div>
+       <div id=clearRate>ゲームクリア率<br><font id=clearRateNum></font>%</div>
+       <div id=creditBack><br>　原作:#コンパス戦闘摂理解析システム様<br>　BGM・効果音 :<a href="https://twitter.com/mikannonegoto" style=color#000000>みかんのねごと様</a><br>　効果音 :<a href="https://taira-komori.jpn.org/index.html" style=color#000000>無料効果音で遊ぼう！様</a><br>　その他制作:Meer--</div>
        <div id=optionReturn>
         <div class=buttonA>
          <div class=buttonB>戻る</div>
