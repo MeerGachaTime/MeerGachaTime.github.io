@@ -628,6 +628,7 @@ function toOption(){
  
  for(var elem in heros){
   denominator++;
+  denominator++;
   if(heros[elem].usable>=1){
    numerator++;
   }
