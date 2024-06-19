@@ -641,7 +641,7 @@ function toOption(){
  numerator=numerator-10;
  
  var myh = document.getElementById("clearRateNum");
- myh.innerHTML = 100*numerator/denominator;
+ myh.innerHTML = Math.floor(100*numerator/denominator);
  
  var myh = document.getElementById("homeWallBase");
  myh.innerHTML = " ";
@@ -1689,7 +1689,7 @@ function stageSelect(chosenStage){console.log(chosenStage);
   }
   else if(chosenStage=="errordoll"){
    var myh = document.getElementById("selectedStageBase");
-   myh.innerHTML = "<img src=item/ステージ選択画面errordoll-18782.png class=selectedStage><div id=selectedStageClear>Clear</div>";
+   myh.innerHTML = "<img src=item/ステージ選択画面Errordoll-18782.png class=selectedStage><div id=selectedStageClear>Clear</div>";
    var myhMekahanSelect = document.getElementById("stageTitleBase");
    myhMekahanSelect.innerHTML = "<div id=stageTitle>Errordoll-18782</div>";
   }
