@@ -643,6 +643,8 @@ function toOption(){
  var myh = document.getElementById("clearRateNum");
  myh.innerHTML = Math.floor(100*numerator/denominator);
  
+ var optionClearCheck=numerator/denominator;
+ 
  var myh = document.getElementById("homeWallBase");
  myh.innerHTML = " ";
  
@@ -746,7 +748,7 @@ function toOption(){
    
   }
  }
- if(heros["layer"].skillBusable==1&&heros["megmeg"].skillBusable==1){
+ if(optionClearCheck==1){
   for(var elem in heros){  
    var node=document.createElement('label');
    node.setAttribute('id',heros[elem].name+"wallSkill");
