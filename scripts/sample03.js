@@ -241,7 +241,7 @@ errordollAct2=0;
 
 window.addEventListener('load', (event) => {console.log("ver.2");console.log("key:"+localStorage.getItem('atariUsable'));
 
-localStorage.clear();//消去
+//localStorage.clear();//消去
 
   if(!localStorage.getItem('atariUsable')){f_wallAcce("logo");}//     保存
 else{localLoad();}
