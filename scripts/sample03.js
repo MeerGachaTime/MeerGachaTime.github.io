@@ -1765,46 +1765,46 @@ function heroSkillStatus(){
 
   atariheroHP=100+(10*(heros["atari"].level-1));
   var elem = document.getElementById("atariHP");
-  elem.innerHTML = atariheroHP;
+  elem.innerHTML = Math.round(100*atariheroHP)/100;
   atariAttackStatus=1+(0.1*(heros["atari"].level-1));
   var elem = document.getElementById("atariAttackStatus");
-  elem.innerHTML = atariAttackStatus;
+  elem.innerHTML = Math.round(100*atariAttackStatus)/100;
 
   voidollheroHP=120+(10*(heros["voidoll"].level-1));
   var elem = document.getElementById("voidollHP");
-  elem.innerHTML = voidollheroHP;
+  elem.innerHTML = Math.round(100*voidollheroHP)/100;
   voidollAttackStatus=0.8+(0.1*(heros["voidoll"].level-1));
   var elem = document.getElementById("voidollAttackStatus");
-  elem.innerHTML = voidollAttackStatus;
+  elem.innerHTML = Math.round(100*voidollAttackStatus)/100;
 
   nohoSkill1status=5+(1*(heros["noho"].level-1));
   var elem = document.getElementById("nohoSkill1status");
-  elem.innerHTML = nohoSkill1status;
+  elem.innerHTML = Math.round(100*nohoSkill1status)/100;
 
   tadaomiSkill1status=30+(5*(heros["tadaomi"].level-1));
   var elem = document.getElementById("tadaomiSkill1status");
-  elem.innerHTML = tadaomiSkill1status;
+  elem.innerHTML = Math.round(100*tadaomiSkill1status)/100;
 
   lucianoSkill1status=20+(4*(heros["luciano"].level-1));
   var elem = document.getElementById("lucianoSkill1status");
-  elem.innerHTML = lucianoSkill1status;
+  elem.innerHTML = Math.round(100*lucianoSkill1status)/100;
 
 
   lyricaSkill1status=10+(2*(heros["lyrica"].level-1));
   var elem = document.getElementById("lyricaSkill1status");
-  elem.innerHTML = lyricaSkill1status;
+  elem.innerHTML = Math.round(100*lyricaSkill1status)/100;
 
   matoiSkill1status=30+(6*(heros["matoi"].level-1));
   var elem = document.getElementById("matoiSkill1status");
-  elem.innerHTML = matoiSkill1status;
+  elem.innerHTML = Math.round(100*matoiSkill1status)/100;
 
   jeanneSkill1status=30+(6*(heros["jeanne"].level-1));
   var elem = document.getElementById("jeanneSkill1status");
-  elem.innerHTML = jeanneSkill1status;
+  elem.innerHTML = Math.round(100*jeanneSkill1status)/100;
 
   marcosSkill1status=1.5+(0.3*(heros["marcos"].level-1));
   var elem = document.getElementById("marcosSkill1status");
-  elem.innerHTML = marcosSkill1status;
+  elem.innerHTML = Math.round(100*marcosSkill1status)/100;
 
   if(heros["nikola"].usable==1){
   
@@ -1812,10 +1812,10 @@ function heroSkillStatus(){
    
    nikolaheroHP=120+(10*(heros["nikola"].level-1));
    var elem = document.getElementById("nikolaHP");
-   elem.innerHTML = nikolaheroHP;
+   elem.innerHTML = Math.round(100*nikolaheroHP)/100;
    nikolaAttackStatus=0.8+(0.1*(heros["nikola"].level-1));
    var elem = document.getElementById("nikolaAttackStatus");
-   elem.innerHTML = nikolaAttackStatus;
+   elem.innerHTML = Math.round(100*nikolaAttackStatus)/100;
   }
   if(heros["adam"].usable==1){
   
@@ -1823,7 +1823,7 @@ function heroSkillStatus(){
    
    adamSkill1status=25+(5*(heros["adam"].level-1));
    var elem = document.getElementById("adamSkill1status");
-   elem.innerHTML = adamSkill1status;
+   elem.innerHTML = Math.round(100*adamSkill1status)/100;
   }
   if(heros["luluca"].usable==1){
   
@@ -1831,7 +1831,7 @@ function heroSkillStatus(){
    
    lulucaSkill1status=20+(4*(heros["luluca"].level-1));
    var elem = document.getElementById("lulucaSkill1status");
-   elem.innerHTML = lulucaSkill1status;
+   elem.innerHTML = Math.round(100*lulucaSkill1status)/100;
   }
   if(heros["amairo"].usable==1){
   
@@ -1839,7 +1839,7 @@ function heroSkillStatus(){
    
    amairoSkill1status=20+(4*(heros["amairo"].level-1));
    var elem = document.getElementById("amairoSkill1status");
-   elem.innerHTML = amairoSkill1status;
+   elem.innerHTML = Math.round(100*amairoSkill1status)/100;
   }
   if(heros["GBG"].usable==1){
   
@@ -1847,7 +1847,7 @@ function heroSkillStatus(){
    
    GBGSkill1status=30+(6*(heros["GBG"].level-1));
    var elem = document.getElementById("GBGSkill1status");
-   elem.innerHTML = GBGSkill1status;
+   elem.innerHTML = Math.round(100*GBGSkill1status)/100;
   }
   if(heros["pororotcho"].usable==1){
   
@@ -1855,7 +1855,7 @@ function heroSkillStatus(){
    
    pororotchoSkill1status=20+(4*(heros["pororotcho"].level-1));
    var elem = document.getElementById("pororotchoSkill1status");
-   elem.innerHTML = pororotchoSkill1status;
+   elem.innerHTML = Math.round(100*pororotchoSkill1status)/100;
   }
   if(heros["istaqa"].usable==1){
   
@@ -1863,7 +1863,7 @@ function heroSkillStatus(){
    
    istaqaSkill1status=30+(6*(heros["istaqa"].level-1));
    var elem = document.getElementById("istaqaSkill1status");
-   elem.innerHTML = istaqaSkill1status;
+   elem.innerHTML = Math.round(100*istaqaSkill1status)/100;
   }
   if(heros["alice"].usable==1){
   
@@ -1875,7 +1875,7 @@ function heroSkillStatus(){
    
    gustafSkill1status=5+(1*(heros["gustaf"].level-1));
    var elem = document.getElementById("gustafSkill1status");
-   elem.innerHTML = gustafSkill1status;
+   elem.innerHTML = Math.round(100*gustafSkill1status)/100;
   }
   if(heros["thirteen"].usable==1){
   
@@ -1883,10 +1883,10 @@ function heroSkillStatus(){
    
    thirteenSkill1status=1.2+(0.24*(heros["thirteen"].level-1));
    var elem = document.getElementById("thirteenSkill1status");
-   elem.innerHTML = thirteenSkill1status;
+   elem.innerHTML = Math.round(100*thirteenSkill1status)/100;
    thirteenHealSkill1status=10+(2*(heros["thirteen"].level-1));
    var elem = document.getElementById("thirteenHealSkill1status");
-   elem.innerHTML = thirteenHealSkill1status;
+   elem.innerHTML = Math.round(100*thirteenHealSkill1status)/100;
   }
   if(heros["dragon"].usable==1){
   
@@ -1898,7 +1898,7 @@ function heroSkillStatus(){
    
    megmegSkill1status=2.5+(0.5*(heros["megmeg"].level-1));
    var elem = document.getElementById("megmegSkill1status");
-   elem.innerHTML = megmegSkill1status*5;
+   elem.innerHTML = Math.round(100*megmegSkill1status*5)/100;
   }
   if(heros["bugdoll"].usable==1){
   
@@ -1906,7 +1906,7 @@ function heroSkillStatus(){
    
    bugdollSkill1status=7.5+(1.5*(heros["bugdoll"].level-1));
    var elem = document.getElementById("bugdollSkill1status");
-   elem.innerHTML = bugdollSkill1status;
+   elem.innerHTML = Math.round(100*bugdollSkill1status)/100;
   }
   if(heros["ignis"].usable==1){
   
@@ -1914,7 +1914,7 @@ function heroSkillStatus(){
    
    ignisSkill1status=15+(3*(heros["ignis"].level-1));
    var elem = document.getElementById("ignisSkill1status");
-   elem.innerHTML = ignisSkill1status;
+   elem.innerHTML = Math.round(100*ignisSkill1status)/100;
   }
   if(heros["kirara"].usable==1){
   
@@ -1922,7 +1922,7 @@ function heroSkillStatus(){
    
    kiraraSkill1status=15+(3*(heros["kirara"].level-1));
    var elem = document.getElementById("kiraraSkill1status");
-   elem.innerHTML = kiraraSkill1status;
+   elem.innerHTML = Math.round(100*kiraraSkill1status)/100;
   }
   if(heros["maria"].usable==1){
   
@@ -1930,7 +1930,7 @@ function heroSkillStatus(){
    
    mariaSkill1status=20+(4*(heros["maria"].level-1));
    var elem = document.getElementById("mariaSkill1status");
-   elem.innerHTML = mariaSkill1status;
+   elem.innerHTML = Math.round(100*mariaSkill1status)/100;
   }
   if(heros["violetta"].usable==1){
   
@@ -1939,7 +1939,7 @@ function heroSkillStatus(){
    violettaSkill1status=0.5+(0.05*(heros["violetta"].level-1));
    if(violettaSkill1status>1){violettaSkill1status=1;}
    var elem = document.getElementById("violettaSkill1status");
-   elem.innerHTML = 1-violettaSkill1status;
+   elem.innerHTML = Math.round(100*(1-violettaSkill1status))/100;
   }
   if(heros["coclico"].usable==1){
   
@@ -1947,10 +1947,10 @@ function heroSkillStatus(){
    
    coclicoheroHP=80+(10*(heros["coclico"].level-1));
    var elem = document.getElementById("coclicoHP");
-   elem.innerHTML = coclicoheroHP;
+   elem.innerHTML = Math.round(100*coclicoheroHP)/100;
    coclicoAttackStatus=1.2+(0.1*(heros["coclico"].level-1));
    var elem = document.getElementById("coclicoAttackStatus");
-   elem.innerHTML = coclicoAttackStatus;
+   elem.innerHTML = Math.round(100*coclicoAttackStatus)/100;
   }
   if(heros["stellea"].usable==1){
   
@@ -1958,7 +1958,7 @@ function heroSkillStatus(){
    
    stelleaSkill1status=10+(2*(heros["stellea"].level-1));
    var elem = document.getElementById("stelleaSkill1status");
-   elem.innerHTML = stelleaSkill1status;
+   elem.innerHTML = Math.round(100*stelleaSkill1status)/100;
   }
   if(heros["lovey"].usable==1){
   
@@ -1966,9 +1966,9 @@ function heroSkillStatus(){
    
    loveySkill1status=15+(3*(heros["lovey"].level-1));
    var elem = document.getElementById("loveySkill1status");
-   elem.innerHTML = loveySkill1status;
+   elem.innerHTML = Math.round(100*loveySkill1status)/100;
    var elem = document.getElementById("loveySkill2status");
-   elem.innerHTML = loveySkill1status;
+   elem.innerHTML = Math.round(100*loveySkill1status)/100;
   }
   if(heros["yusha"].usable==1){
   
@@ -1976,7 +1976,7 @@ function heroSkillStatus(){
    
    yushaSkill1status=15+(3*(heros["yusha"].level-1));
    var elem = document.getElementById("yushaSkill1status");
-   elem.innerHTML = yushaSkill1status;
+   elem.innerHTML = Math.round(100*yushaSkill1status)/100;
   }
   if(heros["nidhoggr"].usable==1){
   
@@ -1984,7 +1984,7 @@ function heroSkillStatus(){
    
    nidhoggrSkill1status=5+(1*(heros["nidhoggr"].level-1));
    var elem = document.getElementById("nidhoggrSkill1status");
-   elem.innerHTML = nidhoggrSkill1status;
+   elem.innerHTML = Math.round(100*nidhoggrSkill1status)/100;
   }
   if(heros["pierre"].usable==1){
   
@@ -1992,10 +1992,10 @@ function heroSkillStatus(){
    
    pierreheroHP=120+(10*(heros["pierre"].level-1));
    var elem = document.getElementById("pierreHP");
-   elem.innerHTML = pierreheroHP;
+   elem.innerHTML = Math.round(100*pierreheroHP)/100;
    pierreAttackStatus=0.8+(0.1*(heros["pierre"].level-1));
    var elem = document.getElementById("pierreAttackStatus");
-   elem.innerHTML = pierreAttackStatus;
+   elem.innerHTML = Math.round(100*pierreAttackStatus)/100;
   }
   if(heros["nanigashi"].usable==1){
   
@@ -2003,10 +2003,10 @@ function heroSkillStatus(){
    
    nanigashiheroHP=100+(10*(heros["nanigashi"].level-1));
    var elem = document.getElementById("nanigashiHP");
-   elem.innerHTML = nanigashiheroHP;
+   elem.innerHTML = Math.round(100*nanigashiheroHP)/100;
    nanigashiAttackStatus=1+(0.1*(heros["nanigashi"].level-1));
    var elem = document.getElementById("nanigashiAttackStatus");
-   elem.innerHTML = nanigashiAttackStatus;
+   elem.innerHTML = Math.round(100*nanigashiAttackStatus)/100;
   }
   if(heros["thomas"].usable==1){
   
@@ -2015,7 +2015,7 @@ function heroSkillStatus(){
    thomasSkill1status=0.5+(0.05*(heros["thomas"].level-1));
    if(thomasSkill1status>1){thomasSkill1status=1;}
    var elem = document.getElementById("thomasSkill1status");
-   elem.innerHTML = 1-thomasSkill1status;
+   elem.innerHTML = Math.round(100*(1-thomasSkill1status))/100;
   }
   if(heros["amister"].usable==1){
   
@@ -2024,7 +2024,7 @@ function heroSkillStatus(){
    amisterSkill1status=0.5+(0.05*(heros["amister"].level-1));
    if(amisterSkill1status>1){amisterSkill1status=1;}
    var elem = document.getElementById("amisterSkill1status");
-   elem.innerHTML = 1-amisterSkill1status;
+   elem.innerHTML = Math.round(100*(1-amisterSkill1status))/100;
   }
   if(heros["cusith"].usable==1){
   
@@ -2032,7 +2032,7 @@ function heroSkillStatus(){
    
    cusithSkill1status=10+(2*(heros["cusith"].level-1));
    var elem = document.getElementById("cusithSkill1status");
-   elem.innerHTML = cusithSkill1status;
+   elem.innerHTML = Math.round(100*cusithSkill1status)/100;
   }
   if(heros["al"].usable==1){
   
@@ -2040,10 +2040,10 @@ function heroSkillStatus(){
    
    alheroHP=100+(10*(heros["al"].level-1));
    var elem = document.getElementById("alHP");
-   elem.innerHTML = alheroHP;
+   elem.innerHTML = Math.round(100*alheroHP)/100;
    alAttackStatus=1+(0.1*(heros["al"].level-1));
    var elem = document.getElementById("alAttackStatus");
-   elem.innerHTML = alAttackStatus;
+   elem.innerHTML = Math.round(100*alAttackStatus)/100;
   }
   if(heros["rinne"].usable==1){
   
@@ -2051,7 +2051,7 @@ function heroSkillStatus(){
    
    rinneSkill1status=30+(6*(heros["rinne"].level-1));
    var elem = document.getElementById("rinneSkill1status");
-   elem.innerHTML = rinneSkill1status;
+   elem.innerHTML = Math.round(100*rinneSkill1status)/100;
   }
   if(heros["layer"].usable==1){
   
@@ -2059,10 +2059,10 @@ function heroSkillStatus(){
    
    layerheroHP=80+(10*(heros["layer"].level-1));
    var elem = document.getElementById("layerHP");
-   elem.innerHTML = layerheroHP;
+   elem.innerHTML = Math.round(100*layerheroHP)/100;
    layerAttackStatus=1.2+(0.1*(heros["layer"].level-1));
    var elem = document.getElementById("layerAttackStatus");
-   elem.innerHTML = layerAttackStatus;
+   elem.innerHTML = Math.round(100*layerAttackStatus)/100;
   }
   if(heros["thorne"].usable==1){
   
@@ -2070,7 +2070,7 @@ function heroSkillStatus(){
    
    thorneSkill1status=10+(2*(heros["thorne"].level-1));
    var elem = document.getElementById("thorneSkill1status");
-   elem.innerHTML = thorneSkill1status;
+   elem.innerHTML = Math.round(100*thorneSkill1status)/100;
   }
   if(heros["delmin"].usable==1){
   
@@ -2078,7 +2078,7 @@ function heroSkillStatus(){
    
    delminSkill1status=10+(2*(heros["delmin"].level-1));
    var elem = document.getElementById("delminSkill1status");
-   elem.innerHTML = delminSkill1status;
+   elem.innerHTML = Math.round(100*delminSkill1status)/100;
   }
   if(heros["luciano"].skillBusable==1){
   
@@ -2086,7 +2086,7 @@ function heroSkillStatus(){
    
    lucianoSkill2status=15+(3*(heros["luciano"].level-1));
    var elem = document.getElementById("lucianoSkill2status");
-   elem.innerHTML = lucianoSkill2status;
+   elem.innerHTML = Math.round(100*lucianoSkill2status)/100;
   }
   if(heros["yusha"].skillBusable==1){
   
@@ -2094,7 +2094,7 @@ function heroSkillStatus(){
    
    yushaSkill2status=10+(2*(heros["yusha"].level-1));
    var elem = document.getElementById("yushaSkill2status");
-   elem.innerHTML = yushaSkill2status;
+   elem.innerHTML = Math.round(100*yushaSkill2status)/100;
   }
   if(heros["thirteen"].skillBusable==1){
   
@@ -2102,7 +2102,7 @@ function heroSkillStatus(){
    
    thirteenSkill2status=20+(4*(heros["thirteen"].level-1));
    var elem = document.getElementById("thirteenSkill2status");
-   elem.innerHTML = thirteenSkill2status;
+   elem.innerHTML = Math.round(100*thirteenSkill2status)/100;
   }
   if(heros["noho"].skillBusable==1){
   
@@ -2110,10 +2110,10 @@ function heroSkillStatus(){
    
    nohoheroHP=80+(10*(heros["noho"].level-1));
    var elem = document.getElementById("nohoHP");
-   elem.innerHTML = nohoheroHP;
+   elem.innerHTML = Math.round(100*nohoheroHP)/100;
    nohoAttackStatus=1.2+(0.1*(heros["noho"].level-1));
    var elem = document.getElementById("nohoAttackStatus");
-   elem.innerHTML = nohoAttackStatus;
+   elem.innerHTML = Math.round(100*nohoAttackStatus)/100;
   }
   if(heros["justice"].skillBusable==1){
   
@@ -2121,7 +2121,7 @@ function heroSkillStatus(){
    
    justiceSkill2status=15+(3*(heros["justice"].level-1));
    var elem = document.getElementById("justiceSkill2status");
-   elem.innerHTML = justiceSkill2status;
+   elem.innerHTML = Math.round(100*justiceSkill2status)/100;
   }
   if(heros["nikola"].skillBusable==1&&heros["nikola"].usable>=1){
   
@@ -2129,7 +2129,7 @@ function heroSkillStatus(){
    
    nikolaSkill2status=5+(1*(heros["nikola"].level-1));
    var elem = document.getElementById("nikolaSkill2status");
-   elem.innerHTML = nikolaSkill2status;
+   elem.innerHTML = Math.round(100*nikolaSkill2status)/100;
   }
   if(heros["thomas"].skillBusable==1&&heros["thomas"].usable>=1){
   
@@ -2137,7 +2137,7 @@ function heroSkillStatus(){
    
    thomasSkill2status=25+(5*(heros["thomas"].level-1));
    var elem = document.getElementById("thomasSkill2status");
-   elem.innerHTML = thomasSkill2status;
+   elem.innerHTML = Math.round(100*thomasSkill2status)/100;
   }
   if(heros["pororotcho"].skillBusable==1&&heros["pororotcho"].usable>=1){
   
@@ -2145,7 +2145,7 @@ function heroSkillStatus(){
    
    pororotchoSkill2status=10+(2*(heros["pororotcho"].level-1));
    var elem = document.getElementById("pororotchoSkill2status");
-   elem.innerHTML = pororotchoSkill2status;
+   elem.innerHTML = Math.round(100*pororotchoSkill2status)/100;
   }
   if(heros["violetta"].skillBusable==1&&heros["violetta"].usable>=1){
   
@@ -2153,10 +2153,10 @@ function heroSkillStatus(){
    
    violettaheroHP=120+(10*(heros["violetta"].level-1));
    var elem = document.getElementById("violettaHP");
-   elem.innerHTML = violettaheroHP;
+   elem.innerHTML = Math.round(100*violettaheroHP)/100;
    violettaAttackStatus=0.8+(0.1*(heros["violetta"].level-1));
    var elem = document.getElementById("violettaAttackStatus");
-   elem.innerHTML = violettaAttackStatus;
+   elem.innerHTML = Math.round(100*violettaAttackStatus)/100;
   }
   if(heros["istaqa"].skillBusable==1&&heros["istaqa"].usable>=1){
   
@@ -2164,10 +2164,10 @@ function heroSkillStatus(){
    
    istaqaheroHP=80+(10*(heros["istaqa"].level-1));
    var elem = document.getElementById("istaqaHP");
-   elem.innerHTML = istaqaheroHP;
+   elem.innerHTML = Math.round(100*istaqaheroHP)/100;
    istaqaAttackStatus=1.2+(0.1*(heros["istaqa"].level-1));
    var elem = document.getElementById("istaqaAttackStatus");
-   elem.innerHTML = istaqaAttackStatus;
+   elem.innerHTML = Math.round(100*istaqaAttackStatus)/100;
   }
   if(heros["delmin"].skillBusable==1&&heros["delmin"].usable>=1){
   
@@ -2175,7 +2175,7 @@ function heroSkillStatus(){
    
    delminSkill2status=30+(6*(heros["delmin"].level-1));
    var elem = document.getElementById("delminSkill2status");
-   elem.innerHTML = delminSkill2status;
+   elem.innerHTML = Math.round(100*delminSkill2status)/100;
   }
   if(heros["amairo"].skillBusable==1&&heros["amairo"].usable>=1){
   
@@ -2183,7 +2183,7 @@ function heroSkillStatus(){
    
    amairoSkill2status=15+(3*(heros["amairo"].level-1));
    var elem = document.getElementById("amairoSkill2status");
-   elem.innerHTML = amairoSkill2status;
+   elem.innerHTML = Math.round(100*amairoSkill2status)/100;
   }
   if(heros["nidhoggr"].skillBusable==1&&heros["nidhoggr"].usable>=1){
   
@@ -2191,7 +2191,7 @@ function heroSkillStatus(){
    
    nidhoggrSkill2status=5+(1*(heros["nidhoggr"].level-1));
    var elem = document.getElementById("nidhoggrSkill2status");
-   elem.innerHTML = nidhoggrSkill2status;
+   elem.innerHTML = Math.round(100*nidhoggrSkill2status)/100;
   }
   if(heros["amister"].skillBusable==1&&heros["amister"].usable>=1){
   
@@ -2199,7 +2199,7 @@ function heroSkillStatus(){
    
    amisterSkill2status=10+(2*(heros["amister"].level-1));
    var elem = document.getElementById("amisterSkill2status");
-   elem.innerHTML = amisterSkill2status;
+   elem.innerHTML = Math.round(100*amisterSkill2status)/100;
   }
   if(heros["cusith"].skillBusable==1&&heros["cusith"].usable>=1){
   
@@ -2207,7 +2207,7 @@ function heroSkillStatus(){
    
    cusithSkill2status=5+(1*(heros["cusith"].level-1));
    var elem = document.getElementById("cusithSkill2status");
-   elem.innerHTML = cusithSkill2status;
+   elem.innerHTML = Math.round(100*cusithSkill2status)/100;
   }
   if(heros["rinne"].skillBusable==1&&heros["rinne"].usable>=1){
   
@@ -2215,7 +2215,7 @@ function heroSkillStatus(){
    
    rinneSkill2status=20+(4*(heros["rinne"].level-1));
    var elem = document.getElementById("rinneSkill2status");
-   elem.innerHTML = rinneSkill2status;
+   elem.innerHTML = Math.round(100*rinneSkill2status)/100;
   }
   if(heros["nanigashi"].skillBusable==1&&heros["nanigashi"].usable>=1){
   
@@ -2223,7 +2223,7 @@ function heroSkillStatus(){
    
    nanigashiSkill2status=15+(3*(heros["nanigashi"].level-1));
    var elem = document.getElementById("nanigashiSkill2status");
-   elem.innerHTML = nanigashiSkill2status;
+   elem.innerHTML = Math.round(100*nanigashiSkill2status)/100;
   }
   if(heros["alice"].skillBusable==1&&heros["alice"].usable>=1){
   
@@ -2231,10 +2231,10 @@ function heroSkillStatus(){
    
    aliceheroHP=120+(10*(heros["alice"].level-1));
    var elem = document.getElementById("aliceHP");
-   elem.innerHTML = aliceheroHP;
+   elem.innerHTML = Math.round(100*aliceheroHP)/100;
    aliceAttackStatus=0.8+(0.1*(heros["alice"].level-1));
    var elem = document.getElementById("aliceAttackStatus");
-   elem.innerHTML = aliceAttackStatus;
+   elem.innerHTML = Math.round(100*aliceAttackStatus)/100;
   }
   if(heros["ignis"].skillBusable==1&&heros["ignis"].usable>=1){
   
@@ -2242,7 +2242,7 @@ function heroSkillStatus(){
    
    ignisSkill2status=1.5+(0.3*(heros["ignis"].level-1));
    var elem = document.getElementById("ignisSkill2status");
-   elem.innerHTML = ignisSkill2status;
+   elem.innerHTML = Math.round(100*ignisSkill2status)/100;
   }
   if(heros["GBG"].skillBusable==1&&heros["GBG"].usable>=1){
   
@@ -2250,10 +2250,10 @@ function heroSkillStatus(){
    
    GBGheroHP=80+(10*(heros["GBG"].level-1));
    var elem = document.getElementById("GBGHP");
-   elem.innerHTML = GBGheroHP;
+   elem.innerHTML = Math.round(100*GBGheroHP)/100;
    GBGAttackStatus=1.2+(0.1*(heros["GBG"].level-1));
    var elem = document.getElementById("GBGAttackStatus");
-   elem.innerHTML = GBGAttackStatus;
+   elem.innerHTML = Math.round(100*GBGAttackStatus)/100;
   }
   if(heros["al"].skillBusable==1&&heros["al"].usable>=1){
   
@@ -2265,7 +2265,7 @@ function heroSkillStatus(){
    
    dragonSkill2status=5+(1*(heros["dragon"].level-1));
    var elem = document.getElementById("dragonSkill2status");
-   elem.innerHTML = dragonSkill2status;
+   elem.innerHTML = Math.round(100*dragonSkill2status)/100;
   }
   if(heros["coclico"].skillBusable==1&&heros["coclico"].usable>=1){
   
@@ -2274,7 +2274,7 @@ function heroSkillStatus(){
    coclicoSkill2status=0.5+(0.05*(heros["coclico"].level-1));
    if(coclicoSkill2status>1){coclicoSkill2status=1;}
    var elem = document.getElementById("coclicoSkill2status");
-   elem.innerHTML = 1-coclicoSkill2status;
+   elem.innerHTML = Math.round(100*(1-coclicoSkill2status))/100;
   }
   if(heros["pierre"].skillBusable==1&&heros["pierre"].usable>=1){
   
@@ -2282,7 +2282,7 @@ function heroSkillStatus(){
    
    pierreSkill2status=2.5+(0.5*(heros["pierre"].level-1));
    var elem = document.getElementById("pierreSkill2status");
-   elem.innerHTML = pierreSkill2status;
+   elem.innerHTML = Math.round(100*pierreSkill2status)/100;
   }
   if(heros["adam"].skillBusable==1&&heros["adam"].usable==1){
   
@@ -2294,10 +2294,10 @@ function heroSkillStatus(){
    
    tadaomiSkill2status=1.2+(0.24*(heros["tadaomi"].level-1));
    var elem = document.getElementById("tadaomiSkill2status");
-   elem.innerHTML = tadaomiSkill2status;
+   elem.innerHTML = Math.round(100*tadaomiSkill2status)/100;
    tadaomiHealSkill2status=10+(2*(heros["tadaomi"].level-1));
    var elem = document.getElementById("tadaomiHealSkill2status");
-   elem.innerHTML = tadaomiHealSkill2status;
+   elem.innerHTML = Math.round(100*tadaomiHealSkill2status)/100;
   }
   if(heros["lyrica"].skillBusable==1&&heros["lyrica"].usable>=1){
   
@@ -2305,10 +2305,10 @@ function heroSkillStatus(){
    
    lyricaheroHP=100+(10*(heros["lyrica"].level-1));
    var elem = document.getElementById("lyricaHP");
-   elem.innerHTML = lyricaheroHP;
+   elem.innerHTML = Math.round(100*lyricaheroHP)/100;
    lyricaAttackStatus=1+(0.1*(heros["lyrica"].level-1));
    var elem = document.getElementById("lyricaAttackStatus");
-   elem.innerHTML = lyricaAttackStatus;
+   elem.innerHTML = Math.round(100*lyricaAttackStatus)/100;
   }
   if(heros["voidoll"].skillBusable==1){
   
@@ -2321,15 +2321,15 @@ function heroSkillStatus(){
    
    matoiSkill2status=1.5+(0.3*(heros["matoi"].level-1));
    var elem = document.getElementById("matoiSkill2status");
-   elem.innerHTML = matoiSkill2status;
+   elem.innerHTML = Math.round(100*matoiSkill2status)/100;
   }
   if(heros["lovey"].skillBusable==1&&heros["lovey"].usable>=1){
   
-   addHero("lovey","attacker",heros["lovey"].skillB,"威力:<font id='loveySkill2status'></font>　硬直:0.8s　射程:2");
+   addHero("lovey","attacker",heros["lovey"].skillB,"威力:<font id='loveySkill3status'></font>　硬直:0.8s　射程:2");
    
-   loveySkill2status=25+(5*(heros["lovey"].level-1));
-   var elem = document.getElementById("loveySkill2status");
-   elem.innerHTML = loveySkill2status;
+   loveySkill3status=25+(5*(heros["lovey"].level-1));
+   var elem = document.getElementById("loveySkill3status");
+   elem.innerHTML = Math.round(100*loveySkill3status)/100;
   }
   if(heros["marcos"].skillBusable==1){
   
@@ -2337,10 +2337,10 @@ function heroSkillStatus(){
    
    marcosheroHP=80+(10*(heros["marcos"].level-1));
    var elem = document.getElementById("marcosHP");
-   elem.innerHTML = marcosheroHP;
+   elem.innerHTML = Math.round(100*marcosheroHP)/100;
    marcosAttackStatus=0.8+(0.1*(heros["marcos"].level-1));
    var elem = document.getElementById("marcosAttackStatus");
-   elem.innerHTML = marcosAttackStatus;
+   elem.innerHTML = Math.round(100*marcosAttackStatus)/100;
   }
   if(heros["gustaf"].skillBusable==1&&heros["gustaf"].usable>=1){
   
@@ -2348,7 +2348,7 @@ function heroSkillStatus(){
    
    gustafSkill2status=150+(30*(heros["gustaf"].level-1));
    var elem = document.getElementById("gustafSkill2status");
-   elem.innerHTML = gustafSkill2status;
+   elem.innerHTML = Math.round(100*gustafSkill2status)/100;
   }
   if(heros["maria"].skillBusable==1&&heros["maria"].usable>=1){
   
@@ -2356,7 +2356,7 @@ function heroSkillStatus(){
    
    mariaSkill2status=120+(24*(heros["maria"].level-1));
    var elem = document.getElementById("mariaSkill2status");
-   elem.innerHTML = mariaSkill2status;
+   elem.innerHTML = Math.round(100*mariaSkill2status)/100;
   }
   if(heros["stellea"].skillBusable==1&&heros["stellea"].usable>=1){
   
@@ -2364,7 +2364,7 @@ function heroSkillStatus(){
    
    stelleaSkill2status=10+(2*(heros["stellea"].level-1));
    var elem = document.getElementById("stelleaSkill2status");
-   elem.innerHTML = stelleaSkill2status;
+   elem.innerHTML = Math.round(100*stelleaSkill2status)/100;
   }
   if(heros["jeanne"].skillBusable==1){
   
@@ -2372,10 +2372,10 @@ function heroSkillStatus(){
    
    jeanneheroHP=80+(10*(heros["jeanne"].level-1));
    var elem = document.getElementById("jeanneHP");
-   elem.innerHTML = jeanneheroHP;
+   elem.innerHTML = Math.round(100*jeanneheroHP)/100;
    jeanneAttackStatus=0.8+(0.1*(heros["jeanne"].level-1));
    var elem = document.getElementById("jeanneAttackStatus");
-   elem.innerHTML = jeanneAttackStatus;
+   elem.innerHTML = Math.round(100*jeanneAttackStatus)/100;
   }
   if(heros["kirara"].skillBusable==1&&heros["kirara"].usable>=1){
   
@@ -2383,7 +2383,7 @@ function heroSkillStatus(){
    
    kiraraSkill2status=180+(36*(heros["kirara"].level-1));
    var elem = document.getElementById("kiraraSkill2status");
-   elem.innerHTML = kiraraSkill2status;
+   elem.innerHTML = Math.round(100*kiraraSkill2status)/100;
   }
   if(heros["luluca"].skillBusable==1&&heros["luluca"].usable>=1){
   
@@ -2391,7 +2391,7 @@ function heroSkillStatus(){
    
    lulucaSkill2status=30+(6*(heros["luluca"].level-1));
    var elem = document.getElementById("lulucaSkill2status");
-   elem.innerHTML = lulucaSkill2status;
+   elem.innerHTML = Math.round(100*lulucaSkill2status)/100;
   }
   if(heros["thorne"].skillBusable==1&&heros["thorne"].usable>=1){
   
@@ -2399,7 +2399,7 @@ function heroSkillStatus(){
    
    thorneSkill2status=2.5+(0.5*(heros["thorne"].level-1));
    var elem = document.getElementById("thorneSkill2status");
-   elem.innerHTML = thorneSkill2status;
+   elem.innerHTML = Math.round(100*thorneSkill2status)/100;
   }
   if(heros["atari"].skillBusable==1&&heros["atari"].usable>=1){
   
@@ -2407,7 +2407,7 @@ function heroSkillStatus(){
    
    atariSkill2status=2+(0.4*(heros["atari"].level-1));
    var elem = document.getElementById("atariSkill2status");
-   elem.innerHTML = atariSkill2status;
+   elem.innerHTML = Math.round(100*atariSkill2status)/100;
   }
   if(heros["bugdoll"].skillBusable==1&&heros["bugdoll"].usable>=1){
   
@@ -2415,7 +2415,7 @@ function heroSkillStatus(){
    
    bugdollSkill2status=20+(4*(heros["bugdoll"].level-1));
    var elem = document.getElementById("bugdollSkill2status");
-   elem.innerHTML = bugdollSkill2status;
+   elem.innerHTML = Math.round(100*bugdollSkill2status)/100;
   }
   if(heros["layer"].skillBusable==1&&heros["layer"].usable>=1){
   
@@ -2424,7 +2424,7 @@ function heroSkillStatus(){
    layerSkill2status=0.5+(0.05*(heros["layer"].level-1));
    if(layerSkill2status>1){layerSkill2status=1;}
    var elem = document.getElementById("layerSkill2status");
-   elem.innerHTML = 1-layerSkill2status;
+   elem.innerHTML = Math.round(100*(1-layerSkill2status))/100;
   }
   if(heros["megmeg"].skillBusable==1&&heros["megmeg"].usable>=1){
   
@@ -2432,7 +2432,7 @@ function heroSkillStatus(){
    
    megmegSkill2status=30+(6*(heros["megmeg"].level-1));
    var elem = document.getElementById("megmegSkill2status");
-   elem.innerHTML = megmegSkill2status;
+   elem.innerHTML = Math.round(100*megmegSkill2status)/100;
   }
 }
 
@@ -4241,7 +4241,7 @@ function loveySkill2(){
   setTimeout(function(){
    var skillSE = new Audio ("sound/jump02.mp3");
    skillSE.play();
-   heroAttack(loveySkill2status*heroAttackStatus,direction,2);
+   heroAttack(loveySkill3status*heroAttackStatus,direction,2);
    var myh1 = document.getElementById("selectedSp");
    myh1.innerHTML = "<img id=spDef src=item/lovey_skill3.png>";
    setTimeout(function(){
