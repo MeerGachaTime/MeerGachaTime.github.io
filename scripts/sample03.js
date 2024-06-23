@@ -127,14 +127,15 @@ let heros={
    "alice"     :{usable:0,exp:0,level:1,name:"青春アリス"          ,lv1:"不思議のトランプ"    ,lv3:"null"      ,skillBusable:0,skillB:"青春アリス"           ,skillHint:"ヒーロー25体解放"},
    "ignis"     :{usable:0,exp:0,level:1,name:"イグニス"            ,lv1:"ブチ切れたぜ"        ,lv3:"null"      ,skillBusable:0,skillB:"御用だ御用だ"         ,skillHint:"盗難被害に遭う"},
    "rinne"     :{usable:0,exp:0,level:1,name:"糸廻輪廻"            ,lv1:"操糸操術 Ж 八方画策",lv3:"null"      ,skillBusable:0,skillB:"操糸操術 Ж 傀儡機雷" ,skillHint:"傀儡機雷をクラフト"},
-   "bugdoll"   :{usable:0,exp:0,level:1,name:"Bugdoll"             ,lv1:"イレギュラーウィング",lv3:"null"      ,skillBusable:0,skillB:"＃イレギュラー"       ,skillHint:"全ステージクリア"},
+   "bugdoll"   :{usable:0,exp:0,level:1,name:"Bugdoll"             ,lv1:"イレギュラーウィング",lv3:"ura"       ,skillBusable:0,skillB:"＃イレギュラー"       ,skillHint:"全ステージクリア"},
    "stellea"   :{usable:0,exp:0,level:1,name:"ステリア"            ,lv1:"華槍ブリムラ"        ,lv3:"lovey"     ,skillBusable:0,skillB:"ラヴィちゃんスリスリ" ,skillHint:"隠れやすい樽をクラフト"},
    "lovey"     :{usable:0,exp:0,level:1,name:"ラヴィ"              ,lv1:"チャーミング・キス♂",lv3:"null"      ,skillBusable:0,skillB:"眷属ビンタ"           ,skillHint:"200以上のダメージを受けた上でステージクリア"},
    "al"        :{usable:0,exp:0,level:1,name:"アル"                ,lv1:"アル"                ,lv3:"null"      ,skillBusable:0,skillB:"盗賊の鉄則"           ,skillHint:"ヒーロー35体解放"},
    "dragon"    :{usable:0,exp:0,level:1,name:"ぶれいずどらごん"    ,lv1:"天空王の加護"        ,lv3:"null"      ,skillBusable:0,skillB:"ほのおのいき"         ,skillHint:"ヒーロー30体解放"},
    "nanigashi" :{usable:0,exp:0,level:1,name:"某"                  ,lv1:"某"                  ,lv3:"thomas"    ,skillBusable:0,skillB:"おれとくいわざある！" ,skillHint:"オプションでホームカラーをデフォルト以外の色に変更"},
    "cusith"    :{usable:0,exp:0,level:1,name:"クー・シー"          ,lv1:"ワープニャーク"      ,lv3:"null"      ,skillBusable:0,skillB:"シールドニャーク"     ,skillHint:"≡NYARK≡をクラフト"},
-   "amister"   :{usable:0,exp:0,level:1,name:"アミスター"          ,lv1:"紅薔薇の誓い"        ,lv3:"null"      ,skillBusable:0,skillB:"ホランド ロサス"      ,skillHint:"赤枠にマリアを、緑枠にアミスターをセットしてステージクリア"}
+   "amister"   :{usable:0,exp:0,level:1,name:"アミスター"          ,lv1:"紅薔薇の誓い"        ,lv3:"null"      ,skillBusable:0,skillB:"ホランド ロサス"      ,skillHint:"赤枠にマリアを、緑枠にアミスターをセットしてステージクリア"},
+   "ura"       :{usable:0,exp:0,level:1,name:"鬼ヶ式うら"          ,lv1:"¦¦¦神力扇子¦¦¦烏天狗",lv3:"null"      ,skillBusable:0,skillB:"霊符旋風"             ,skillHint:"黄枠に甘色を、緑枠にうらをセットしてステージクリア"}
   };
 
 let items={
@@ -860,12 +861,12 @@ function toHome(){
   else if(noficeRandom==3){
    var lostItem="justice";
   }
-  items[lostItem].num=items[lostItem].num-1;
-  f_popUpN("nofice","何者かに"+items[lostItem].name+"を盗まれた！");
   if(heros["ignis"].skillBusable==0){
    f_popUpN("ignis","イグニスのスキルが解放されました。<br>※イグニスが解放されていないと使えません");
    heros["ignis"].skillBusable=1;
   }
+  items[lostItem].num=items[lostItem].num-1;
+  f_popUpN("nofice","何者かに"+items[lostItem].name+"を盗まれた！");
  }
  tankKeep=0;
  atariBuffEffect.style.opacity=0;
@@ -2244,6 +2245,14 @@ function heroSkillStatus(){
    var elem = document.getElementById("ignisSkill2status");
    elem.innerHTML = Math.round(100*ignisSkill2status)/100;
   }
+  if(heros["ura"].usable>=1){
+  
+   addHero("ura","tank","¦¦¦神力扇子¦¦¦烏天狗","攻撃力を8秒間<font id='uraSkill1status'></font>倍");
+   
+   uraSkill1status=1.5+(0.3*(heros["ura"].level-1));
+   var elem = document.getElementById("uraSkill1status");
+   elem.innerHTML = Math.round(100*uraSkill1status)/100;
+  }
   if(heros["GBG"].skillBusable==1&&heros["GBG"].usable>=1){
   
    addHero("GBG","sprinter","GBガール","体力:<font id=GBGHP></font>　攻撃倍率:<font id=GBGAttackStatus></font>");
@@ -2287,6 +2296,15 @@ function heroSkillStatus(){
   if(heros["adam"].skillBusable==1&&heros["adam"].usable==1){
   
    addHero("adam","tank",heros["adam"].skillB,"15秒間持続回復");
+  }
+  
+  if(heros["ura"].skillBusable==1&&heros["ura"].usable==1){
+  
+   addHero("ura","attacker",heros["ura"].skillB,"威力:<font id='uraSkill2status'></font>　硬直:1.2s　射程:3");
+   
+   uraSkill2status=20+(4*(heros["ura"].level-1));
+   var elem = document.getElementById("uraSkill2status");
+   elem.innerHTML = Math.round(100*uraSkill2status)/100;
   }
   if(heros["tadaomi"].skillBusable==1&&heros["tadaomi"].usable>=1){
   
@@ -3366,6 +3384,9 @@ function attackerSkill(){
   else if(atSet=="pierre"){
    pierreSkill2();
   }
+  else if(atSet=="ura"){
+   uraSkill2();
+  }
   else if(atSet=="lovey"){
    loveySkill2();
   }
@@ -3492,6 +3513,9 @@ function tankSkill(){
   }
   else if(taSet=="thomas"){
    thomasSkill1();
+  }
+  else if(taSet=="ura"){
+   uraSkill1();
   }
   else if(taSet=="amister"){
    amisterSkill1();
@@ -5131,6 +5155,38 @@ function marcosSkill1(){
  }
 }
 
+function uraSkill1(){
+ if(SkillCheck==0){
+  if(tankKeep==0){
+   tankKeep=1;
+   SkillCheck=1;
+   var skillSE = new Audio ("sound/powerup01.mp3");
+   skillSE.play();
+   var myh1 = document.getElementById("selectedSp");
+   myh1.innerHTML = "<img id=spDef src=item/ura.png>";
+   var marcosBuff = document.getElementById("attackBuffEffect");
+   marcosBuff.innerHTML = "<img  src=item/強化エフェクト.png>";
+   setTimeout(function(){
+    var myh1 = document.getElementById("selectedSp");
+    myh1.innerHTML = "<img id=spDef src=item/ura.png>";
+    skillOut();
+    SkillCheck=0;
+    attackBuff=attackBuff+(uraSkill1status-1);
+    setTimeout(function(){
+     attackBuff=attackBuff-(uraSkill1status-1);
+     var marcosBuff = document.getElementById("attackBuffEffect");
+     marcosBuff.innerHTML = " ";
+     tankKeep=0;
+    },8000);
+   },2000); 
+  }
+  else{
+   skillOut();
+   SkillCheck=0;
+  }
+ }
+}
+
 function amairoSkill1(){
  if(SkillCheck==0){
   SkillCheck=1;
@@ -5733,6 +5789,36 @@ function coclicoSkill2(){
    skillOut();
    SkillCheck=0;
   }
+ }
+}
+
+function uraSkill2(){
+ if(SkillCheck==0){
+  SkillCheck=1;
+  tankKeep=1;
+   var myh1 = document.getElementById("selectedSp");
+   myh1.innerHTML = " ";
+   var myh1 = document.getElementById("gustafSkillBulletBase");
+   myh1.innerHTML = "<img id=gustafSkillBullet src=item/ura_skill1.png>";
+  setTimeout(function(){
+   var skillSE = new Audio ("sound/jump02.mp3");
+   skillSE.play();
+   heroAttack(uraSkill2status*heroAttackStatus,direction,3);
+   heroAttack(uraSkill2status*heroAttackStatus,-direction,3);
+   setTimeout(function(){
+    var gustafHeal = document.getElementById("healBuffEffect");
+    gustafHeal.innerHTML = " ";
+   var myh1 = document.getElementById("gustafSkillBulletBase");
+   myh1.innerHTML = "<img id=gustafSkillBullet src=item/ura_skill2.png>";
+   },200);
+   setTimeout(function(){
+    var myh1 = document.getElementById("gustafSkillBulletBase");
+    myh1.innerHTML = " ";
+    tankKeep=0;
+    skillOut();
+    SkillCheck=0;
+   },700);
+  },500);
  }
 }
 
@@ -7032,6 +7118,10 @@ function toClearResult(){
    if(atSet=="maria"&&taSet=="amister"&&heros["amister"].skillBusable==0){
      f_popUpN("amister","特定の条件を満たしたため<br>以下のヒーローのスキルが解放されました。");
      heros["amister"].skillBusable=1;
+    }
+    if(guSet=="amairo"&&taSet=="ura"&&heros["ura"].skillBusable==0){
+     f_popUpN("ura","特定の条件を満たしたため<br>以下のヒーローのスキルが解放されました。");
+     heros["ura"].skillBusable=1;
     }
     if(noMissCheck==1&&spSet=="coclico"&&heros["coclico"].skillBusable==0){
      f_popUpN("coclico","特定の条件を満たしたため<br>以下のヒーローのスキルが解放されました。");
