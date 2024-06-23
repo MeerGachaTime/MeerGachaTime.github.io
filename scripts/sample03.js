@@ -5803,17 +5803,11 @@ function uraSkill2(){
   setTimeout(function(){
    var skillSE = new Audio ("sound/jump02.mp3");
    skillSE.play();
+   var myh1 = document.getElementById("gustafSkillBulletBase");
+   myh1.innerHTML = "<img id=gustafSkillBullet src=item/ura_skill2.png>";
    heroAttack(uraSkill2status*heroAttackStatus,direction,3);
    heroAttack(uraSkill2status*heroAttackStatus,-direction,3);
    setTimeout(function(){
-    var gustafHeal = document.getElementById("healBuffEffect");
-    gustafHeal.innerHTML = " ";
-   var myh1 = document.getElementById("gustafSkillBulletBase");
-   myh1.innerHTML = "<img id=gustafSkillBullet src=item/ura_skill2.png>";
-   },200);
-   setTimeout(function(){
-    var myh1 = document.getElementById("gustafSkillBulletBase");
-    myh1.innerHTML = " ";
     tankKeep=0;
     skillOut();
     SkillCheck=0;
