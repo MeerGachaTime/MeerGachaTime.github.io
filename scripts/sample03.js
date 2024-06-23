@@ -5770,7 +5770,7 @@ function coclicoSkill2(){
    var myh1 = document.getElementById("selectedSp");
    myh1.innerHTML = "<img id=spDef src=item/coclico_skill1.png>";
    var coclicoBuff = document.getElementById("defendBuffEffect");
-   coclicoBuff.innerHTML = "<img  src=item/enderBuff.png>";
+   coclicoBuff.innerHTML = "<img  src=item/	防御エフェクト.png>";
    setTimeout(function(){
     var myh1 = document.getElementById("selectedSp");
     myh1.innerHTML = "<img id=spDef src=item/coclico.png>";
