@@ -43,7 +43,7 @@
        <div id=tutorialNextButton onclick=f_tutorial("10")></div>
        <div id=tutorialToHomeButton onclick=f_tutorial("12")></div>
        <div id=tutorialFinish><div class=buttonA><div class=buttonB>チュートリアルを終わる</div></div></div>
-       <div id=tutorialFinishButton onclick=tutorialScreen.style.zIndex=-60;allClear=1;selectSE.play();></div>
+       <div id=tutorialFinishButton onclick=tutorialScreen.style.zIndex=-60;allClear=1;selectSE.play();localSave();></div>
         <div id="tutorialYes">
          <div class="buttonA">
           <div class="buttonB">はい</div>
@@ -55,7 +55,7 @@
           <div class="buttonB">いいえ</div>
          </div>
         </div>
-        <div id="tutorialNoButton" onclick=tutorialScreen.style.zIndex=-60;allClear=1;backSE.play();></div>
+        <div id="tutorialNoButton" onclick=tutorialScreen.style.zIndex=-60;allClear=1;localSave();backSE.play();></div>
       </div>
 
       <div id="homeScreen">

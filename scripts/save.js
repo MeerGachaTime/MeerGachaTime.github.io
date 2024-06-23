@@ -10,6 +10,7 @@ function localSave(){
   localStorage.setItem(elem+"Made"   , items[elem].made);
   localStorage.setItem(elem+"Recipe"   , items[elem].recipe);
  }
+ localStorage.setItem("allClear"   , allClear);
 }
 
 function localLoad(){console.log(localStorage.getItem("localColor"));
@@ -26,4 +27,5 @@ function localLoad(){console.log(localStorage.getItem("localColor"));
   items[elem].made=localStorage.getItem(elem+'Made');
   items[elem].recipe=localStorage.getItem(elem+'Recipe');
  }
+ allClear=localStorage.getItem("allClear");
 }

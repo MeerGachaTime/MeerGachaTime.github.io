@@ -247,6 +247,10 @@ window.addEventListener('load', (event) => {console.log("ver.2");console.log("ke
   if(!localStorage.getItem('atariUsable')){f_wallAcce("logo");}//     保存
 else{localLoad();}
 
+ if(allClear!=0){
+  tutorialScreen.style.zIndex=-60;
+ }
+
 
   // ブラウザのウインドウサイズを取得する
   var windowH = window.innerHeight*0.95;
@@ -962,6 +966,7 @@ function toHome(){
  }
  if(skillN==listHeroN&&allClear<=1){
   allClear=2;
+  localSave();
   f_popUpN("cracker","祝 全スキル解放！！<br>複数種の壁紙が解放されました<br>ホーム→オプションでご確認ください");
  }
 }
