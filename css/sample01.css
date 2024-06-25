@@ -137,12 +137,14 @@
   --heroHintButton:0;
   --heroStatusDetailImg:1;
   --itemStatusDetailImg:1;
+  --itemStatusDetailUseButton:0;
   --itemHintButton:0;
   --craftReturnButton:0;
   --craftCheckYesButton:0;
   --craftCheckNoButton:0;
   --craftErrorOKButton:0;
-  --craftHintButton:0;
+  --craftHint1Button:0;
+  --craftHint2Button:0;
   --itemCraftOKButton:0;
   --shopReturnButton:0;
   --shopCheckYesButton:0;
@@ -1387,7 +1389,7 @@ border-radius:5%;
 
 #itemStatusDetailLv{
 position:absolute;
-top:50%;
+top:46%;
 left:2%;
 width:20%;
 height:10%;
@@ -1400,7 +1402,7 @@ border-radius:5%;
 
 #itemStatusDetailLvN{
 position:absolute;
-top:50%;
+top:46%;
 left:24%;
 width:70%;
 height:10%;
@@ -1413,13 +1415,34 @@ border-radius:5%;
 
 #itemStatusDetailSkill1{
 position:absolute;
-top:65%;
+top:60%;
 left:2%;
 width:94%;
 height:auto;
 font-size:4.5vh;
 text-align: center;
 color: var(--homeColor);
+backGround:#ffffff;
+border-radius:5%;
+}
+
+#itemStatusDetailUse{
+position:absolute;
+bottom:2%;
+left:2%;
+width:94%;
+height:10%;
+backGround:var(--homeColor);
+border-radius:5%;
+}
+
+#itemStatusDetailUseButton{
+position:absolute;
+opacity:var(--itemStatusDetailUseButton);
+bottom:2%;
+left:2%;
+width:94%;
+height:10%;
 backGround:#ffffff;
 border-radius:5%;
 }
@@ -1753,11 +1776,11 @@ width:40%;
 backGround:#ffffff;
 }
 
-#craftHint{
+#craftHint1{
 position:absolute;
-left:25%;
+left:22%;
 top:5%;
-width:23%;
+width:12%;
 height:10%;
 font-size:4.5vh;
 text-align: center;
@@ -1766,12 +1789,36 @@ border-radius:3%;
 backGround:#35ff8a;
 }
 
-#craftHintButton{
+#craftHint1Button{
 position:absolute;
-opacity:var(--craftHintButton);
-left:25%;
+opacity:var(--craftHint1Button);
+left:22%;
 top:5%;
-width:23%;
+width:12%;
+height:10%;
+border-radius:3%;
+backGround:#ffffff;
+}
+
+#craftHint2{
+position:absolute;
+left:36%;
+top:5%;
+width:12%;
+height:10%;
+font-size:4.5vh;
+text-align: center;
+color: var(--homeColor);
+border-radius:3%;
+backGround:#35ff8a;
+}
+
+#craftHint2Button{
+position:absolute;
+opacity:var(--craftHint2Button);
+left:36%;
+top:5%;
+width:12%;
 height:10%;
 border-radius:3%;
 backGround:#ffffff;
@@ -4693,7 +4740,7 @@ animation-fill-mode:forwards;
 }
 
 .cerberusAttackBAni{
-animation: cerberusAttackBAni 4s 0s 1;
+animation: cerberusAttackBAni 2s 0s 1;
 animation-fill-mode:forwards;
 }
 

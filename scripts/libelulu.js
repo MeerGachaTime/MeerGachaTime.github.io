@@ -159,25 +159,25 @@ function libeluluAttack2(){
    var attackPoint1=sidePosi;var ataPoiN1=Number(attackPoint1);
    document.documentElement.style.setProperty('--libeluluAttackEffect2aAni', attackPoint1+"%");
    setTimeout(function(){
-    if(sidePosi==String(ataPoiN1-5)||sidePosi==String(ataPoiN1)||sidePosi==String(ataPoiN1+5)){getDamage(20);}
+    if(sidePosi==String(ataPoiN1-5)||sidePosi==String(ataPoiN1)||sidePosi==String(ataPoiN1+5)){getDamage(15);}
    },250);
   },1500);
    setTimeout(function(){
    granatSE4.currentTime=0;;
    granatSE4.play();
-   var attackPoint2=String(Number(sidePosi)+20);var ataPoiN2=Number(attackPoint2);
+   var attackPoint2=String(Number(sidePosi));var ataPoiN2=Number(attackPoint2);
    document.documentElement.style.setProperty('--libeluluAttackEffect2bAni', attackPoint2+"%");
    setTimeout(function(){
-    if(sidePosi==String(ataPoiN2-5)||sidePosi==String(ataPoiN2)||sidePosi==String(ataPoiN2+5)){getDamage(20);}
+    if(sidePosi==String(ataPoiN2-5)||sidePosi==String(ataPoiN2)||sidePosi==String(ataPoiN2+5)){getDamage(15);}
    },250);
   },1750);
     setTimeout(function(){
    granatSE4.currentTime=0;;
    granatSE4.play();
-   var attackPoint3=String(Number(sidePosi)-20);var ataPoiN3=Number(attackPoint3);
+   var attackPoint3=String(Number(sidePosi));var ataPoiN3=Number(attackPoint3);
    document.documentElement.style.setProperty('--libeluluAttackEffect2cAni', attackPoint3+"%");
    setTimeout(function(){
-    if(sidePosi==String(ataPoiN3-5)||sidePosi==String(ataPoiN3)||sidePosi==String(ataPoiN3+5)){getDamage(20);}
+    if(sidePosi==String(ataPoiN3-5)||sidePosi==String(ataPoiN3)||sidePosi==String(ataPoiN3+5)){getDamage(15);}
    },250);
   },2000);
   setTimeout(function(){
@@ -186,25 +186,25 @@ function libeluluAttack2(){
    var attackPoint4=sidePosi;var ataPoiN4=Number(attackPoint4);
    document.documentElement.style.setProperty('--libeluluAttackEffect2dAni', attackPoint4+"%");
    setTimeout(function(){
-    if(sidePosi==String(ataPoiN4-5)||sidePosi==String(ataPoiN4)||sidePosi==String(ataPoiN4+5)){getDamage(20);}
+    if(sidePosi==String(ataPoiN4-5)||sidePosi==String(ataPoiN4)||sidePosi==String(ataPoiN4+5)){getDamage(15);}
    },250);
   },2250);
   setTimeout(function(){
    granatSE4.currentTime=0;;
    granatSE4.play();
-   var attackPoint5=String(Number(sidePosi)-20);var ataPoiN5=Number(attackPoint5);
+   var attackPoint5=String(Number(sidePosi));var ataPoiN5=Number(attackPoint5);
    document.documentElement.style.setProperty('--libeluluAttackEffect2eAni', attackPoint5+"%");
    setTimeout(function(){
-    if(sidePosi==String(ataPoiN5-5)||sidePosi==String(ataPoiN5)||sidePosi==String(ataPoiN5+5)){getDamage(20);}
+    if(sidePosi==String(ataPoiN5-5)||sidePosi==String(ataPoiN5)||sidePosi==String(ataPoiN5+5)){getDamage(15);}
    },250);
   },2500);
   setTimeout(function(){
    granatSE4.currentTime=0;;
    granatSE4.play();
-   var attackPoint6=String(Number(sidePosi)+20);var ataPoiN6=Number(attackPoint6);
+   var attackPoint6=String(Number(sidePosi));var ataPoiN6=Number(attackPoint6);
    document.documentElement.style.setProperty('--libeluluAttackEffect2fAni', attackPoint6+"%");
    setTimeout(function(){
-    if(sidePosi==String(ataPoiN6-5)||sidePosi==String(ataPoiN6)||sidePosi==String(ataPoiN6+5)){getDamage(20);}
+    if(sidePosi==String(ataPoiN6-5)||sidePosi==String(ataPoiN6)||sidePosi==String(ataPoiN6+5)){getDamage(15);}
    },250);
   },2500);
   setTimeout(function(){

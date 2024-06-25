@@ -15,12 +15,11 @@ cerberusSpan3=0;
 cerberusSpan4=0;
 
 function cerberusAct(){
- if(cerberusSpan>=4){
+ if(cerberusSpan>=3){
   cerberusSpan=0;
   cerberusSpan1=0;
   cerberusSpan2=0;
   cerberusSpan3=0;
-  cerberusSpan4=0;
  }
  cerberusAct2=1;
  if(sidePosi==0||sidePosi==30||sidePosi==60||sidePosi==90){console.log("cerberusSpan"+cerberusSpan);
@@ -35,13 +34,13 @@ function cerberusAct(){
    cerberusSpan=cerberusSpan+1;
   }
   else if(!cerberusSpan3){
-   cerberusAttack3();
+   if(sidePosi==0||sidePosi==10||sidePosi==20||sidePosi==30||sidePosi==40||sidePosi==50||sidePosi==60||sidePosi==70||sidePosi==80||sidePosi==90){
+    cerberusAttack3();
+   }
+   else{
+    cerberusAttack4();
+   }
    cerberusSpan3=1;
-   cerberusSpan=cerberusSpan+1;
-  }
-  else if(!cerberusSpan4){
-   cerberusAttack4();
-   cerberusSpan4=1;
    cerberusSpan=cerberusSpan+1;
   }
  }
@@ -57,19 +56,24 @@ function cerberusAct(){
    cerberusSpan=cerberusSpan+1;
   }
   else if(!cerberusSpan3){
-   cerberusAttack3();
+   if(sidePosi==0||sidePosi==10||sidePosi==20||sidePosi==30||sidePosi==40||sidePosi==50||sidePosi==60||sidePosi==70||sidePosi==80||sidePosi==90){
+    cerberusAttack3();
+   }
+   else{
+    cerberusAttack4();
+   }
    cerberusSpan3=1;
-   cerberusSpan=cerberusSpan+1;
-  }
-  else if(!cerberusSpan4){
-   cerberusAttack4();
-   cerberusSpan4=1;
    cerberusSpan=cerberusSpan+1;
   }
  }
  else if(sidePosi==5||sidePosi==20||sidePosi==70||sidePosi==85){
   if(!cerberusSpan3){
-   cerberusAttack3();
+   if(sidePosi==0||sidePosi==10||sidePosi==20||sidePosi==30||sidePosi==40||sidePosi==50||sidePosi==60||sidePosi==70||sidePosi==80||sidePosi==90){
+    cerberusAttack3();
+   }
+   else{
+    cerberusAttack4();
+   }
    cerberusSpan3=1;
    cerberusSpan=cerberusSpan+1;
   }
@@ -83,25 +87,20 @@ function cerberusAct(){
    cerberusSpan1=1;
    cerberusSpan=cerberusSpan+1;
   }
-  else if(!cerberusSpan4){
-   cerberusAttack4();
-   cerberusSpan4=1;
-   cerberusSpan=cerberusSpan+1;
-  }
 }
  else{
-  if(!cerberusSpan4){
-   cerberusAttack4();
-   cerberusSpan4=1;
-   cerberusSpan=cerberusSpan+1;
-  }
-  else if(!cerberusSpan2){
+  if(!cerberusSpan2){
    cerberusAttack2();
    cerberusSpan2=1;
    cerberusSpan=cerberusSpan+1;
   }
   else if(!cerberusSpan3){
-   cerberusAttack3();
+   if(sidePosi==0||sidePosi==10||sidePosi==20||sidePosi==30||sidePosi==40||sidePosi==50||sidePosi==60||sidePosi==70||sidePosi==80||sidePosi==90){
+    cerberusAttack3();
+   }
+   else{
+    cerberusAttack4();
+   }
    cerberusSpan3=1;
    cerberusSpan=cerberusSpan+1;
   }
@@ -127,8 +126,8 @@ function cerberusAttack1(){
    cerberusSE1.currentTime=0;
    cerAt1b.classList.remove("cerberusAttackBAni");
    cerberusAct2=0;
-  },2000);
- },2000);
+  },1000);
+ },1000);
 }
 
 function cerberusAttack2(){
@@ -231,7 +230,7 @@ function cerberusAttack3(){
         cerAt3e.classList.remove('cerberusAttackEAni');
         if(15<=Number(sidePosi)&&25>=Number(sidePosi)){getDamage(20);}
        },1000);
-      },2000);
+      },1500);
       setTimeout(function(){
        cerberusSE2.currentTime=0;
        cerberusSE2.play();
@@ -242,7 +241,7 @@ function cerberusAttack3(){
         cerAt3f.classList.remove('cerberusAttackEAni');
         if(30<=Number(sidePosi)&&40>=Number(sidePosi)){getDamage(20);}
        },1000);
-      },3000);
+      },2000);
       setTimeout(function(){
        cerberusSE2.currentTime=0;
        cerberusSE2.play();
@@ -253,7 +252,7 @@ function cerberusAttack3(){
         cerAt3g.classList.remove('cerberusAttackEAni');
         if(50<=Number(sidePosi)&&60>=Number(sidePosi)){getDamage(20);}
        },1000);
-      },4000);
+      },2500);
       setTimeout(function(){
        cerberusSE2.currentTime=0;
        cerberusSE2.play();
@@ -264,7 +263,7 @@ function cerberusAttack3(){
         cerAt3h.classList.remove('cerberusAttackEAni');
         if(65<=Number(sidePosi)&&75>=Number(sidePosi)){getDamage(20);}
        },1000);
-      },5000);
+      },3000);
       setTimeout(function(){
        cerberusSE2.currentTime=0;
        cerberusSE2.play();
@@ -275,15 +274,15 @@ function cerberusAttack3(){
         cerAt3i.classList.remove('cerberusAttackEAni');
         if(80<=Number(sidePosi)&&90>=Number(sidePosi)){getDamage(20);}
        },1000);
-      },6000);
+      },3500);
       
       setTimeout(function(){
        cerberusAct2=0;
-      },7000);
-     },1000);
+      },4000);
+     },500);
    },500);
-  },1000);
- },1500);
+  },500);
+ },500);
 }
 
 function cerberusAttack4(){
@@ -329,7 +328,7 @@ function cerberusAttack4(){
         cerAt3d.classList.remove('cerberusAttackEAni');
         if(0<=Number(sidePosi)&&10>=Number(sidePosi)){getDamage(20);}
        },1000);
-      },6000);
+      },3500);
       setTimeout(function(){
        cerberusSE2.currentTime=0;
        cerberusSE2.play();
@@ -340,7 +339,7 @@ function cerberusAttack4(){
         cerAt3e.classList.remove('cerberusAttackEAni');
         if(15<=Number(sidePosi)&&25>=Number(sidePosi)){getDamage(20);}
        },1000);
-      },5000);
+      },3000);
       setTimeout(function(){
        cerberusSE2.currentTime=0;
        cerberusSE2.play();
@@ -351,7 +350,7 @@ function cerberusAttack4(){
         cerAt3f.classList.remove('cerberusAttackEAni');
         if(30<=Number(sidePosi)&&40>=Number(sidePosi)){getDamage(20);}
        },1000);
-      },4000);
+      },2500);
       setTimeout(function(){
        cerberusSE2.currentTime=0;
        cerberusSE2.play();
@@ -362,7 +361,7 @@ function cerberusAttack4(){
         cerAt3g.classList.remove('cerberusAttackEAni');
         if(50<=Number(sidePosi)&&60>=Number(sidePosi)){getDamage(20);}
        },1000);
-      },3000);
+      },2000);
       setTimeout(function(){
        cerberusSE2.currentTime=0;
        cerberusSE2.play();
@@ -373,7 +372,7 @@ function cerberusAttack4(){
         cerAt3h.classList.remove('cerberusAttackEAni');
         if(65<=Number(sidePosi)&&75>=Number(sidePosi)){getDamage(20);}
        },1000);
-      },2000);
+      },1500);
       setTimeout(function(){
        cerberusSE2.currentTime=0;
        cerberusSE2.play();
@@ -388,9 +387,9 @@ function cerberusAttack4(){
       
       setTimeout(function(){
        cerberusAct2=0;
-      },7000);
-     },1000);
+      },4000);
+     },500);
    },500);
-  },1000);
- },1500);
+  },500);
+ },500);
 }

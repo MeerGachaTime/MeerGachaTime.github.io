@@ -11,6 +11,7 @@ function heimdallrBattleStart(){
  document.documentElement.style.setProperty('--heimdallrLeft', "60%");
  document.documentElement.style.setProperty('--heimdallrDirection', "1");
  heiPosi=60;
+ heimdallrStartMove=1;
 }
 
 heimdallrSpan=0;
@@ -18,63 +19,70 @@ heimdallrSpan1=0;
 heimdallrSpan2=0;
 heimdallrSpan3=0;
 
-function heimdallrAct(){console.log("heimdallrSpan"+heimdallrSpan);console.log("enemyBack"+enemyBack);
- if(heimdallrSpan>=3){
-  heimdallrSpan=0;
-  heimdallrSpan1=0;
-  heimdallrSpan2=0;
-  heimdallrSpan3=0;
- }
- heimdallrAct2=1;
- if(sidePosi==0||sidePosi==30||sidePosi==60||sidePosi==90){
-  if(!heimdallrSpan1){
-   heimdallrAttack1();
-   heimdallrSpan1=1;
-   heimdallrSpan=heimdallrSpan+1;
-  }
-  else if(!heimdallrSpan2){
-   heimdallrAttack2();
-   heimdallrSpan2=1;
-   heimdallrSpan=heimdallrSpan+1;
-  }
-  else if(!heimdallrSpan3){
-   heimdallrAttack3();
-   heimdallrSpan3=1;
-   heimdallrSpan=heimdallrSpan+1;
-  }
- }
- else if(sidePosi==15||sidePosi==45||sidePosi==75){
-  if(!heimdallrSpan2){
-   heimdallrAttack2();
-   heimdallrSpan2=1;
-   heimdallrSpan=heimdallrSpan+1;
-  }
-  else if(!heimdallrSpan1){
-   heimdallrAttack1();
-   heimdallrSpan1=1;
-   heimdallrSpan=heimdallrSpan+1;
-  }
-  else if(!heimdallrSpan3){
-   heimdallrAttack3();
-   heimdallrSpan3=1;
-   heimdallrSpan=heimdallrSpan+1;
-  }
+function heimdallrAct(){
+ if(heimdallrStartMove==1){
+  heimdallrAct2=1;
+  heimdallrAttack3();
+  heimdallrStartMove=0;
  }
  else{
-  if(!heimdallrSpan3){
-   heimdallrAttack3();
-   heimdallrSpan3=1;
-   heimdallrSpan=heimdallrSpan+1;
+  if(heimdallrSpan>=3){
+   heimdallrSpan=0;
+   heimdallrSpan1=0;
+   heimdallrSpan2=0;
+   heimdallrSpan3=0;
   }
-  else if(!heimdallrSpan2){
-   heimdallrAttack2();
-   heimdallrSpan2=1;
-   heimdallrSpan=heimdallrSpan+1;
+  heimdallrAct2=1;
+  if(sidePosi==0||sidePosi==30||sidePosi==60||sidePosi==90){
+   if(!heimdallrSpan1){
+    heimdallrAttack1();
+    heimdallrSpan1=1;
+    heimdallrSpan=heimdallrSpan+1;
+   }
+   else if(!heimdallrSpan2){
+    heimdallrAttack2();
+    heimdallrSpan2=1;
+    heimdallrSpan=heimdallrSpan+1;
+   }
+   else if(!heimdallrSpan3){
+    heimdallrAttack3();
+    heimdallrSpan3=1;
+    heimdallrSpan=heimdallrSpan+1;
+   }
   }
-  else if(!heimdallrSpan1){
-   heimdallrAttack1();
-   heimdallrSpan1=1;
-   heimdallrSpan=heimdallrSpan+1;
+  else if(sidePosi==15||sidePosi==45||sidePosi==75){
+   if(!heimdallrSpan2){
+    heimdallrAttack2();
+    heimdallrSpan2=1;
+    heimdallrSpan=heimdallrSpan+1;
+   }
+   else if(!heimdallrSpan1){
+    heimdallrAttack1();
+    heimdallrSpan1=1;
+    heimdallrSpan=heimdallrSpan+1;
+   }
+   else if(!heimdallrSpan3){
+    heimdallrAttack3();
+    heimdallrSpan3=1;
+    heimdallrSpan=heimdallrSpan+1;
+   }
+  }
+  else{
+   if(!heimdallrSpan3){
+    heimdallrAttack3();
+    heimdallrSpan3=1;
+    heimdallrSpan=heimdallrSpan+1;
+   }
+   else if(!heimdallrSpan2){
+    heimdallrAttack2();
+    heimdallrSpan2=1;
+    heimdallrSpan=heimdallrSpan+1;
+   }
+   else if(!heimdallrSpan1){
+    heimdallrAttack1();
+    heimdallrSpan1=1;
+    heimdallrSpan=heimdallrSpan+1;
+   }
   }
  }
 }

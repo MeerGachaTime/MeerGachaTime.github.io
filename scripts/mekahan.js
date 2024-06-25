@@ -1,4 +1,10 @@
 function mekahanBattleStart(){
+ mekahanSpan=0;
+ mekahanSpan1=0;
+ mekahanSpan2=0;
+ mekahanSpan3=0;
+ mekahanRandom=Math.floor( Math.random() * 5);
+ mekahanAct2=0;
  enemyBack=1;
  enemyFront=[];
  enemyHP=300*stageLevel;
@@ -15,45 +21,110 @@ function mekahanBattleStart(){
 }
 
 function mekahanAct(){
- mekahanAct2=1;
- if(sidePosiN<=15){
-  if(mekahanSpan1==0){
-  mekahanAttack1();
+ if(mekahanAct2==0){
+  mekahanAct2=1;
+  if(mekahanSpan>=3){
+   mekahanSpan=0;
+   mekahanSpan1=0;
+   mekahanSpan2=0;
+   mekahanSpan3=0;
+  }
+  if(sidePosi==0||sidePosi==20||sidePosi==40||sidePosi==60||sidePosi==80){
+   if(mekahanSpan1==0){
+    mekahanSpan++;
+    if(Number(sidePosi<45)){
+     mekahanAttack1();
+    }
+    else{
+     mekahanAttack2();
+    }
+   }
+   else if(mekahanSpan2==0){
+    mekahanSpan++;
+    if(Number(sidePosi<45)){
+     mekahanAttack3();
+    }
+    else{
+     mekahanAttack4();
+    }
+   }
+   else{
+    mekahanSpan++;
+    mekahanAttack5();
+   }
+  }
+  else if(sidePosi==5||sidePosi==25||sidePosi==45||sidePosi==65||sidePosi==85){
+   if(mekahanSpan3==0){
+    mekahanSpan++;
+    mekahanAttack5();
+   }
+   else if(mekahanSpan2==0){
+    mekahanSpan++;
+    if(Number(sidePosi<45)){
+     mekahanAttack3();
+    }
+    else{
+     mekahanAttack4();
+    }
+   }
+   else{
+    mekahanSpan++;
+    if(Number(sidePosi<45)){
+     mekahanAttack1();
+    }
+    else{
+     mekahanAttack2();
+    }
+   }
+  }
+  else if(sidePosi==10||sidePosi==30||sidePosi==50||sidePosi==70||sidePosi==90){
+   if(mekahanSpan2==0){
+    mekahanSpan++;
+    if(Number(sidePosi<45)){
+     mekahanAttack3();
+    }
+    else{
+     mekahanAttack4();
+    }
+   }
+   else if(mekahanSpan1==0){
+    mekahanSpan++;
+    if(Number(sidePosi<45)){
+     mekahanAttack1();
+    }
+    else{
+     mekahanAttack2();
+    }
+   }
+   else{
+    mekahanSpan++;
+    mekahanAttack5();
+   }
   }
   else{
-  mekahanSpan1=0;
-  mekahanAttack3();
+   if(mekahanSpan2==0){
+    mekahanSpan++;
+    if(Number(sidePosi<45)){
+     mekahanAttack3();
+    }
+    else{
+     mekahanAttack4();
+    }
+   }
+   else if(mekahanSpan3==0){
+    mekahanSpan++;
+    mekahanAttack5();
+   }
+   else{
+    mekahanSpan++;
+    if(Number(sidePosi<45)){
+     mekahanAttack1();
+    }
+    else{
+     mekahanAttack2();
+    }
+   }
   }
- }
- else if(sidePosiN>=75){//振り降ろし
-  if(mekahanSpan2==0){
-  mekahanAttack2();
-  }
-  else{
-  mekahanSpan2=0;
-  mekahanAttack4();
-  }
- }
- else if(sidePosiN>=25&&sidePosiN<=40){
-  if(mekahanSpan3==0){
-  mekahanAttack3();
-  }
-  else{
-  mekahanSpan3=0;
-  mekahanAttack1();
-  }
- }
- else if(sidePosiN<=65&&sidePosiN>=50){//ボディプレス
-  if(mekahanSpan4==0){
-  mekahanAttack4();
-  }
-  else{
-  mekahanSpan4=0;
-  mekahanAttack2();
-  }
- }
- else{
-  mekahanAttack5();//ミニメカ
  }
 }
 
@@ -94,7 +165,7 @@ function mekahanAttack1(){
 }
 
 function mekahanAttack2(){
-  mekahanSpan2=1;
+  mekahanSpan1=1;
   const mekaAt2a = document.getElementById("mekahanBody");
   mekaAt2a.classList.add('mekahanAttack2');
   const mekaAt2b = document.getElementById("mekahanHand");
@@ -130,7 +201,7 @@ function mekahanAttack2(){
 }
 
 function mekahanAttack3(){
-  mekahanSpan3=1;
+  mekahanSpan2=1;
   const mekaAt3a = document.getElementById("mekahanSet");
   mekaAt3a.classList.add('mekahanAttack3');
   const mekaAt3b = document.getElementById("mekahanJet");
@@ -187,7 +258,6 @@ function mekahanAttack3(){
         document.getElementById("mekahanJet").classList.remove("mekahanAttackJet");
         const root4 = document.querySelector(':root');
         root4.style.setProperty("--mekahanOpacity4", "0");
-        mekahanSpan1=0;
        },2000);
       },2000);
      },2000);
@@ -200,7 +270,7 @@ function mekahanAttack3(){
 
 
 function mekahanAttack4(){
-  mekahanSpan4=1;
+  mekahanSpan2=1;
   const mekaAt3a = document.getElementById("mekahanSet");
   mekaAt3a.classList.add('mekahanAttack3');
   const mekaAt3b = document.getElementById("mekahanJet");
@@ -256,7 +326,6 @@ function mekahanAttack4(){
         document.getElementById("mekahanJet").classList.remove("mekahanAttackJet");
         const root4 = document.querySelector(':root');
         root4.style.setProperty("--mekahanOpacity4", "0");
-        mekahanSpan2=0;
        },2000);
       },2000);
      },2000);
@@ -265,14 +334,13 @@ function mekahanAttack4(){
 }
 
 function mekahanAttack5(){
- if(!mekahanSpan5){
   miniMekahanLife1=1;
   miniMekahanLife2=1;
   miniMekaPosi1=20;
   miniMekaPosi2=70;
   miniMekaCount=190;
 
-  mekahanSpan5=1;console.log(mekahanSpan5);
+  mekahanSpan3=1;
   const mekaAt5a = document.getElementById("mekahanHole1");
   mekaAt5a.classList.add('mekahanAttack5');
   const mekaAt5b = document.getElementById("mekahanHole2");
@@ -306,7 +374,6 @@ function mekahanAttack5(){
      mekaAt5f.classList.add('mekahanAttack7');
      const mekaAt5g = document.getElementById("miniMekahanB2");
      mekaAt5g.classList.add('mekahanAttack7');
-     mekahanSpan5=0;
      setTimeout(function(){
       document.documentElement.style.setProperty('--miniMekahanField', "0");
       document.getElementById("miniMekahanB1").classList.remove("mekahanAttack7");
@@ -316,13 +383,6 @@ function mekahanAttack5(){
     },1000);
    },2000);
   },3000);
- }
- else if(sidePosi<=40){
-  mekahanAttack1();
- }
- else{
-  mekahanAttack2();
- }
 }
 
 function miniMekahan(){

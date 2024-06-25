@@ -235,7 +235,7 @@ function ankokuAttack6(){
     ankokuEffect.style.opacity=0;
     ankokuHeal.style.opacity=0.5;
     setTimeout(function(){
-     enemyHP=enemyHP+(stageLevel*40);
+     enemyHP=enemyHP+(stageLevel*20);
      enemyHPchangeHeal=enemyHP*46.5/defaultEnemyHP;
      enemyHPchangeHeal=String(enemyHPchangeHeal);
      const rootEnemyHPHeal = document.querySelector(':root');

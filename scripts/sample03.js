@@ -1104,12 +1104,18 @@ function nextLevelCheck(checkHero){
 }
 
 function itemDetailCheck(checkItem){
- var myh = document.getElementById("itemStatusDetail");
- myh.innerHTML = "<img src=item/"+items[checkItem].name+".png id=itemStatusDetailImg onclick=useItemCheck('"+checkItem+"');><div id=itemStatusDetailName>"+items[checkItem].name+"</div><div id=itemStatusDetailLv>所持数</div><div id=itemStatusDetailLvN>"+items[checkItem].num+"</div><div id=itemStatusDetailSkill1>"+items[checkItem].sentence+"</div>";
- var tag="itemStatusDetailImg";
- var dv=document.getElementById(tag);
- dv.addEventListener('pointerover',f_chgOpacity2(tag,1),false);
- dv.addEventListener('pointerout' ,f_chgOpacity2(tag,0),false);
+ if(checkItem=="silverData"||checkItem=="goldData"||checkItem=="platinumData"||checkItem=="energy1000"||checkItem=="energy4000"||checkItem=="energy100000"||checkItem=="cube3"||checkItem=="cube4"||checkItem=="cube5"||checkItem=="littleLack"||checkItem=="middleLack"||checkItem=="bigLack"){
+  var myh = document.getElementById("itemStatusDetail");
+  myh.innerHTML = "<img src=item/"+items[checkItem].name+".png id=itemStatusDetailImg><div id=itemStatusDetailName>"+items[checkItem].name+"</div><div id=itemStatusDetailLv>所持数</div><div id=itemStatusDetailLvN>"+items[checkItem].num+"</div><div id=itemStatusDetailSkill1>"+items[checkItem].sentence+"</div><div id=itemStatusDetailUse><div class=buttonA><div class=buttonB>使う</div></div></div><div id=itemStatusDetailUseButton onclick=useItemCheck('"+checkItem+"');></div>";
+  var tag="itemStatusDetailUseButton";
+  var dv=document.getElementById(tag);
+  dv.addEventListener('pointerover',f_chgOpacity1(tag,1),false);
+  dv.addEventListener('pointerout' ,f_chgOpacity1(tag,0),false);
+ }
+ else{
+  var myh = document.getElementById("itemStatusDetail");
+  myh.innerHTML = "<img src=item/"+items[checkItem].name+".png id=itemStatusDetailImg><div id=itemStatusDetailName>"+items[checkItem].name+"</div><div id=itemStatusDetailLv>所持数</div><div id=itemStatusDetailLvN>"+items[checkItem].num+"</div><div id=itemStatusDetailSkill1>"+items[checkItem].sentence+"</div>";
+ }
 }
 
 function useItemCheck(checkItem){
@@ -2701,13 +2707,13 @@ var info=[
   ['herotReturnButton'         ,f_chgOpacity1],
   ['heroLiberateOKButton'      ,f_chgOpacity1],
   ['itemReturnButton'          ,f_chgOpacity1],
-  ['itemHintButton'            ,f_chgOpacity1],
   ['heroHintButton'            ,f_chgOpacity1],
   ['craftReturnButton'         ,f_chgOpacity1],
   ['craftCheckYesButton'       ,f_chgOpacity1],
   ['craftCheckNoButton'        ,f_chgOpacity1],
   ['craftErrorOKButton'        ,f_chgOpacity1],
-  ['craftHintButton'           ,f_chgOpacity1],
+  ['craftHint1Button'           ,f_chgOpacity1],
+  ['craftHint2Button'           ,f_chgOpacity1],
   ['itemCraftOKButton'         ,f_chgOpacity1],
   ['shopReturnButton'          ,f_chgOpacity1],
   ['shopCheckYesButton'        ,f_chgOpacity1],
@@ -6347,7 +6353,18 @@ function gameOver(){
  phase=0;
  skillOut();
  if(items["bravery"].num>=1&&items["aloneness"].num>=1&&items["love"].num>=1&&items["justice"].num>=1){
-  nofice=1;
+  if(heros["ignis"].skillBusable<1){
+   nofice=1
+  }
+  else{
+   var noficeLack=Math.floor( Math.random() * 10);
+   if(noficeLack==1){
+    nofice=1;
+   }
+   else{
+    nofice=0;
+   }
+  }
  }
  setTimeout(function(){
   document.documentElement.style.setProperty('--whiteOut', "1");
@@ -7464,8 +7481,8 @@ function experienceResultFunction(roleExperienceResult,heroName){
   break;
  }
   myhExperience.innerHTML=
-  "<img class=experienceResult1 src=item/"+heroName+".png><div class=experienceResult2>Level<font id="+heroName+"ResultExperience></font></div>";  
-  var elem = document.getElementById(heroName+"ResultExperience");
+  "<img class=experienceResult1 src=item/"+heroName+".png><div class=experienceResult2>Level<font id="+heroName+roleExperienceResult+"ResultExperience></font></div>";  
+  var elem = document.getElementById(heroName+roleExperienceResult+"ResultExperience");
   elem.innerHTML = heros[heroName].level;
 }
 
@@ -7549,7 +7566,7 @@ function f_leila(){
   f_popUpN("thomas","トマスのスキルが解放されました。<br>※トマスが解放されていないと使えません");
   heros["thomas"].skillBusable=1;
  }
- f_popUpN("leila","お忍び中のレイラ嬢を見つけた<br>500BM獲得");
+ f_popUpN("leila","お忍び中のレイラ嬢を見つけた<br>口止め料の500BM獲得");
  leila.style.zIndex=-60;
  items["BM"].num=items["BM"].num+500;
 }

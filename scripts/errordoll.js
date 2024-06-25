@@ -6,6 +6,7 @@ function errordollBattleStart(){
  errordollAct1=1;
  enemyBack=0;
  enemyFront=[];
+ errordollStartMove=1;
 }
 
 errordollSpan=0;
@@ -15,62 +16,69 @@ errordollSpan3=0;
 errordollSpan4=0;
 
 function errordollAct(){
- if(errordollSpan>=3){
-  errordollSpan=0;
-  errordollSpan1=0;
-  errordollSpan2=0;
-  errordollSpan3=0;
- }
- errordollAct2=1;
- if(sidePosi==0||sidePosi==30||sidePosi==60||sidePosi==90){console.log("errordollSpan"+errordollSpan);
-  if(!errordollSpan1){
-   errordollAttack1();
-   errordollSpan1=1;
-   errordollSpan=errordollSpan+1;
-  }
-  else if(!errordollSpan2){
-   errordollAttack2();
-   errordollSpan2=1;
-   errordollSpan=errordollSpan+1;
-  }
-  else if(!errordollSpan3){
-   errordollAttack3();
-   errordollSpan3=1;
-   errordollSpan=errordollSpan+1;
-  }
- }
- else if(sidePosi==15||sidePosi==45||sidePosi==75){
-  if(!errordollSpan2){
-   errordollAttack2();
-   errordollSpan2=1;
-   errordollSpan=errordollSpan+1;
-  }
-  else if(!errordollSpan1){
-   errordollAttack1();
-   errordollSpan1=1;
-   errordollSpan=errordollSpan+1;
-  }
-  else if(!errordollSpan3){
-   errordollAttack3();
-   errordollSpan3=1;
-   errordollSpan=errordollSpan+1;
-  }
+if(errordollStartMove==1){
+  errordollAct2=1;
+  errordollAttack3();
+  errordollStartMove=0;
  }
  else{
-  if(!errordollSpan3){
-   errordollAttack3();
-   errordollSpan3=1;
-   errordollSpan=errordollSpan+1;
+  if(errordollSpan>=3){
+   errordollSpan=0;
+   errordollSpan1=0;
+   errordollSpan2=0;
+   errordollSpan3=0;
   }
-  else if(!errordollSpan2){
-   errordollAttack2();
-   errordollSpan2=1;
-   errordollSpan=errordollSpan+1;
+  errordollAct2=1;
+  if(sidePosi==0||sidePosi==30||sidePosi==60||sidePosi==90){console.log("errordollSpan"+errordollSpan);
+   if(!errordollSpan1){
+    errordollAttack1();
+    errordollSpan1=1;
+    errordollSpan=errordollSpan+1;
+   }
+   else if(!errordollSpan2){
+    errordollAttack2();
+    errordollSpan2=1;
+    errordollSpan=errordollSpan+1;
+   }
+   else if(!errordollSpan3){
+    errordollAttack3();
+    errordollSpan3=1;
+    errordollSpan=errordollSpan+1;
+   }
   }
-  else if(!errordollSpan1){
-   errordollAttack1();
-   errordollSpan1=1;
-   errordollSpan=errordollSpan+1;
+  else if(sidePosi==15||sidePosi==45||sidePosi==75){
+   if(!errordollSpan2){
+    errordollAttack2();
+    errordollSpan2=1;
+    errordollSpan=errordollSpan+1;
+   }
+   else if(!errordollSpan1){
+    errordollAttack1();
+    errordollSpan1=1;
+    errordollSpan=errordollSpan+1;
+   }
+   else if(!errordollSpan3){
+    errordollAttack3();
+    errordollSpan3=1;
+    errordollSpan=errordollSpan+1;
+   }
+  }
+  else{
+   if(!errordollSpan3){
+    errordollAttack3();
+    errordollSpan3=1;
+    errordollSpan=errordollSpan+1;
+   }
+   else if(!errordollSpan2){
+    errordollAttack2();
+    errordollSpan2=1;
+    errordollSpan=errordollSpan+1;
+   }
+   else if(!errordollSpan1){
+    errordollAttack1();
+    errordollSpan1=1;
+    errordollSpan=errordollSpan+1;
+   }
   }
  }
 }
