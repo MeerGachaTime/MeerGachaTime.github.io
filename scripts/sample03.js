@@ -1104,7 +1104,7 @@ function nextLevelCheck(checkHero){
 }
 
 function itemDetailCheck(checkItem){
- if(checkItem=="silverData"||checkItem=="goldData"||checkItem=="platinumData"||checkItem=="energy1000"||checkItem=="energy4000"||checkItem=="energy100000"||checkItem=="cube3"||checkItem=="cube4"||checkItem=="cube5"||checkItem=="littleLack"||checkItem=="middleLack"||checkItem=="bigLack"){
+ if(checkItem=="doughnut"||checkItem=="silverData"||checkItem=="goldData"||checkItem=="platinumData"||checkItem=="energy1000"||checkItem=="energy4000"||checkItem=="energy100000"||checkItem=="cube3"||checkItem=="cube4"||checkItem=="cube5"||checkItem=="littleLack"||checkItem=="middleLack"||checkItem=="bigLack"){
   var myh = document.getElementById("itemStatusDetail");
   myh.innerHTML = "<img src=item/"+items[checkItem].name+".png id=itemStatusDetailImg><div id=itemStatusDetailName>"+items[checkItem].name+"</div><div id=itemStatusDetailLv>所持数</div><div id=itemStatusDetailLvN>"+items[checkItem].num+"</div><div id=itemStatusDetailSkill1>"+items[checkItem].sentence+"</div><div id=itemStatusDetailUse><div class=buttonA><div class=buttonB>使う</div></div></div><div id=itemStatusDetailUseButton onclick=useItemCheck('"+checkItem+"');></div>";
   var tag="itemStatusDetailUseButton";
@@ -1119,7 +1119,6 @@ function itemDetailCheck(checkItem){
 }
 
 function useItemCheck(checkItem){
- if(checkItem=="doughnut"||checkItem=="silverData"||checkItem=="goldData"||checkItem=="platinumData"||checkItem=="energy1000"||checkItem=="energy4000"||checkItem=="energy100000"||checkItem=="cube3"||checkItem=="cube4"||checkItem=="cube5"||checkItem=="littleLack"||checkItem=="middleLack"||checkItem=="bigLack"){
  selectSE.play();
  var myh = document.getElementById("useItemCheck");
  myh.innerHTML ="<div class=BlackBack></div><div id=useItemCheckBase><div class=buttonA><div class=buttonB>"+items[checkItem].name+"を使用しますか？<br>※使用したアイテムは消費されます</div><div id=useCheckItemYes><div class=buttonA><div class=buttonB>はい</div></div></div><div id=useCheckItemNo><div class=buttonA><div class=buttonB>いいえ</div></div></div><div id=useCheckItemYesButton onclick=f_useItem(1,'"+checkItem+"');></div><div id=useCheckItemNoButton onclick=f_useItem(0,'"+checkItem+"');></div></div></div><style>#useItemCheck{position:absolute;width:100%;height:100%;}#useItemCheckBase{position:absolute;top:20%;left:10%;width:80%;height:60%;border-radius:10%;backGround:var(--homeColor);}#useCheckItemYes{position:absolute;top:60%;left:20%;width:20%;height:15%;border-radius:10%;backGround:var(--homeColor);}#useCheckItemYesButton{position:absolute;opacity:var(--useCheckItemYesButton);top:60%;left:20%;width:20%;height:15%;border-radius:10%;backGround:#ffffff;}#useCheckItemNo{position:absolute;top:60%;right:20%;width:20%;height:15%;border-radius:10%;backGround:var(--homeColor);}#useCheckItemNoButton{position:absolute;opacity:var(--useCheckItemNoButton);top:60%;right:20%;width:20%;height:15%;border-radius:10%;backGround:#ffffff;}</style>";
@@ -1133,10 +1132,6 @@ function useItemCheck(checkItem){
  var dv=document.getElementById(tag);
  dv.addEventListener('pointerover',f_chgOpacity1(tag,1),false);
  dv.addEventListener('pointerout' ,f_chgOpacity1(tag,0),false);
- }
- else{
-  backSE.play();
- }
 }
 
 function f_useItem(YesNo,checkItem){
