@@ -5033,7 +5033,7 @@ function megmegSkill2(){
     var myh1 = document.getElementById("selectedSp");
     myh1.innerHTML = "<img id=spDef src=item/megmeg_skill2.png>";
     setTimeout(function(){
-     heroShooting(megmegSkill1status*heroAttackStatus,500);
+     heroShooting(megmegSkill2status*heroAttackStatus,500);
      setTimeout(function(){
       skillOut();
       SkillCheck=0;
