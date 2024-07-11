@@ -7525,6 +7525,8 @@ function f_popUpN(imgName,sentence){
  popUpNCheck++;
  popUpScreenN.style.zIndex=40;
  
+ localSave();
+ 
  let nodeheroLiberateImgBase=document.createElement('div');
  nodeheroLiberateImgBase.setAttribute('id',imgName+"popUpScreen");
  var parentDiv = document.getElementById("popUpScreenN");
