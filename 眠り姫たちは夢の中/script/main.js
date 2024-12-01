@@ -2144,10 +2144,10 @@ window.addEventListener('load', (event) => {
  if(windowWc<windowW){f_popUpN("null","画面の横幅が足りません<br>PCであればウィンドウ幅を伸ばしてください。<br>スマホは横持ちにしてください。");}
  
  
- if(localStorage.getItem('restPosi1Local')==5){
+ if(restPosi[0]==8&&restPosi[1]==5){
   f_firstCheck(0);
  }//     保存
- else{console.log(localStorage.getItem('restPosi1Local'));localLoad();}
+ else{localLoad();}
  
 });
 
