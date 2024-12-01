@@ -2177,8 +2177,8 @@ function f_firstCheck(number){
   document.documentElement.style.setProperty('--checkScreen', "100%");
   var myh = document.getElementById("checkScreen");
   myh.innerHTML = " ";
-  setTimeout(function(){blackoutScreen.style.opacity=0.6;BGM1.pause();},500);
-  setTimeout(function(){blackoutScreen.style.opacity=0.3;BGM1.pause();},1000);
+  setTimeout(function(){blackoutScreen.style.opacity=0.6;},500);
+  setTimeout(function(){blackoutScreen.style.opacity=0.3;},1000);
   setTimeout(function(){
    blackoutScreen.style.opacity=0;
    document.documentElement.style.setProperty('--blackout', "0%");
