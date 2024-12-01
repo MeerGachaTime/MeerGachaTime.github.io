@@ -2218,6 +2218,11 @@ function f_firstCheck(number){
    BGM1.volume=0.6;
   },1500);
   setTimeout(function(){
+   BGM1.play();
+   BGM2.play();
+   BGM3.play();
+   BGM4.play();
+   BGM5.play();
    enterKeySentence="end";
    f_speech("marcosTutorial1");
   },2500);

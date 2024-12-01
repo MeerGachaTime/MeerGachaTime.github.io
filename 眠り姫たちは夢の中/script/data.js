@@ -93,6 +93,11 @@ function localLoad(){
    heros[selectHero].attack=20;
   break;
  }
+ BGM1.play();
+ BGM2.play();
+ BGM3.play();
+ BGM4.play();
+ BGM5.play();
  heroPosi=[restPosi[0],restPosi[1]];console.log("restPosi:"+restPosi+",heroPosi:"+heroPosi)
  selectStage=restPosi[2];console.log(restPosi);
  f_stageChange();
