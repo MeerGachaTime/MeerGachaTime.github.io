@@ -2107,7 +2107,7 @@ window.addEventListener('load', (event) => {
  if(windowWc<windowW){f_popUpN("null","画面の横幅が足りません<br>PCであればウィンドウ幅を伸ばしてください。<br>スマホは横持ちにしてください。");}
  
  
- if(restPosi[0]==8&&restPosi[1]==5){
+ if(localStorage.getItem('restPosi1Local')===null){
   f_firstCheck(0);
  }//     保存
  else{localLoad();}
@@ -2177,8 +2177,8 @@ function f_firstCheck(number){
   document.documentElement.style.setProperty('--checkScreen', "100%");
   var myh = document.getElementById("checkScreen");
   myh.innerHTML = " ";
-  setTimeout(function(){blackoutScreen.style.opacity=0.6;BGM1.pause().2;},500);
-  setTimeout(function(){blackoutScreen.style.opacity=0.3;BGM1.pause().4;},1000);
+  setTimeout(function(){blackoutScreen.style.opacity=0.6;BGM1.pause();},500);
+  setTimeout(function(){blackoutScreen.style.opacity=0.3;BGM1.pause();},1000);
   setTimeout(function(){
    blackoutScreen.style.opacity=0;
    document.documentElement.style.setProperty('--blackout', "0%");
@@ -2572,10 +2572,10 @@ function makeStage(backArray,gimmickArray,hitArray,frontArray,stageName){
 
 function f_checkPoint(){
  BGM2.play();
- f_BGM();
  restPosi=[heroPosi[0],heroPosi[1],selectStage];
  f_dataReflect();
  phase=2;
+ f_BGM();
  var myh = document.getElementById("checkPoint");
  myh.innerHTML=" ";
  heroActControl=1;
@@ -2754,9 +2754,9 @@ function f_returnAdventure(){
  BGM4.pause();
  BGM5.pause();
  selectSE.play();
+ phase=1;
  BGM2.pause();
  f_BGM();
- phase=1;
  heroActControl=0;
  fallOK=1;
  timeStop=0;
@@ -3058,7 +3058,6 @@ function f_sweet(sweetBlock){
 }
 
 function f_BGM(){
- if(BGM2.volume==0){
   if(selectStage=="coclicoDream3Boss"||selectStage=="coclicoDream11Boss"){
    BGM1.pause();
    BGM3.pause();
@@ -3078,18 +3077,19 @@ function f_BGM(){
    BGM5.pause();
   }
   else{
-   BGM1.play();
-   BGM3.pause();
-   BGM4.pause();
-   BGM5.pause();
+   if(phase==2){
+    BGM1.pause();
+    BGM3.pause();
+    BGM4.pause();
+    BGM5.pause();
+   }
+   else{
+    BGM1.play();
+    BGM3.pause();
+    BGM4.pause();
+    BGM5.pause();
+   }
   }
- }
- else{
-  BGM1.pause();
-  BGM3.pause();
-  BGM4.pause();
-  BGM5.pause();
- }
 }
 
 const log = function(){
@@ -3675,16 +3675,16 @@ function f_speech(sentence){
    setTimeout(function(){f_whiteScreen(0);},3500*skipTime);
   }
   if(sentence=="LBend9"){
-   dreamSE = new Audio('sound/silent_ending.mp3');dreamSE.pause();dreamSE.currentTime=0;dreamSE.play();dreamSE.pause().5;
-   setTimeout(function(){f_whiteScreen(0.2);dreamSE.pause().3;},500*skipTime);
-   setTimeout(function(){f_whiteScreen(0.4);dreamSE.pause().1;},1000*skipTime);
+   dreamSE = new Audio('sound/silent_ending.mp3');dreamSE.pause();dreamSE.currentTime=0;dreamSE.play();dreamSE.pause();
+   setTimeout(function(){f_whiteScreen(0.2);dreamSE.pause();},500*skipTime);
+   setTimeout(function(){f_whiteScreen(0.4);dreamSE.pause();},1000*skipTime);
    setTimeout(function(){f_whiteScreen(0.6);dreamSE.pause();dreamSE.currentTime=0;},1500*skipTime);
   }
   if(sentence=="LBend22"){
-   dreamSE = new Audio('sound/silent_ending.mp3');dreamSE.pause();dreamSE.currentTime=0;dreamSE.play();dreamSE.pause().5;
-   setTimeout(function(){f_whiteScreen(0.7);dreamSE.pause().4;},500*skipTime);
-   setTimeout(function(){f_whiteScreen(0.8);dreamSE.pause().3;},1000*skipTime);
-   setTimeout(function(){f_whiteScreen(0.9);dreamSE.pause().2;},1500*skipTime);
+   dreamSE = new Audio('sound/silent_ending.mp3');dreamSE.pause();dreamSE.currentTime=0;dreamSE.play();dreamSE.pause();
+   setTimeout(function(){f_whiteScreen(0.7);dreamSE.pause();},500*skipTime);
+   setTimeout(function(){f_whiteScreen(0.8);dreamSE.pause();},1000*skipTime);
+   setTimeout(function(){f_whiteScreen(0.9);dreamSE.pause();},1500*skipTime);
    setTimeout(function(){f_whiteScreen(1);dreamSE.pause();dreamSE.currentTime=0;},2000*skipTime);
   }
   if(sentence=="LBenc5"){
@@ -4824,8 +4824,8 @@ function f_lastBoss(){
     var myh = document.getElementById("bossName");
     myh.innerHTML = "　ミオソティス？";
     f_whiteScreen(200);
-    setTimeout(function(){f_attack(2,10);BGM3.pause().4;},1000);
-    setTimeout(function(){f_attack(4,12);BGM3.pause().2;},1500);
+    setTimeout(function(){f_attack(2,10);BGM3.pause();},1000);
+    setTimeout(function(){f_attack(4,12);BGM3.pause();},1500);
     setTimeout(function(){f_attack(2,12);BGM3.pause();  },2000);
     setTimeout(function(){f_attack(4,10);},2500);
     setTimeout(function(){
@@ -5732,7 +5732,7 @@ function f_luruca(){
  var lurucaHP=0;
  for(var elem in enemyArray){
   if(enemyArray[elem][4]=="lurucaA"){
-   lurucaSE1 = new Audio('sound/fire2.mp3');lurucaSE1.pause().5;lurucaSE1.pause();lurucaSE1.currentTime=0;lurucaSE1.play();
+   lurucaSE1 = new Audio('sound/fire2.mp3');lurucaSE1.pause();lurucaSE1.pause();lurucaSE1.currentTime=0;lurucaSE1.play();
    if(enemyArray[elem][3]==0){
     var myh = document.getElementById("selectGimmickX"+Math.floor(enemyArray[elem][1])+"Y"+enemyArray[elem][0]);
     myh.innerHTML = "<img src=item/stage/lurucaG.png style=position:absolute;bottom:-100%;right:-100%;height:300%;width:300%;><style>#selectGimmickX"+Math.floor(enemyArray[elem][1])+"Y"+enemyArray[elem][0]+"{position:absolute;top:"+12.5*(enemyArray[elem][0])+"%;left:"+6.9*(enemyArray[elem][1])+"%;height:12.5%;width:6.9%;}</style>";
