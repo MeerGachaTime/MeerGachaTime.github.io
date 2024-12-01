@@ -2070,7 +2070,7 @@ function f_BGMset(){
  }, false);
 }
 
-window.addEventListener('load', (event) => {console.log("ver.19.02");
+window.addEventListener('load', (event) => {console.log("ver.19.28");
  
  f_stageReset();
  phase=1;

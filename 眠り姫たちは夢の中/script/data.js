@@ -321,6 +321,16 @@ event={"damage":{happen:0},
        "freeTalk33":{happen:0},
        "freeTalk34":{happen:0},
       }
+heros={
+       "marcos"      :{usable:0,attack:10 ,costume:"オリジナル",walkNum:2,battleSkillGauge:30},
+       "nikola"      :{usable:0,attack:10 ,costume:"オリジナル",walkNum:2,battleSkillGauge:30},
+       "lyrica"      :{usable:0,attack:10 ,costume:"オリジナル",walkNum:2,battleSkillGauge:30},
+       "alice"       :{usable:0,attack:10 ,costume:"オリジナル",walkNum:2,battleSkillGauge:30},
+       "amairo"      :{usable:0,attack:10 ,costume:"オリジナル",walkNum:2,battleSkillGauge:30},
+       "pierre"      :{usable:0,attack:10 ,costume:"オリジナル",walkNum:2,battleSkillGauge:30},
+       "thirteen"    :{usable:0,attack:10 ,costume:"オリジナル",walkNum:2,battleSkillGauge:30},
+       "coclico"     :{usable:0,attack:10 ,costume:"オリジナル",walkNum:2,battleSkillGauge:30},
+      }
  BGM1.pause();
  BGM2.pause();
  BGM3.pause();
