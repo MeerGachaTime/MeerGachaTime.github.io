@@ -2067,7 +2067,7 @@ function f_BGMset(){
  }, false);
 }
 
-window.addEventListener('load', (event) => {console.log("ver.16.11");
+window.addEventListener('load', (event) => {console.log("ver.17.27");
  
  f_stageReset();
  phase=1;
@@ -3477,7 +3477,7 @@ function f_speech(sentence){
     heroTalk[sentence].speech1="わぁ！"+coclicoItem+"だぁ";
     blocks[selectGimmick[itemPosi[0]][itemPosi[1]]].name=0;
    }
-   myh.innerHTML = "<div id=talkSkip onclick=f_popUpYesNo('null','この会話をスキップしてもよろしいですか？','skipTime=0;f_speech(enterKeySentence);'); class=buttonA style=position:absolute;top:250%;left:50%;height:30%;width:45%;><div class=buttonB>会話をスキップ（Pキー）</div></div><div style=position:absolute;height:100%;width:100%;><img src=item/icon/"+heroTalk[sentence].img+".png style=position:absolute;top:5%;left:5%;height:90%;><font style=position:absolute;top:5%;left:25%;color:#ffffff;font-size:var(--speechFont5);>"+heroTalk[sentence].name+"</font><font style=position:absolute;top:30%;left:25%;color:#ffffff;font-size:var(--speechFont4);>"+heroTalk[sentence].speech1+"</font><font style=position:absolute;top:60%;left:25%;color:#ffffff;font-size:var(--speechFont4);>"+heroTalk[sentence].speech2+"</font><div style=position:absolute;bottom:5%;right:2%;font-size:var(--speechFont3);backGround:#ffffff;>Enterで進む</div></div>";
+   myh.innerHTML = "<div id=talkSkip onclick=f_popUpYesNo('null','この会話をスキップしてもよろしいですか？','skipTime=0;f_speech(enterKeySentence);'); class=buttonA style=position:absolute;top:250%;left:50%;height:30%;width:45%;><div class=buttonB>会話をスキップ（Pキー）</div></div><div style=position:absolute;height:100%;width:100%;><img src=item/icon/"+heroTalk[sentence].img+".png style=position:absolute;top:5%;left:5%;height:90%;backGround:var(--homeColor);border-radius:10%;><font style=position:absolute;top:5%;left:25%;color:#ffffff;font-size:var(--speechFont5);>"+heroTalk[sentence].name+"</font><font style=position:absolute;top:30%;left:25%;color:#ffffff;font-size:var(--speechFont4);>"+heroTalk[sentence].speech1+"</font><font style=position:absolute;top:60%;left:25%;color:#ffffff;font-size:var(--speechFont4);>"+heroTalk[sentence].speech2+"</font><div style=position:absolute;bottom:5%;right:2%;font-size:var(--speechFont3);backGround:#ffffff;>Enterで進む</div></div>";
    f_opacityButton("talkSkip");
    if(sentence=="amairoSweet1"){
     enterKeySentence=selectHero+"Sweet2";
@@ -3714,7 +3714,7 @@ function f_speech(sentence){
    },3000*skipTime);
   }
   if(sentence=="marcosTutorial9"){
-   if(skipTime==1){f_popUpN("null","「ぴんくのきりん」がいるところでは休憩ができます。休憩中は雑談や装備変更、データベースの確認ができます。また休憩するとHPが全快します。本ゲームの進行状況のセーブも休憩したタイミングで行われます。そのためゲーム終了前に「ぴんくのきりん」に寄ることを強く推奨します。");}
+   if(skipTime==1){f_popUpN("null","「ぴんくのきりん」がいるところでは休憩ができます。本ゲームの進行状況のセーブも休憩したタイミングで行われます。そのためゲーム終了前に「ぴんくのきりん」に寄ることを強く推奨します。");}
   }
   if(sentence=="niziiroEnd7"||sentence=="lurucaEnd18"||sentence=="angelEnd9"){
    setTimeout(function(){f_whiteScreen(0.3);},500*skipTime);
