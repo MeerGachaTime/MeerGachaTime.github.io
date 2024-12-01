@@ -2031,6 +2031,15 @@ function f_arrayMake(array){
 
 window.addEventListener('load', (event) => {
  
+ heroPosi=[8,5];//[y,x]...[8,5]
+ restPosi=[8,5,"coclicoDream9"];
+ selectEquipment="なし";
+ selectHero="marcos";
+ selectBack=f_arrayMake(coclicoDream9Back);
+ selectGimmick=f_arrayMake(coclicoDream9Gimmick);
+ selectHit=f_arrayMake(coclicoDream9Hit);
+ selectFront=f_arrayMake(coclicoDream9Front);
+ selectStage="coclicoDream9";
  f_stageReset();
  phase=1;
  level=1;
@@ -2051,15 +2060,6 @@ window.addEventListener('load', (event) => {
  heroAttack1=0;
  stageBaseLeft=0;//stageBaseLeft=-70.5+12.5*heroPosi[1]
  stageBaseTop=-25;//stageBaseTop=57.5-(12.5*heroPosi[0])
- heroPosi=[8,5];//[y,x]...[8,5]
- restPosi=[8,5,"coclicoDream9"];
- selectEquipment="なし";
- selectHero="marcos";
- selectBack=f_arrayMake(coclicoDream9Back);
- selectGimmick=f_arrayMake(coclicoDream9Gimmick);
- selectHit=f_arrayMake(coclicoDream9Hit);
- selectFront=f_arrayMake(coclicoDream9Front);
- selectStage="coclicoDream9";
  playerHP_1=100;
  MaxHP=100;
  playerSkill_1=0;
