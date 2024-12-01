@@ -97,9 +97,6 @@ function localLoad(){
  }
  heroPosi=[restPosi[0],restPosi[1]];console.log("restPosi:"+restPosi+",heroPosi:"+heroPosi)
  selectStage=restPosi[2];console.log(restPosi);
- f_stageChange();
- 
- setTimeout(function(){f_returnAdventure();},1000);
  /*
  document.documentElement.style.setProperty('--homeColor', localStorage.getItem("localColor"));
  
@@ -324,6 +321,11 @@ event={"damage":{happen:0},
        "freeTalk33":{happen:0},
        "freeTalk34":{happen:0},
       }
+ BGM1.pause();
+ BGM2.pause();
+ BGM3.pause();
+ BGM4.pause();
+ BGM5.pause();
  heroPosi=[8,5];//[y,x]...[8,5]
  restPosi=[8,5,"coclicoDream9"];
  selectEquipment="なし";
@@ -333,7 +335,8 @@ event={"damage":{happen:0},
  selectHit=f_arrayMake(coclicoDream9Hit);
  selectFront=f_arrayMake(coclicoDream9Front);
  selectStage="coclicoDream9";
- setTimeout(function(){window.location.reload();},1000);
+ setTimeout(function(){f_stageChange();},200);
+ setTimeout(function(){f_firstCheck(0);},1000);
 }
 
 function f_dataReflect(){

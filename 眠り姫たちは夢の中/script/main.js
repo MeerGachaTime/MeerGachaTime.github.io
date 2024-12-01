@@ -2029,6 +2029,44 @@ function f_arrayMake(array){
  return returnArray;
 }
 
+function f_BGMset(){
+ BGM1 = new Audio('sound/描きおろし/通常戦闘 .mp3');
+ BGM1.play();
+ BGM1.volume=0;
+ BGM1.addEventListener("ended", function () {
+  BGM1.currentTime = 0;
+  BGM1.play();
+ }, false);
+ BGM2 = new Audio('sound/描きおろし/休息 .mp3');
+ BGM2.play();
+ BGM2.volume=0;
+ BGM2.addEventListener("ended", function () {
+  BGM2.currentTime = 0;
+  BGM2.play();
+ }, false);
+ BGM3 = new Audio('sound/描きおろし/ボス .mp3');
+ BGM3.play();
+ BGM3.volume=0;
+ BGM3.addEventListener("ended", function () {
+  BGM3.currentTime = 0;
+  BGM3.play();
+ }, false);
+ BGM4 = new Audio('sound/描きおろし/ボス2 .mp3');
+ BGM4.play();
+ BGM4.volume=0;
+ BGM4.addEventListener("ended", function () {
+  BGM4.currentTime = 0;
+  BGM4.play();
+ }, false);
+ BGM5 = new Audio('sound/描きおろし/ボス3 .mp3');
+ BGM5.play();
+ BGM5.volume=0;
+ BGM5.addEventListener("ended", function () {
+  BGM5.currentTime = 0;
+  BGM5.play();
+ }, false);
+}
+
 window.addEventListener('load', (event) => {console.log("ver.16.11");
  
  f_stageReset();
@@ -2086,41 +2124,6 @@ window.addEventListener('load', (event) => {console.log("ver.16.11");
  lastBossCheck=0;
  f_opacityButton("toNextTalk");
  
- BGM1 = new Audio('sound/描きおろし/通常戦闘 .mp3');
- BGM1.play();
- BGM1.volume=0;
- BGM1.addEventListener("ended", function () {
-  BGM1.currentTime = 0;
-  BGM1.play();
- }, false);
- BGM2 = new Audio('sound/描きおろし/休息 .mp3');
- BGM2.play();
- BGM2.volume=0;
- BGM2.addEventListener("ended", function () {
-  BGM2.currentTime = 0;
-  BGM2.play();
- }, false);
- BGM3 = new Audio('sound/描きおろし/ボス .mp3');
- BGM3.play();
- BGM3.volume=0;
- BGM3.addEventListener("ended", function () {
-  BGM3.currentTime = 0;
-  BGM3.play();
- }, false);
- BGM4 = new Audio('sound/描きおろし/ボス2 .mp3');
- BGM4.play();
- BGM4.volume=0;
- BGM4.addEventListener("ended", function () {
-  BGM4.currentTime = 0;
-  BGM4.play();
- }, false);
- BGM5 = new Audio('sound/描きおろし/ボス3 .mp3');
- BGM5.play();
- BGM5.volume=0;
- BGM5.addEventListener("ended", function () {
-  BGM5.currentTime = 0;
-  BGM5.play();
- }, false);
  
  
  phase=0;
@@ -2144,10 +2147,10 @@ window.addEventListener('load', (event) => {console.log("ver.16.11");
  if(windowWc<windowW){f_popUpN("null","画面の横幅が足りません<br>PCであればウィンドウ幅を伸ばしてください。<br>スマホは横持ちにしてください。");}
  
  
- if(localStorage.getItem('restPosi1Local')==5){
+ if(localStorage.getItem('restPosi1Local')===null){
   f_firstCheck(0);
  }//     保存
- else{console.log(localStorage.getItem('restPosi1Local'));localLoad();}
+ else{console.log(localStorage.getItem('restPosi1Local'));localLoad();f_firstCheck(4);}
  
 });
 
@@ -2203,7 +2206,7 @@ function f_firstCheck(number){
   f_opacityButton("hardButton");
  }
  if(number==3){
-  
+  f_BGMset();
   blackoutScreen.style.opacity=1;
   document.documentElement.style.setProperty('--blackout', "100%");
   document.documentElement.style.setProperty('--checkScreen', "100%");
@@ -2221,6 +2224,25 @@ function f_firstCheck(number){
    enterKeySentence="end";
    f_speech("marcosTutorial1");
   },2500);
+ }
+ else if(number==4){
+  blackoutScreen.style.opacity=1;
+  document.documentElement.style.setProperty('--blackout', "100%");
+  document.documentElement.style.setProperty('--checkScreen', "100%");
+  var myh = document.getElementById("checkScreen");
+  myh.innerHTML = "<div style=position:absolute;top:20%;left:20%;height:60%;width:60%;text-align:center;color:#ffffff;backGround:var(--homeColor);border-radius:10%;font-size:var(--speechFont5);><br>前回のセーブ地点から再開します<div id=pcButton onclick=selectSE.play();f_firstCheck(5); style=position:absolute;top:60%;left:35%;height:30%;width:30%; class=buttonA><div class=buttonB>OK</div></div></div>";
+  f_opacityButton("pcButton");
+ }
+ if(number==5){
+  f_BGMset();
+  f_stageChange();
+  setTimeout(function(){f_returnAdventure();},1000);
+  blackoutScreen.style.opacity=0;
+  document.documentElement.style.setProperty('--blackout', "100%");
+  document.documentElement.style.setProperty('--checkScreen', "100%");
+  var myh = document.getElementById("checkScreen");
+  myh.innerHTML = " ";
+  enterKeySentence="end";
  }
 }
 
