@@ -2790,11 +2790,16 @@ function f_equipmentChange(){
 }
 
 function f_returnAdventure(){
-   BGM1 = new Audio('sound/描きおろし/通常戦闘 .mp3');
-   BGM2 = new Audio('sound/描きおろし/休息 .mp3');
-   BGM3 = new Audio('sound/描きおろし/ボス .mp3');
-   BGM4 = new Audio('sound/描きおろし/ボス2 .mp3');
-   BGM5 = new Audio('sound/描きおろし/ボス3 .mp3');
+ BGM1 = new Audio('sound/描きおろし/通常戦闘 .mp3');
+ BGM2 = new Audio('sound/描きおろし/休息 .mp3');
+ BGM3 = new Audio('sound/描きおろし/ボス .mp3');
+ BGM4 = new Audio('sound/描きおろし/ボス2 .mp3');
+ BGM5 = new Audio('sound/描きおろし/ボス3 .mp3');
+ BGM1.volume=0.6;
+ BGM2.volume=0;
+ BGM3.volume=0;
+ BGM4.volume=0;
+ BGM5.volume=0;
  selectSE.play();
  BGM2.volume=0;
  f_BGM();
