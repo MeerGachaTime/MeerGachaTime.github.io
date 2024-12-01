@@ -2029,7 +2029,7 @@ function f_arrayMake(array){
  return returnArray;
 }
 
-window.addEventListener('load', (event) => {
+window.addEventListener('load', (event) => {console.log("ver.16.11");
  
  f_stageReset();
  phase=1;

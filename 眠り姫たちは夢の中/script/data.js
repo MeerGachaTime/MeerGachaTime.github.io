@@ -67,10 +67,12 @@ function localLoad(){
  document.documentElement.style.setProperty('--speechFont4_5', windowH*0.01*fontSize*0.9+"px");console.log(restPosi);
  document.documentElement.style.setProperty('--speechFont5'  , windowH*0.01*fontSize*1.0+"px");console.log(restPosi);
  document.documentElement.style.setProperty('--speechFont6'  , windowH*0.01*fontSize*1.2+"px");console.log(restPosi);
- document.documentElement.style.setProperty('--controllerButton4', Number(windowLN)/2*buttonSize+"px");console.log(restPosi);
- document.documentElement.style.setProperty('--controllerButton4L', -1*windowLN+"px");console.log(restPosi);
- document.documentElement.style.setProperty('--controllerButton5L', -1*Number(windowLN)/2*(2-buttonSize)+"px");console.log(restPosi);
- document.documentElement.style.setProperty('--buttonPosi', windowW-(Number(windowLN)*(buttonSize-1))+"px");console.log(restPosi);
+ document.documentElement.style.setProperty('--controllerButton1', Number(windowLN)*buttonSize+"px");
+ document.documentElement.style.setProperty('--controllerButton4', Number(windowLN)/2*buttonSize+"px");
+ document.documentElement.style.setProperty('--controllerButton4L', -1*windowLN+"px");
+ document.documentElement.style.setProperty('--controllerButton5L', -1*Number(windowLN)/2*(2-buttonSize)+"px");
+ document.documentElement.style.setProperty('--buttonPosi', windowW-(Number(windowLN)*(buttonSize-1))+"px");
+ document.documentElement.style.setProperty('--helpSide', Number(windowLN)*(buttonSize-1)+windowW*0.02+"px");
  switch(selectEquipment){
   case "なし":
    MaxHP=100;
