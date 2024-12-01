@@ -1943,6 +1943,9 @@ function f_map(number){
  if(blocks["itemF"].name=="0"){rateArray[2]++;}
  rateArray[2]=Math.floor(rateArray[2]/2*100);
  
+ if(event["lastBoss"].happen==1){rateArray[3]++;}
+ rateArray[2]=Math.floor(rateArray[3]/1*100);
+ 
  if(blocks["itemB"].name=="0"){rateArray[4]++;}
  if(blocks["sweetC"].name=="0"){rateArray[4]++;}
  if(blocks["nikola"].name=="0"){rateArray[4]++;}
@@ -2067,7 +2070,7 @@ function f_BGMset(){
  }, false);
 }
 
-window.addEventListener('load', (event) => {console.log("ver.18.03");
+window.addEventListener('load', (event) => {console.log("ver.18.27");
  
  f_stageReset();
  phase=1;
