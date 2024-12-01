@@ -1,0 +1,560 @@
+:root{
+ --controllerCursor4:30%;
+ --playerHP_1:0%;
+ --topEdge:0%;
+ --player1Left:41.4%;
+ --player1Top:50%;
+ --player1Width:6.9%;
+ --player1Height:12.5%;
+ --playerLeftIn1:0%;
+ --player1damage:#ff0000;
+ --attackTop:0%;
+ --attackLeft:0%;
+ --field2_1:#000000;
+ --field3_1:#000000;
+ --field4_1:#000000;
+ --speechBase:30vh;
+ --bossHP_1:0%;
+ --lastBossOpacity:0;
+ --whiteScreen:0%;
+ --controllerButton1:40%;
+ --helpSide:2%;
+ --buttonPosi:100%;
+ --speechFont2:2vh;
+ --speechFont3:3vh;
+ --speechFont3_5:3.5vh;
+ --speechFont4:4vh;
+ --speechFont4_5:4.5vh;
+ --speechFont5:5vh;
+ --speechFont6:6vh;
+}
+
+#controllerCursor{
+position:absolute;
+opacity:0.8;
+top:42.5%;
+left:-16.5%;
+height:15%;
+width:16.5%;
+}
+
+#controllerCursor1{
+position:absolute;
+top:0%;
+left:0%;
+height:100%;
+width:50%;
+backGround:#4b4b4b;
+border-radius:50%;
+}
+
+#controllerCursor2{
+position:absolute;
+top:0%;
+right:0%;
+height:100%;
+width:50%;
+backGround:#4b4b4b;
+border-radius:50%;
+}
+
+#controllerCursor3{
+position:absolute;
+top:0%;
+right:25%;
+height:100%;
+width:50%;
+backGround:#4b4b4b;
+}
+
+#controllerCursor4{
+position:absolute;
+top:10%;
+right:var(--controllerCursor4);
+height:80%;
+width:40%;
+backGround:#ffffff;
+border-radius:50%;
+}
+
+.controllerCursorAni1{
+animation: controllerCursorAni1 0.2s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes controllerCursorAni1{
+0%  {right:var(--controllerCursor4);}
+100%{right:5%;}
+}
+
+.controllerCursorAni2{
+animation: controllerCursorAni2 0.2s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes controllerCursorAni2{
+0%  {right:var(--controllerCursor4);}
+100%{right:30%;}
+}
+
+
+.controllerCursorAni3{
+animation: controllerCursorAni3 0.2s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes controllerCursorAni3{
+0%  {right:var(--controllerCursor4);}
+100%{right:55%;}
+}
+
+.controllerButton1_2{
+position:absolute;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+backGround:#4b4b4b;
+}
+
+#controllerButton1_1{
+z-index:2;
+position:absolute;
+opacity:0.8;
+top:0%;
+left:var(--buttonPosi);
+height:33%;
+width:var(--controllerButton1);
+}
+
+#controllerButton1_3{
+position:absolute;
+top:5%;
+left:5%;
+height:90%;
+width:90%;
+backGround:#ffffff;
+}
+
+#controllerButton2_1{
+z-index:2;
+position:absolute;
+opacity:0.8;
+top:33%;
+left:var(--buttonPosi);
+height:34%;
+width:var(--controllerButton1);
+}
+
+#controllerButton2_3{
+position:absolute;
+top:5%;
+left:5%;
+height:90%;
+width:90%;
+backGround:#ffffff;
+}
+
+#controllerButton3_1{
+z-index:2;
+position:absolute;
+opacity:0.8;
+top:67%;
+left:var(--buttonPosi);
+height:33%;
+width:var(--controllerButton1);
+}
+
+#controllerButton3_3{
+position:absolute;
+top:5%;
+left:5%;
+height:90%;
+width:90%;
+backGround:#ffffff;
+}
+
+#controllerButton4_1{
+z-index:2;
+position:absolute;
+opacity:0.8;
+top:0%;
+left:var(--controllerButton4L);
+height:100%;
+width:var(--controllerButton4);
+}
+
+#controllerButton4_3{
+position:absolute;
+top:5%;
+left:5%;
+height:90%;
+width:90%;
+backGround:#ffffff;
+}
+
+#controllerButton5_1{
+z-index:2;
+position:absolute;
+opacity:0.8;
+top:0%;
+left:var(--controllerButton5L);
+height:100%;
+width:var(--controllerButton4);
+}
+
+#controllerButton5_3{
+position:absolute;
+top:5%;
+left:5%;
+height:90%;
+width:90%;
+backGround:#ffffff;
+}
+
+#topEdge{
+position:absolute;
+top:0%;
+left:0%;
+height:12.5%;
+width:var(--topEdge);
+}
+
+#bottomEdge{
+position:absolute;
+top:var(--bottomEdge);
+left:0%;
+height:12.5%;
+width:var(--topEdge);
+transform:scale(1,-1);
+}
+
+#leftEdge{
+position:absolute;
+top:0%;
+left:0%;
+height:var(--leftEdge);
+width:6.9%;
+}
+
+#rightEdge{
+position:absolute;
+top:0%;
+left:var(--rightEdge);
+height:var(--leftEdge);
+width:6.9%;
+transform:scale(-1,1);
+}
+
+#gameView{
+position:absolute;
+height:100%;
+width:100%;
+}
+
+#player1Base{
+position:absolute;
+transform: scale(var(--direction), 1);
+top:var(--player1Top);
+left:var(--player1Left);
+width:var(--player1Width);
+height:var(--player1Height);
+}
+
+#secretAreaBase{
+position:absolute;
+opacity:0;
+transform: scale(var(--direction), 1);
+top:var(--player1Top);
+left:var(--player1Left);
+width:var(--player1Width);
+height:var(--player1Height);
+}
+
+#secretArea{
+position:absolute;
+top:0%;
+left:var(--playerLeftIn1);
+bottom:0%;
+height:100%;
+width:100%;
+border-radius:100%;
+backGround:#000000;
+}
+
+#heroEffect{
+position:absolute;
+transform: scale(var(--direction), 1);
+top:var(--player1Top);
+left:var(--player1Left);
+width:6.9%;
+height:12.5%;
+}
+
+#player1damage{
+position:absolute;
+opacity:0;
+transform: scale(var(--direction), 1);
+top:var(--player1Top);
+left:var(--player1Left);
+width:6.9%;
+height:12.5%;
+backGround:var(--player1damage);
+}
+
+#player1{
+position:absolute;
+top:0%;
+left:var(--playerLeftIn1);
+bottom:0%;
+width:100%;
+}
+
+#playerHP1_1{
+position:absolute;
+opacity:0.8;
+bottom:5%;
+left:5%;
+width:30%;
+height:6%;
+font-size:var(--speechFont4_5);
+color:#ffffff;
+backGround:#4b4b4b;
+}
+
+.playerHP2_1{
+position:absolute;
+top:10%;
+left:20%;
+height:80%;
+width:75%;
+backGround:#000000;
+}
+
+#playerHP3_1{
+position:absolute;
+top:0%;
+left:0%;
+height:100%;
+width:var(--playerHP_1);
+backGround:#00ff5e;
+}
+
+#bossHP1_1{
+position:absolute;
+opacity:0.8;
+top:10%;
+right:2%;
+width:90%;
+height:var(--bossHPheight);
+font-size:var(--speechFont4_5);
+color:#ffffff;
+backGround:#4b4b4b;
+}
+
+#bossHP2_1{
+position:absolute;
+top:10%;
+right:2%;
+height:80%;
+width:70%;
+backGround:#000000;
+}
+
+#bossHP3_1{
+position:absolute;
+top:0%;
+left:0%;
+height:100%;
+width:var(--bossHP_1);
+backGround:#ed3342;
+}
+
+#playerSkill1_1{
+position:absolute;
+opacity:0.8;
+bottom:5%;
+left:5%;
+width:20%;
+height:4%;
+font-size:var(--speechFont3);
+color:#ffffff;
+backGround:#4b4b4b;
+}
+
+.playerSkill2_1{
+position:absolute;
+top:10%;
+left:20%;
+height:80%;
+width:75%;
+backGround:#000000;
+}
+
+#playerSkill3_1{
+position:absolute;
+opacity:0.5;
+top:0%;
+left:0%;
+height:100%;
+width:var(--playerSkill_1);
+backGround:#00d9ff;
+}
+
+#stageBase{
+position:absolute;
+top:var(--stageBaseTop);
+left:var(--stageBaseLeft);
+height:100%;
+width:100%;
+}
+
+#stageBaseMark{
+position:absolute;
+top:var(--stageBaseTop);
+left:var(--stageBaseLeft);
+height:100%;
+width:100%;
+}
+
+.stage{
+position:absolute;
+top:var(--stageBaseTop);
+left:var(--stageBaseLeft);
+height:100%;
+width:100%;
+}
+
+#attackSuccess{
+position:absolute;
+opacity:0;
+top:var(--attackTop);
+left:var(--attackLeft);
+height:25%;
+width:13.8%;
+backGround:#ffffff;
+}
+
+#field1_1{
+position:absolute;
+opacity:0;
+top:var(--player1Top);
+left:var(--player1Left);
+width:6.9%;
+height:12.5%;
+}
+
+#field2_1{
+position:absolute;
+top:-33%;
+left:0%;
+width:30%;
+height:30%;
+border-radius:50%;
+backGround:var(--field2_1);
+}
+
+#field3_1{
+position:absolute;
+top:-33%;
+left:33%;
+width:30%;
+height:30%;
+border-radius:50%;
+backGround:var(--field3_1);
+}
+
+#field4_1{
+position:absolute;
+top:-33%;
+left:66%;
+width:30%;
+height:30%;
+border-radius:50%;
+backGround:var(--field4_1);
+}
+
+#stageBaseBack{
+position:absolute;
+top:0%;
+left:0%;
+height:var(--stageBaseBackH);
+width:var(--stageBaseBackW);
+}
+
+#notice{
+position:absolute;
+bottom:5%;
+right:0%;
+height:10%;
+width:0%;
+font-size:var(--speechFont4_5);
+color:#000000;
+backGround:#ffffff;
+}
+
+#shiftScreen{
+position:absolute;
+opacity:0;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+backGround:#000000;
+}
+
+.shiftScreen1{
+animation: shiftScreen1 0.2s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes shiftScreen1{
+0%  {opacity:0;}
+100%{opacity:1;}
+}
+
+.shiftScreen2{
+animation: shiftScreen2 0.2s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes shiftScreen2{
+0%  {opacity:1;}
+100%{opacity:0;}
+}
+
+.notice{
+animation: notice 3s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes notice{
+0%  {width:0%;}
+16% {width:30%;}
+84% {width:30%;}
+100%{width:0%;}
+}
+
+#speechBase{
+position:absolute;
+top:2%;
+left:0%;
+height:var(--speechBase);
+width:100%;
+backGround:#000000;
+}
+
+.angelAnime{
+animation: notice 8s 0s 1;
+animation-fill-mode:forwards;
+}
+
+@keyframes angelAnime{
+0%  {left:50%;width:0%;}
+5%  {left:45%;width:10%;}
+45% {left:45%;width:10%;}
+50% {left:0%;width:100%;}
+75% {left:0%;width:100%;}
+100%{left:50%;width:0%;}
+}
+
