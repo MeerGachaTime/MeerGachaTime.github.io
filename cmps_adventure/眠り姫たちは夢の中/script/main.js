@@ -2032,7 +2032,7 @@ function f_arrayMake(array){
 window.addEventListener('load', (event) => {
  
  heroPosi=[8,5];//[y,x]...[8,5]
- restPosi=[8,5,"coclicoDream9"];
+ restPosi=[8,5,"coclicoDream9"];console.log(heroPosi);
  selectEquipment="なし";
  selectHero="marcos";
  selectBack=f_arrayMake(coclicoDream9Back);
