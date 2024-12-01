@@ -99,10 +99,10 @@ function localLoad(){
  BGM4 = new Audio('sound/描きおろし/ボス2 .mp3');
  BGM5 = new Audio('sound/描きおろし/ボス3 .mp3');
  BGM1.play();
- BGM2.play();
- BGM3.play();
- BGM4.play();
- BGM5.play();
+ BGM2.pause();
+ BGM3.pause();
+ BGM4.pause();
+ BGM5.pause();
  heroPosi=[restPosi[0],restPosi[1]];console.log("restPosi:"+restPosi+",heroPosi:"+heroPosi)
  selectStage=restPosi[2];console.log(restPosi);
  f_stageChange();
