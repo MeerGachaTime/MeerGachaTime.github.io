@@ -1,4 +1,12 @@
-
+heroPosi=[8,5];//[y,x]...[8,5]
+restPosi=[8,5,"coclicoDream9"];console.log(heroPosi);
+selectEquipment="なし";
+selectHero="marcos";
+selectBack=f_arrayMake(coclicoDream9Back);
+selectGimmick=f_arrayMake(coclicoDream9Gimmick);
+selectHit=f_arrayMake(coclicoDream9Hit);
+selectFront=f_arrayMake(coclicoDream9Front);
+selectStage="coclicoDream9";
 heros={
        "marcos"      :{usable:0,attack:10 ,costume:"オリジナル",walkNum:2,battleSkillGauge:30},
        "nikola"      :{usable:0,attack:10 ,costume:"オリジナル",walkNum:2,battleSkillGauge:30},
