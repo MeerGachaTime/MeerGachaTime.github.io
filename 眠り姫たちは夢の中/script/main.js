@@ -2067,7 +2067,7 @@ function f_BGMset(){
  }, false);
 }
 
-window.addEventListener('load', (event) => {console.log("ver.17.27");
+window.addEventListener('load', (event) => {console.log("ver.18.03");
  
  f_stageReset();
  phase=1;
@@ -2135,10 +2135,6 @@ window.addEventListener('load', (event) => {console.log("ver.17.27");
  
  makeStage(selectBack,selectGimmick,selectHit,selectFront,selectStage);
  
- /*if(heros["marcos"].usable==0){
-  enterKeySentence="end";
-  f_speech("marcosTutorial1");
- }*/
  document.documentElement.style.setProperty('--speechObstruction', "0%");
  document.documentElement.style.setProperty('--speechBase', "0vh");
  var windowH = window.innerHeight*0.95;
@@ -3054,7 +3050,7 @@ function f_checkAppear(){
   }
  }
  else{
-  enterKeySentence="end";
+  if(enterKeySentence!="mirrorClear5"&&enterKeySentence!=selectHero+"MirrorC3"){enterKeySentence="end";}
   var myh = document.getElementById("checkPoint");
   myh.innerHTML = " ";
   var giraffePosi=[0,0];
@@ -3483,7 +3479,7 @@ function f_speech(sentence){
     enterKeySentence=selectHero+"Sweet2";
    }
    else{
-    enterKeySentence=heroTalk[sentence].nextTalk;
+    enterKeySentence=heroTalk[sentence].nextTalk;console.log(enterKeySentence);
    }
    if(sentence==selectHero+"DreamPieceGet"){
     var dreamPieceNum=0;
