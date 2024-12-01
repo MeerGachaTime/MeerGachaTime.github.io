@@ -59,14 +59,14 @@ function localLoad(){
  windowW=windowH*1.817;
  var windowL = String((window.innerWidth-windowW)/2)+"px";
  windowLN=(window.innerWidth-windowW)/2;
- document.documentElement.style.setProperty('--homeColor', localStorage.getItem("localColor"));
- document.documentElement.style.setProperty('--speechFont2'  , windowH*0.01*fontSize*0.5+"px");
- document.documentElement.style.setProperty('--speechFont3'  , windowH*0.01*fontSize*0.6+"px");
- document.documentElement.style.setProperty('--speechFont3_5', windowH*0.01*fontSize*0.7+"px");
- document.documentElement.style.setProperty('--speechFont4'  , windowH*0.01*fontSize*0.8+"px");
- document.documentElement.style.setProperty('--speechFont4_5', windowH*0.01*fontSize*0.9+"px");
- document.documentElement.style.setProperty('--speechFont5'  , windowH*0.01*fontSize*1.0+"px");
- document.documentElement.style.setProperty('--speechFont6'  , windowH*0.01*fontSize*1.2+"px");
+ document.documentElement.style.setProperty('--homeColor', localStorage.getItem("localColor"));console.log(restPosi);
+ document.documentElement.style.setProperty('--speechFont2'  , windowH*0.01*fontSize*0.5+"px");console.log(restPosi);
+ document.documentElement.style.setProperty('--speechFont3'  , windowH*0.01*fontSize*0.6+"px");console.log(restPosi);
+ document.documentElement.style.setProperty('--speechFont3_5', windowH*0.01*fontSize*0.7+"px");console.log(restPosi);
+ document.documentElement.style.setProperty('--speechFont4'  , windowH*0.01*fontSize*0.8+"px");console.log(restPosi);
+ document.documentElement.style.setProperty('--speechFont4_5', windowH*0.01*fontSize*0.9+"px");console.log(restPosi);
+ document.documentElement.style.setProperty('--speechFont5'  , windowH*0.01*fontSize*1.0+"px");console.log(restPosi);
+ document.documentElement.style.setProperty('--speechFont6'  , windowH*0.01*fontSize*1.2+"px");console.log(restPosi);
  document.documentElement.style.setProperty('--controllerButton4', Number(windowLN)/2*buttonSize+"px");console.log(restPosi);
  document.documentElement.style.setProperty('--controllerButton4L', -1*windowLN+"px");console.log(restPosi);
  document.documentElement.style.setProperty('--controllerButton5L', -1*Number(windowLN)/2*(2-buttonSize)+"px");console.log(restPosi);
@@ -93,16 +93,6 @@ function localLoad(){
    heros[selectHero].attack=20;
   break;
  }
- BGM1 = new Audio('sound/描きおろし/通常戦闘 .mp3');
- BGM2 = new Audio('sound/描きおろし/休息 .mp3');
- BGM3 = new Audio('sound/描きおろし/ボス .mp3');
- BGM4 = new Audio('sound/描きおろし/ボス2 .mp3');
- BGM5 = new Audio('sound/描きおろし/ボス3 .mp3');
- BGM1.play();
- BGM2.pause();
- BGM3.pause();
- BGM4.pause();
- BGM5.pause();
  heroPosi=[restPosi[0],restPosi[1]];console.log("restPosi:"+restPosi+",heroPosi:"+heroPosi)
  selectStage=restPosi[2];console.log(restPosi);
  f_stageChange();
