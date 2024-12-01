@@ -93,6 +93,11 @@ function localLoad(){
    heros[selectHero].attack=20;
   break;
  }
+ BGM1 = new Audio('sound/描きおろし/通常戦闘 .mp3');
+ BGM2 = new Audio('sound/描きおろし/休息 .mp3');
+ BGM3 = new Audio('sound/描きおろし/ボス .mp3');
+ BGM4 = new Audio('sound/描きおろし/ボス2 .mp3');
+ BGM5 = new Audio('sound/描きおろし/ボス3 .mp3');
  BGM1.play();
  BGM2.play();
  BGM3.play();

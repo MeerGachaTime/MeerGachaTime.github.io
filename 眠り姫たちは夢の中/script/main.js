@@ -2086,43 +2086,6 @@ window.addEventListener('load', (event) => {
  lastBossCheck=0;
  f_opacityButton("toNextTalk");
  
- BGM1 = new Audio('sound/描きおろし/通常戦闘 .mp3');
- BGM1.play();
- BGM1.volume=0;
- BGM1.addEventListener("ended", function () {
-  BGM1.currentTime = 0;
-  BGM1.play();
- }, false);
- BGM2 = new Audio('sound/描きおろし/休息 .mp3');
- BGM2.play();
- BGM2.volume=0;
- BGM2.addEventListener("ended", function () {
-  BGM2.currentTime = 0;
-  BGM2.play();
- }, false);
- BGM3 = new Audio('sound/描きおろし/ボス .mp3');
- BGM3.play();
- BGM3.volume=0;
- BGM3.addEventListener("ended", function () {
-  BGM3.currentTime = 0;
-  BGM3.play();
- }, false);
- BGM4 = new Audio('sound/描きおろし/ボス2 .mp3');
- BGM4.play();
- BGM4.volume=0;
- BGM4.addEventListener("ended", function () {
-  BGM4.currentTime = 0;
-  BGM4.play();
- }, false);
- BGM5 = new Audio('sound/描きおろし/ボス3 .mp3');
- BGM5.play();
- BGM5.volume=0;
- BGM5.addEventListener("ended", function () {
-  BGM5.currentTime = 0;
-  BGM5.play();
- }, false);
- 
- 
  phase=0;
  heroActControl=1;
  fallOK=0;
@@ -2203,7 +2166,21 @@ function f_firstCheck(number){
   f_opacityButton("hardButton");
  }
  if(number==3){
-  
+ BGM1 = new Audio('sound/描きおろし/通常戦闘 .mp3');
+ BGM2 = new Audio('sound/描きおろし/休息 .mp3');
+ BGM3 = new Audio('sound/描きおろし/ボス .mp3');
+ BGM4 = new Audio('sound/描きおろし/ボス2 .mp3');
+ BGM5 = new Audio('sound/描きおろし/ボス3 .mp3');
+ BGM1.play();
+ BGM2.play();
+ BGM3.play();
+ BGM4.play();
+ BGM5.play();
+ BGM1.volume=0;
+ BGM2.volume=0;
+ BGM3.volume=0;
+ BGM4.volume=0;
+ BGM5.volume=0;
   blackoutScreen.style.opacity=1;
   document.documentElement.style.setProperty('--blackout', "100%");
   document.documentElement.style.setProperty('--checkScreen', "100%");
@@ -2218,21 +2195,6 @@ function f_firstCheck(number){
    BGM1.volume=0.6;
   },1500);
   setTimeout(function(){
-   BGM1 = new Audio('sound/描きおろし/通常戦闘 .mp3');
-   BGM2 = new Audio('sound/描きおろし/休息 .mp3');
-   BGM3 = new Audio('sound/描きおろし/ボス .mp3');
-   BGM4 = new Audio('sound/描きおろし/ボス2 .mp3');
-   BGM5 = new Audio('sound/描きおろし/ボス3 .mp3');
-   BGM1.play();
-   BGM2.play();
-   BGM3.play();
-   BGM4.play();
-   BGM5.play();
-   BGM1.volume=0.6;
-   BGM2.volume=0;
-   BGM3.volume=0;
-   BGM4.volume=0;
-   BGM5.volume=0;
    enterKeySentence="end";
    f_speech("marcosTutorial1");
   },2500);
@@ -2795,12 +2757,7 @@ function f_equipmentChange(){
 }
 
 function f_returnAdventure(){
- BGM1 = new Audio('sound/描きおろし/通常戦闘 .mp3');
- BGM2 = new Audio('sound/描きおろし/休息 .mp3');
- BGM3 = new Audio('sound/描きおろし/ボス .mp3');
- BGM4 = new Audio('sound/描きおろし/ボス2 .mp3');
- BGM5 = new Audio('sound/描きおろし/ボス3 .mp3');
- BGM1.volume=0;
+ BGM1.volume=0.6;
  BGM2.volume=0;
  BGM3.volume=0;
  BGM4.volume=0;
