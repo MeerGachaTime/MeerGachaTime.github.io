@@ -52,7 +52,7 @@ function localLoad(){
  restPosi[1]=Number(localStorage.getItem('restPosi1Local'));console.log(restPosi[1]);
  restPosi[2]=localStorage.getItem('restPosi2Local');
  fontSize=Number(localStorage.getItem('fontSizeLocal'));
- buttonSize=localStorage.getItem('buttonSizeLocal');
+ buttonSize=Number(localStorage.getItem('buttonLocal'));
  pcOrPhone=localStorage.getItem('pcOrPhoneLocal');
  helpApp=localStorage.getItem('helpAppLocal');
  var windowH = window.innerHeight*0.95;
