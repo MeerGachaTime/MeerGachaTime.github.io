@@ -389,10 +389,10 @@ function f_dataReflect(){
  heros["marcos"].usable=1;
  if(event["nikolaEncount"].happen){heros["nikola"].usable=1;    dataBaseList["二コラ　テスラ"].get=1;          }
  if(event["lyricaEncount"].happen){heros["lyrica"].usable=1;    dataBaseList["リリカ"].get=1;                  dataBaseList["びりびりうさぎ"].get=1;  if(blocks["itemA"].name=="0"){dataBaseList["ふわふわとびばこ"].get=1;}}
- if(event["aliceEncount"].happen ){heros["alice"].usable=1;     dataBaseList["青春アリス"].get=1;              dataBaseList["赤い羊"].get=1;}
+ if(event["aliceEncount"].happen ){heros["alice"].usable=1;     dataBaseList["青春アリス"].get=1;              dataBaseList["焦がれゆく夢魔"].get=1;  dataBaseList["赤い羊"].get=1;}
  if(event["amairoEncount"].happen){heros["amairo"].usable=1;    dataBaseList["狐ヶ咲甘色"].get=1;              dataBaseList["嗤い熊"].get=1;          if(blocks["itemD"].name=="0"){dataBaseList["ふんわりチョコけしごむ"].get=1;}}
  if(event["pierreEncount"].happen){heros["pierre"].usable=1;    dataBaseList["ピエール77世"].get=1;            dataBaseList["かぶりつきおもち"].get=1;}
- if(event["thirteenEncount"].happen){heros["thirteen"].usable=1;dataBaseList["13†サーティーン†"].get=1;      dataBaseList["焦がれゆく夢魔"].get=1;  if(blocks["itemE"].name=="0"){dataBaseList["まっくろたんぽぽ"].get=1;}      dataBaseList["びりびりうさぎEX"].get=1;  }
+ if(event["thirteenEncount"].happen){heros["thirteen"].usable=1;dataBaseList["13†サーティーン†"].get=1;      if(blocks["itemE"].name=="0"){dataBaseList["まっくろたんぽぽ"].get=1;}      dataBaseList["びりびりうさぎEX"].get=1;  }
  if(event["coclicoEncount"].happen){heros["coclico"].usable=1;  dataBaseList["コクリコット　ブランシュ"].get=1;dataBaseList["とげ"].get=1;            if(blocks["sweetE"].name=="0"){dataBaseList["ねこよりとろけるメロン"].get=1;}dataBaseList["嗤い熊EX"].get=1;}
  if(event["marionette"].happen){dataBaseList["茨のマリオネット"].get=1;}
  if(event["skeleton"].happen){dataBaseList["髑髏"].get=1;}

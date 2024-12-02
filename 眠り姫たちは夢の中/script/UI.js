@@ -1,3 +1,4 @@
+yesNoShootCut=0;
 popUpNCheck=0;
 selectSE = new Audio('sound/select01.mp3');
 cancelSE = new Audio('sound/select08.mp3');
@@ -46,6 +47,7 @@ function f_opacityButtonA(name,opacity){
 }
 
 function popUpBack(imgName){
+ yesNoShootCut=0;
  playerActControl=0;
  popUpNCheck--;
  if(popUpNCheck==0){
@@ -102,6 +104,9 @@ function f_popUpYesNo(imgName,sentence,f_yes){
  popUpNCheck++;
  popUpScreenN.style.zIndex=40;console.log("path:"+path+",imgName:"+imgName);
  
+ 
+ var yesNoKeySentence="<script>window.addEventListener('keydown',if(event.keyCode==89){"+imgName+"popUpYes.style.opacity=0.2;});window.addEventListener('keyup',if(event.keyCode==89){"+imgName+"popUpYes.style.opacity=1;});window.addEventListener('keydown',if(event.keyCode==78){"+imgName+"popUpNo.style.opacity=0.2;});window.addEventListener('keyup',if(event.keyCode==78){"+imgName+"popUpYes.style.opacity=0.2;});</script>";
+ 
  let nodeheroLiberateImgBase=document.createElement('div');
  nodeheroLiberateImgBase.setAttribute('id',imgName+"popUpScreen");
  nodeheroLiberateImgBase.setAttribute('style',"position:absolute;top:0%;left:0%;height:100%;width:100%;z-index:var(--"+imgName+"popUpScreen);");
@@ -109,7 +114,7 @@ function f_popUpYesNo(imgName,sentence,f_yes){
  parentDiv.appendChild(nodeheroLiberateImgBase);
  
  var myh = document.getElementById(imgName+"popUpScreen");
- myh.innerHTML = "<div class=BlackBack></div><div id="+imgName+"popUp style=position:absolute;top:10%;left:10%;height:80%;width:80%;><div class=buttonA><div class=buttonB><br><font id="+imgName+"popUpCondition></font><div id="+imgName+"popUpImgBase style=height:100%;width:100%;></div></div></div></div><div id="+imgName+"popUpNo style=position:absolute;bottom:20%;right:20%;height:10%;width:25%; onclick=selectSE.play();popUpBack('"+imgName+"');><div class=buttonA><div class=buttonB>いいえ</div></div></div><div id="+imgName+"popUpYes style=position:absolute;bottom:20%;left:25%;height:10%;width:20%; onclick=selectSE.play();"+f_yes+";popUpBack('"+imgName+"');><div class=buttonA><div class=buttonB>はい</div></div></div><style>:root{--"+imgName+"popUpOKButton:0;--"+imgName+"popUpScreen:-60;}#"+imgName+"popUpOKButton{position:absolute;opacity:var(--"+imgName+"popUpOKButton);bottom:20%;left:30%;height:10%;width:40%;backGround:#ffffff;}</style>";
+ myh.innerHTML = "<div class=BlackBack></div><div id="+imgName+"popUp style=position:absolute;top:10%;left:10%;height:80%;width:80%;><div class=buttonA><div class=buttonB><br><font id="+imgName+"popUpCondition></font><div id="+imgName+"popUpImgBase style=height:100%;width:100%;></div></div></div></div><div id="+imgName+"popUpNo style=position:absolute;bottom:20%;right:20%;height:18%;width:25%; onclick=selectSE.play();popUpBack('"+imgName+"');><div class=buttonA><div class=buttonB>いいえ<br>（Nキー）</div></div></div><div id="+imgName+"popUpYes style=position:absolute;bottom:20%;left:25%;height:18%;width:20%; onclick=selectSE.play();"+f_yes+";popUpBack('"+imgName+"');><div class=buttonA><div class=buttonB>はい<br>（Yキー）</div></div></div><style>:root{--"+imgName+"popUpOKButton:0;--"+imgName+"popUpScreen:-60;}#"+imgName+"popUpOKButton{position:absolute;opacity:var(--"+imgName+"popUpOKButton);bottom:20%;left:30%;height:10%;width:40%;backGround:#ffffff;}</style>";
  
  document.documentElement.style.setProperty("--"+imgName+"popUpScreen", 40);
  var myh = document.getElementById(imgName+"popUpCondition");
@@ -123,7 +128,19 @@ function f_popUpYesNo(imgName,sentence,f_yes){
  var myh = document.getElementById(imgName+"popUpBase");
  myh.innerHTML = "<img src=item/"+path+".png class=popUpImg>";*/
  
+ 
+ var scriptBase=document.createElement('script');
+ scriptBase.setAttribute('id',imgName+"popUpYesNoScript");
+ var scriptDiv = document.getElementById(imgName+"popUpImgBase");
+ scriptDiv.appendChild(scriptBase);
+ 
+ var myh = document.getElementById(imgName+"popUpYesNoScript");
+ myh.innerHTML = "function f_yesNo(number){if(number==1){"+imgName+"popUpYes.style.opacity=0.2;}else if(number==2){"+imgName+"popUpNo.style.opacity=0.2;}else if(number==3){selectSE.play();"+imgName+"popUpYes.style.opacity=1;popUpBack('"+imgName+"');"+f_yes+";}else if(number==4){selectSE.play();"+imgName+"popUpNo.style.opacity=1;popUpBack('"+imgName+"');}}";
+ 
  f_opacityButton(imgName+"popUpNo");
  f_opacityButton(imgName+"popUpYes");
+ 
+ yesNoShootCut=1;
+ 
 }
 

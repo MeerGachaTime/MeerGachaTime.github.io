@@ -699,7 +699,7 @@ heroTalk={"debug1"         :{img:"nikola_normal"     ,name:"二コラ　テス�
           "niziiroEnd10"   :{img:"amairo_normal"     ,name:"狐ヶ咲甘色"              ,speech1:"あぁ、道草を食ってしまって悪かったね"                 ,speech2:" "                                                    ,nextTalk:"niziiroEnd11"},
           "niziiroEnd11"   :{img:"amairo_normal"     ,name:"狐ヶ咲甘色"              ,speech1:"僕は大丈夫だ"                                         ,speech2:"先を急ごう"                                           ,nextTalk:"end"},
           "lurucaEnc1"     :{img:"pierre_normal"     ,name:"ピエール77世"            ,speech1:"さーて、ここは一体誰の夢なんだっ！"                   ,speech2:" "                                                    ,nextTalk:"lurucaEnc2"},
-          "lurucaEnc2"     :{img:"lyrica_normal"     ,name:"リリカ"                  ,speech1:"この景色は......マジカルスクウェアと戦った場所？"     ,speech2:"ってことはここはリリカの夢なのかな"                   ,nextTalk:"lurucaEnc3"},
+          "lurucaEnc2"     :{img:"lyrica_normal"     ,name:"リリカ"                  ,speech1:"この景色は......マジカルスクエアと戦った場所？"       ,speech2:"ってことはここはリリカの夢なのかな"                   ,nextTalk:"lurucaEnc3"},
           "lurucaEnc3"     :{img:"luruca_normal"     ,name:"ルルカ"                  ,speech1:"リリカ......"                                         ,speech2:" "                                                    ,nextTalk:"lurucaEnc4"},
           "lurucaEnc4"     :{img:"lyrica_normal"     ,name:"リリカ"                  ,speech1:"あ、ルルカだ！"                                       ,speech2:" "                                                    ,nextTalk:"lurucaEnc5"},
           "lurucaEnc5"     :{img:"luruca_normal"     ,name:"ルルカ"                  ,speech1:"......ねぇリリカ、どうして今あなたの隣にいるのは"     ,speech2:"ルルカじゃないの？"                                   ,nextTalk:"lurucaEnc6"},
@@ -1114,7 +1114,7 @@ heroTalk={"debug1"         :{img:"nikola_normal"     ,name:"二コラ　テス�
           "freeTalk22_2"   :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"あんま帰りが遅くなると俺様のファンたちが"             ,speech2:"俺様の心配のし過ぎで失神しちまうよ"                   ,nextTalk:"freeTalk22_3"},
           "freeTalk22_3"   :{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"ほーん、サーティーンにも"                             ,speech2:"熱心なファンなんているんだねー"                       ,nextTalk:"freeTalk22_4"},
           "freeTalk22_4"   :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"いやそのリアクションはおかしいだろ"                   ,speech2:"俺様の熱心なファンなんてたくさんいるに決まってる"     ,nextTalk:"freeTalk22_5"},
-          "freeTalk22_5"   :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"<font id=thisSpeech onclick=f_popUpN('null','2020年8月に行われたアンケートに基づき集計されたランキングにて、サーティーンは再推しヒーローランキングで1位をとっている。'); style=color:#868eff;z-index:5;>2020年の最推しヒーローランキング</font>1位よ？"              ,speech2:" "                                                    ,nextTalk:"freeTalk22_6"},
+          "freeTalk22_5"   :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"<font id=thisSpeech onclick=f_popUpN('null','2020年8月に行われたアンケートに基づき集計されたランキングにて、サーティーンは最推しヒーローランキングで1位をとっている。'); style=color:#868eff;z-index:5;>2020年の最推しヒーローランキング</font>1位よ？"              ,speech2:" "                                                    ,nextTalk:"freeTalk22_6"},
           "freeTalk22_6"   :{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"そんな何年も前のメタネタ引っ張ってきても"             ,speech2:"通じる人ほとんどいないよ......"                       ,nextTalk:"freeTalk22_7"},
           "freeTalk22_7"   :{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"まぁファンとしてはともかく、友達として慕ってる人は"   ,speech2:"コンパスにもけっこういるだろうから"                   ,nextTalk:"freeTalk22_8"},
           "freeTalk22_8"   :{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"心配はされてるかもね"                                 ,speech2:" "                                                    ,nextTalk:"freeTalk22_9"},
@@ -1122,7 +1122,7 @@ heroTalk={"debug1"         :{img:"nikola_normal"     ,name:"二コラ　テス�
           "freeTalk22_10"  :{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"もし誰かが心配していてくれてたら"                     ,speech2:"ちょっとだけ嬉しいかも......"                         ,nextTalk:"freeTalk22_11"},
           "freeTalk22_11"  :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"......"                                               ,speech2:" "                                                    ,nextTalk:"freeTalk22_12"},
           "freeTalk22_12"  :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"好きなだけ嬉しがっとけばいいと思うぞ"                 ,speech2:"おめーも大概人には好かれてる。心配はされてるだろうよ" ,nextTalk:"freeTalk22_13"},
-          "freeTalk22_13"  :{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"...こういう時は冷やかさず素直に褒めくれるよね"        ,speech2:" "                                                    ,nextTalk:"freeTalk22_14"},
+          "freeTalk22_13"  :{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"...こういう時は冷やかさず素直に褒めてくれるよね"      ,speech2:" "                                                    ,nextTalk:"freeTalk22_14"},
           "freeTalk22_14"  :{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"サーティーンって"                                     ,speech2:"意外とこうやって人の心を掴むのが上手い"               ,nextTalk:"freeTalk22_15"},
           "freeTalk22_15"  :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"意外ってなんだ意外って"                               ,speech2:" "                                                    ,nextTalk:"freeTalk22_16"},
           "freeTalk22_16"  :{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"コンパスでは弄られ役が板についちゃってるけど"         ,speech2:" "                                                    ,nextTalk:"freeTalk22_17"},
@@ -1137,7 +1137,7 @@ heroTalk={"debug1"         :{img:"nikola_normal"     ,name:"二コラ　テス�
           "freeTalk22_25"  :{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"いやいや、信じてないことはないよ、ほんとほんと"       ,speech2:" "                                                    ,nextTalk:"freeTalk22_26"},
           "freeTalk22_26"  :{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"（多分慕ってくれてた子がいたってのは"                 ,speech2:"嘘じゃないんだろうな......）"                         ,nextTalk:"freeTalk22_27"},
           "freeTalk22_27"  :{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"（でも咄嗟に出た表現が『いた』っていう過去形なことを" ,speech2:"考えると）"                                           ,nextTalk:"freeTalk22_28"},
-          "freeTalk22_28"  :{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"（<font id=thisSpeech onclick=f_popUpN('null','サーティーンの大切な「物」とされた下位天使たちは罪の浄化のために罰を与えられた。罰を生き延びた下位天使たちもその後の反逆において皆殺しにされたと思われる。詳細は「月影の堕天使」のシーズン文を参照。'); style=color:#868eff;z-index:5;>サーティーンを慕っててたって子</font>は多分もう......）"   ,speech2:" "                                                    ,nextTalk:"endA"},
+          "freeTalk22_28"  :{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"（<font id=thisSpeech onclick=f_popUpN('null','サーティーンの大切な「物」とされた下位天使たちは罪の浄化のために罰を与えられた。罰を生き延びた下位天使たちもその後の反逆において皆殺しにされたと思われる。詳細は「月影の堕天使」のシーズン文を参照。'); style=color:#868eff;z-index:5;>サーティーンを慕ってたって子</font>は多分もう......）"   ,speech2:" "                                                    ,nextTalk:"endA"},
           "freeTalk23_1"   :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"なぁ、そこのかわいいかわいいテスラちゃん"             ,speech2:" "                                                    ,nextTalk:"freeTalk23_2"},
           "freeTalk23_2"   :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"俺様のカックイー漆黒のコートの背中に"                 ,speech2:"「膝枕募集中♡」って刺繍したの"                        ,nextTalk:"freeTalk23_3"},
           "freeTalk23_3"   :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"どこのテスラちゃんだかご存じなぁい？"                 ,speech2:" "                                                    ,nextTalk:"freeTalk23_4"},
@@ -1387,11 +1387,16 @@ heroTalk={"debug1"         :{img:"nikola_normal"     ,name:"二コラ　テス�
           "sheepData2"     :{img:"alice_normal"      ,name:"青春アリス"              ,speech1:"攻撃はしてきませんが、人がいても容赦なく"             ,speech2:"ぶつかってくるので注意が必要です！"                   ,nextTalk:"sheepData3"},
           "sheepData3"     :{img:"alice_normal"      ,name:"青春アリス"              ,speech1:"この羊さんたち、ただ走り回っているだけというより"     ,speech2:" "                                                    ,nextTalk:"sheepData4"},
           "sheepData4"     :{img:"alice_normal"      ,name:"青春アリス"              ,speech1:"なんだか踊っているように見えるんですよね～"           ,speech2:"気のせいでしょうか...？"                              ,nextTalk:"endB"},
-          "devilData1"     :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"いきなり現れて攻撃してくる迷惑なヤローだな"           ,speech2:"......ところでさ"                                     ,nextTalk:"devilData2"},
+          
+          /*"devilData1"     :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"いきなり現れて攻撃してくる迷惑なヤローだな"           ,speech2:"......ところでさ"                                     ,nextTalk:"devilData2"},
           "devilData2"     :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"俺様の記憶違いじゃなければたしか夢魔って......"       ,speech2:" "                                                    ,nextTalk:"devilData3"},
           "devilData3"     :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"淫魔の別称だった気が......"                           ,speech2:" "                                                    ,nextTalk:"devilData4"},
           "devilData4"     :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"............"                                         ,speech2:" "                                                    ,nextTalk:"devilData5"},
-          "devilData5"     :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"いや流石に俺様の記憶違いだろう。コクリコの夢の中に"   ,speech2:"そんなやついる訳ねぇよな"                             ,nextTalk:"endB"},
+          "devilData5"     :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"いや流石に俺様の記憶違いだろう。コクリコの夢の中に"   ,speech2:"そんなやついる訳ねぇよな"                             ,nextTalk:"endB"},*/
+          
+          "devilData1"     :{img:"nikola_normal"     ,name:"二コラ　テスラ"          ,speech1:"何もないところからいきなり現れる厄介な相手だね"       ,speech2:" "                                                    ,nextTalk:"devilData2"},
+          "devilData2"     :{img:"nikola_normal"     ,name:"二コラ　テスラ"          ,speech1:"耐久力は高くないから"                                 ,speech2:"見かけ次第倒していくのもありだけど"                   ,nextTalk:"devilData3"},
+          "devilData3"     :{img:"nikola_normal"     ,name:"二コラ　テスラ"          ,speech1:"宙に浮いてるから相手しにくいんだよね......"           ,speech2:"場合によっては無視した方がいいかもしれない"           ,nextTalk:"endB"},
           "omochiData1"    :{img:"pierre_normal"     ,name:"ピエール77世"            ,speech1:"うまそうなお餅を見つけてかぶりつこうとしたら"         ,speech2:"なんとお餅の方がかぶりついてきたぜっ！"               ,nextTalk:"omochiData2"},
           "omochiData2"    :{img:"pierre_normal"     ,name:"ピエール77世"            ,speech1:"オレ様も色んな食べ物を食べてきたが、"                 ,speech2:"食べ物の方がかぶりついてきたことは多くないぜ..."      ,nextTalk:"omochiData3"},
           "omochiData3"    :{img:"pierre_normal"     ,name:"ピエール77世"            ,speech1:"しかーし！オレ様はかぶりつかれたくらいで食欲が失せる" ,speech2:"ヤワな漢じゃないぜっ！"                               ,nextTalk:"omochiData4"},
@@ -1399,9 +1404,13 @@ heroTalk={"debug1"         :{img:"nikola_normal"     ,name:"二コラ　テス�
           "rabitEXData1"   :{img:"alice_normal"      ,name:"青春アリス"              ,speech1:"最初の方から見かけていたウサギさんの色違いですね"     ,speech2:" "                                                    ,nextTalk:"rabitEXData2"},
           "rabitEXData2"   :{img:"alice_normal"      ,name:"青春アリス"              ,speech1:"ピンクのウサギさんより速くて硬くて痛い！"             ,speech2:"しかも攻撃範囲は変わらず広いのでかなり強いです......" ,nextTalk:"rabitEXData3"},
           "rabitEXData3"   :{img:"alice_normal"      ,name:"青春アリス"              ,speech1:"避けきるのも大変ですし、ゴリ押ししちゃった方が"       ,speech2:"もしかしたらいいかもしれませんね"                     ,nextTalk:"endB"},
-          "bearEXData1"    :{img:"nikola_normal"     ,name:"二コラ　テスラ"          ,speech1:"最初の方から見かけていたクマの色違いだね"             ,speech2:"変異種とかなのかな？"                                 ,nextTalk:"bearEXData2"},
+          
+          /*"bearEXData1"    :{img:"nikola_normal"     ,name:"二コラ　テスラ"          ,speech1:"最初の方から見かけていたクマの色違いだね"             ,speech2:"変異種とかなのかな？"                                 ,nextTalk:"bearEXData2"},
           "bearEXData2"    :{img:"nikola_normal"     ,name:"二コラ　テスラ"          ,speech1:"耐久力にパンチの威力、歩く速さまで強くなっていて"     ,speech2:"厄介だけど"                                           ,nextTalk:"bearEXData3"},
-          "bearEXData3"    :{img:"nikola_normal"     ,name:"二コラ　テスラ"          ,speech1:"基本的な動きは他のクマと同じだから"                   ,speech2:"落ち着いて対処していきたいね"                         ,nextTalk:"endB"},
+          "bearEXData3"    :{img:"nikola_normal"     ,name:"二コラ　テスラ"          ,speech1:"基本的な動きは他のクマと同じだから"                   ,speech2:"落ち着いて対処していきたいね"                         ,nextTalk:"endB"},*/
+          
+          "bearEXData1"    :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"全身まっピンクのド派手なクマだ"                       ,speech2:" "                                                    ,nextTalk:"bearEXData2"},
+          "bearEXData2"    :{img:"thirteen_normal"   ,name:"13†サーティーン†"      ,speech1:"茶色いやつより硬くて速くて相手にすんのは正直面倒"     ,speech2:"スルーできんならスルーしたいな"                       ,nextTalk:"endB"},
           "marionetteData1":{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"全身に棘がついている人形だね"                         ,speech2:"触れただけで傷を負っちゃう厄介な相手だった"           ,nextTalk:"marionetteData2"},
           "marionetteData2":{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"誰かに操られているかのような動きも特徴的だった"       ,speech2:" "                                                    ,nextTalk:"marionetteData3"},
           "marionetteData3":{img:"marcos_normal"     ,name:"マルコス'55"             ,speech1:"そいうえばあの動き方、"                               ,speech2:"バトル中のコクリコちゃんに似ているような......"       ,nextTalk:"endB"},
@@ -1643,7 +1652,7 @@ coclicoDream9Hit=[['1','0','1','0','0','1','1','1','1','1','1','1','1','1','1','
 coclicoDream9Front=[['blockA','blockA','blockA','0','0','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA'],['blockA','blockA','blockA','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','blockA'],['blockA','blockA','blockA','blockA','0','0','0','0','0','0','0','0','0','0','blockA','blockA','blockA','blockA','blockA','0','0','blockA'],['blockA','blockA','blockA','blockA','blockD','blockD','blockD','blockD','blockD','blockD','blockD','blockD','0','0','0','blockA','blockA','0','0','0','0','blockA'],['blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','0','0','blockA','blockA','blockA','0','0','0','0','blockA'],['blockA','blockA','blockA','blockA','0','0','0','0','0','0','0','0','0','0','blockA','0','blockA','0','0','blockA','blockA','blockA'],['blockA','blockA','blockA','blockA','0','0','0','0','0','0','0','0','0','0','blockA','blockA','blockA','0','blockA','blockA','blockA','blockA'],['blockA','0','0','0','0','0','0','0','0','0','0','0','0','0','blockA','blockA','blockA','0','0','0','0','blockA'],['blockA','0','0','0','0','0','0','0','0','0','0','0','blockA','0','blockA','blockA','blockA','0','0','0','0','blockA'],['blockA','0','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','0','blockA','blockA','blockA','blockA','0','0','0','blockA'],['blockA','0','0','0','0','0','0','0','0','0','blockA','blockA','blockA','0','0','0','0','0','0','0','0','blockA'],['blockA','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockC','0','blockA','blockA','blockA','0','0','0','0','0','0','0','blockA','blockA'],['blockA','0','0','0','0','0','0','0','0','0','blockA','blockA','blockA','0','0','0','0','0','0','0','blockA','blockA'],['blockA','0','0','0','0','0','0','0','0','0','blockA','blockA','blockA','0','0','0','0','0','0','0','blockA','blockA'],['blockA','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA']];
 
 coclicoDream10Back=[['0','0','0','0','0','0','0','0','0','0','0','0','000bff','000bff','0','0','0','0','0','0','0','0'],['0','blockB','blockB','blockB','blockB','blockB','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','blockB','blockB','blockB','blockB','blockB','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','blockB','blockB','blockB','blockB','blockB','0','0','backB','0','0','backB','0','0','backB','0','blockB','blockB','blockB','blockB','0','0'],['0','0','0','0','0','0','0','0','0','0','0','0','blockB','blockB','blockB','0','blockB','blockB','blockB','blockB','blockB','blockB'],['0','0','0','0','0','0','blockB','blockB','blockB','blockB','0','blockB','blockB','blockB','blockB','0','blockB','blockB','blockB','blockB','blockB','blockB'],['0','0','0','0','0','0','blockB','blockB','blockB','blockB','0','blockB','blockB','blockB','blockB','0','blockB','0','0','0','0','0'],['0','0','0','0','blockB','0','blockB','blockB','blockB','blockB','0','blockB','blockB','blockB','blockB','0','blockB','blockB','blockB','blockB','blockB','0'],['0','0','0','0','0','0','0','0','0','0','0','0','blockB','blockB','blockB','0','0','blockB','blockB','blockB','blockB','0'],['0','0','0','0','0','blockB','blockB','blockB','blockB','blockB','blockB','0','blockB','blockB','blockB','0','blockB','blockB','blockB','blockB','blockB','0'],['0','0','blockB','blockB','blockB','blockB','blockB','blockB','blockB','blockB','blockB','0','blockB','blockB','blockB','0','blockB','blockB','blockB','blockB','blockB','0'],['0','0','blockB','blockB','blockB','blockB','blockB','blockB','blockB','blockB','blockB','0','blockB','blockB','blockB','0','blockB','blockB','0','0','0','0'],['0','0','blockB','blockB','blockB','0','0','0','0','0','0','0','0','0','0','0','blockB','blockB','blockB','blockB','blockB','0'],['0','0','blockB','blockB','blockB','blockB','blockB','blockB','blockB','blockB','blockB','blockB','blockB','blockB','blockB','blockB','blockB','blockB','blockB','blockB','blockB','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0']];
-coclicoDream10Gimmick=[['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','0','0','0','0','0','0','0','devil','0','0','0','0','0','0','0','0','0','0'],['0','0','dreamRockA','0','0','0','mirror','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','giraffeC','0','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','partE','0','0','alice','0','0','mirror','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','sweetG','0'],['0','0','0','0','0','0','0','0','0','sheep','0','mirror','0','0','0','0','0','0','0','0','0','0'],['0','0','0','devil','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','0','hamsterC','0','0','0','0','0','0','0','0','0','0','0','0','0','0','sheep','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0']];
+coclicoDream10Gimmick=[['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','dreamRockA','0','0','0','mirror','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','giraffeC','0','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','partE','0','0','alice','0','0','mirror','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','sweetG','0'],['0','0','0','0','0','0','0','0','0','sheep','0','mirror','0','0','0','0','0','0','0','0','0','0'],['0','0','0','devil','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'],['0','0','0','0','0','hamsterC','0','0','0','0','0','0','0','0','0','0','0','0','0','0','sheep','0'],['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0']];
 coclicoDream10Hit=[['1','1','1','1','1','1','1','1','1','1','1','1','0','0','1','1','1','1','1','1','1','1'],['1','0','0','0','0','0','1','0','0','0','0','0','0','0','1','1','1','1','1','1','1','1'],['1','0','0','0','0','0','1','0','0','0','0','0','0','0','1','1','1','1','1','1','1','1'],['1','0','0','0','0','0','1','0','0','0','0','0','0','0','0','1','0','0','0','0','1','1'],['1','1','1','1','1','1','1','1','0','0','1','1','0','0','0','1','0','0','0','0','0','0'],['1','1','1','1','1','1','0','0','0','0','1','0','0','0','0','1','0','0','0','0','0','0'],['1','0','0','0','0','1','0','0','0','0','1','0','0','0','1','1','0','1','1','1','1','1'],['1','0','0','0','0','1','0','0','0','0','1','0','0','0','0','1','0','0','0','0','0','1'],['1','0','0','0','1','1','1','1','1','1','1','1','0','0','0','1','1','0','0','0','0','1'],['1','0','0','1','1','0','0','0','0','0','0','1','0','0','0','1','0','0','0','0','0','1'],['1','0','0','0','0','0','0','0','0','0','0','1','0','0','1','1','0','0','0','0','0','1'],['1','0','0','0','0','0','0','0','0','0','0','1','0','0','1','1','0','0','1','1','1','1'],['1','1','0','0','0','1','1','1','1','1','1','1','1','1','1','1','0','0','0','0','0','1'],['1','1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1'],['1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1']];
 coclicoDream10Front=[['blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA','0','0','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA'],['blockA','0','0','0','0','0','blockA','0','0','0','0','0','0','0','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA'],['blockA','0','0','0','0','0','0','0','0','0','0','0','0','0','blockA','blockA','blockA','blockA','blockA','blockA','blockA','blockA'],['blockA','0','0','0','0','0','0','0','0','0','0','0','0','0','0','blockA','0','0','0','0','blockA','blockA'],['blockA','blockC','blockC','blockC','blockC','blockC','blockA','blockA','blockA','blockA','blockA','blockA','0','0','0','blockA','0','0','0','0','0','0'],['blockA','blockA','blockA','blockA','blockA','blockA','0','0','0','0','blockA','0','0','0','0','blockA','0','0','0','0','0','0'],['blockA','blockA','blockA','blockA','blockA','blockA','0','0','0','0','0','0','0','0','blockA','blockA','0','blockA','blockA','blockA','blockA','blockA'],['blockA','blockA','blockA','blockA','0','blockA','0','0','0','0','0','0','0','0','0','blockA','0','0','0','0','0','blockA'],['blockA','blockA','blockA','blockA','blockA','blockA','blockC','blockC','blockC','blockC','blockA','blockA','0','0','0','blockA','blockA','0','0','0','0','blockA'],['blockA','blockA','blockA','blockA','blockA','0','0','0','0','0','0','blockA','0','0','0','blockA','0','0','0','0','0','blockA'],['blockA','blockA','0','0','0','0','0','0','0','0','0','0','0','0','blockA','blockA','0','0','0','0','0','blockA'],['blockA','blockA','0','0','0','0','0','0','0','0','0','0','0','0','blockA','blockA','0','0','blockA','blockA','blockA','blockA'],['blockA','blockA','0','0','0','blockC','blockC','blockC','blockC','blockC','blockC','blockA','blockA','blockA','blockA','blockA','0','0','0','0','0','blockA'],['blockA','blockA','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','blockA'],['blockA','blockA','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockC','blockA']];
 
@@ -1789,21 +1798,6 @@ function f_option(number){
  else{
   phase=5;
  }
- var levelSentence="error";
- switch(level){
-  case 0.1:
-   levelSentence="<img onclick=f_levelChange(-1); id=levelDown src=item/etc/cursor.png style=position:absolute;bottom:5%;left:5%;height:0%;transform:scale(-1,1);><font style=position:absolute;bottom:5%;left:30%;width:40%;height:35%;text-align:center;font-size:var(--speechFont5);backGround:#ffffff;color:var(--homeColor);>接待プレイ</font><img onclick=f_levelChange(1); id=levelUp src=item/etc/cursor.png style=position:absolute;bottom:5%;right:5%;height:35%;>";
-  break;
-  case 0.5:
-   levelSentence="<img onclick=f_levelChange(-1); id=levelDown src=item/etc/cursor.png style=position:absolute;bottom:5%;left:5%;height:35%;transform:scale(-1,1);><font style=position:absolute;bottom:5%;left:30%;width:40%;height:35%;text-align:center;font-size:var(--speechFont5);backGround:#ffffff;color:var(--homeColor);>かんたん</font><img onclick=f_levelChange(1); id=levelUp src=item/etc/cursor.png style=position:absolute;bottom:5%;right:5%;height:35%;>";
-  break;
-  case 1:
-   levelSentence="<img onclick=f_levelChange(-1); id=levelDown src=item/etc/cursor.png style=position:absolute;bottom:5%;left:5%;height:35%;transform:scale(-1,1);><font style=position:absolute;bottom:5%;left:30%;width:40%;height:35%;text-align:center;font-size:var(--speechFont5);backGround:#ffffff;color:var(--homeColor);>普通</font><img onclick=f_levelChange(1); id=levelUp src=item/etc/cursor.png style=position:absolute;bottom:5%;right:5%;height:35%;>";
-  break;
-  case 1.5:
-   levelSentence="<img onclick=f_levelChange(-1); id=levelDown src=item/etc/cursor.png style=position:absolute;bottom:5%;left:5%;height:35%;transform:scale(-1,1);><font style=position:absolute;bottom:5%;left:30%;width:40%;height:35%;text-align:center;font-size:var(--speechFont5);backGround:#ffffff;color:var(--homeColor);>難しい</font><img onclick=f_levelChange(1); id=levelUp src=item/etc/cursor.png style=position:absolute;bottom:5%;right:5%;height:0%;>";
-  break;
- }
  var myh = document.getElementById("checkScreen");
  if(number==4){
   myh.innerHTML="<div id=dataBaseListReturn onclick=f_checkPoint(); id=dataBaseListReturn class=buttonA style=position:absolute;top:2%;left:2%;height:15%;width:25%;><div class=buttonB>Spaceキーで<br>メニューに戻る</div></div><div style=position:absolute;top:23%;left:5%;height:40%;width:40%;backGround:var(--homeColor);color:#ffffff;font-size:var(--speechFont4);>　操作方法<br>　・←キー、→キー：移動<br>　・Sキー：ジャンプ<br>　・Aキー：攻撃<br>　・Enterキー：確認<br>　・Spaceキー：メニュー</div><div id=setting class=buttonA onclick=f_setting(); style=position:absolute;top:75%;left:5%;height:15%;width:40%;text-align:center;><div class=buttonB><font style=font-size:var(--speechFont5);>設定</font></div></div><div style=position:absolute;top:5%;left:50%;height:50%;width:48%;backGround:var(--homeColor);text-align:center;color:#ffffff;font-size:var(--speechFont3);><font style=font-size:var(--speechFont5);>フィードバック</font><br>「眠り姫たちは夢の中」をプレイしていただき<br>誠にありがとうございます<br><br>本ゲームをプレイしていただいた感想や<br>ご意見を是非お聞かせください<br><br><a href='https://twitter.com/Meer69774257'>製作者X(旧Twitter)</a><br><a href='https://peing.net/ja/meer__'>匿名希望の場合はこちらから</a></div><div style=position:absolute;top:58%;left:50%;height:39%;width:48%;backGround:var(--homeColor);color:#ffffff;font-size:var(--speechFont3);>　原作:#コンパス戦闘摂理解析システム様<br>　　　 #コンパス ライブアリーナ様<br>　BGM :<a href='https://twitter.com/mikannonegoto' style=color#000000>みかんのねごと様</a><br>　効果音 :<a href='https://taira-komori.jpn.org/index.html' style=color#000000>無料効果音で遊ぼう！様</a><br>　テストプレイヤー :<a href='https://x.com/QuleruRestart' style=color#000000>くろすん/踊掛踊遊</a><br>　その他制作:Meer--</div>";
@@ -1827,16 +1821,16 @@ function f_setting(){
  var levelSentence="error";
  switch(level){
   case 0.1:
-   levelSentence="<img onclick=f_levelChange(-1); id=levelDown src=item/etc/cursor.png style=position:absolute;bottom:5%;left:5%;height:0%;transform:scale(-1,1);><font style=position:absolute;bottom:5%;left:30%;width:40%;height:35%;text-align:center;font-size:var(--speechFont5);backGround:#ffffff;color:var(--homeColor);>接待プレイ</font><img onclick=f_levelChange(1); id=levelUp src=item/etc/cursor.png style=position:absolute;bottom:5%;right:5%;height:35%;>";
+   levelSentence="<img onclick=f_levelChange(-1); id=levelDown src=item/etc/cursor.png style=position:absolute;bottom:5%;left:5%;height:0%;transform:scale(-1,1);><font style=position:absolute;bottom:5%;left:30%;width:40%;height:35%;text-align:center;font-size:var(--speechFont5);backGround:#ffffff;color:var(--homeColor);>Very　Easy</font><img onclick=f_levelChange(1); id=levelUp src=item/etc/cursor.png style=position:absolute;bottom:5%;right:5%;height:35%;>";
   break;
   case 0.5:
-   levelSentence="<img onclick=f_levelChange(-1); id=levelDown src=item/etc/cursor.png style=position:absolute;bottom:5%;left:5%;height:35%;transform:scale(-1,1);><font style=position:absolute;bottom:5%;left:30%;width:40%;height:35%;text-align:center;font-size:var(--speechFont5);backGround:#ffffff;color:var(--homeColor);>かんたん</font><img onclick=f_levelChange(1); id=levelUp src=item/etc/cursor.png style=position:absolute;bottom:5%;right:5%;height:35%;>";
+   levelSentence="<img onclick=f_levelChange(-1); id=levelDown src=item/etc/cursor.png style=position:absolute;bottom:5%;left:5%;height:35%;transform:scale(-1,1);><font style=position:absolute;bottom:5%;left:30%;width:40%;height:35%;text-align:center;font-size:var(--speechFont5);backGround:#ffffff;color:var(--homeColor);>Easy</font><img onclick=f_levelChange(1); id=levelUp src=item/etc/cursor.png style=position:absolute;bottom:5%;right:5%;height:35%;>";
   break;
   case 1:
-   levelSentence="<img onclick=f_levelChange(-1); id=levelDown src=item/etc/cursor.png style=position:absolute;bottom:5%;left:5%;height:35%;transform:scale(-1,1);><font style=position:absolute;bottom:5%;left:30%;width:40%;height:35%;text-align:center;font-size:var(--speechFont5);backGround:#ffffff;color:var(--homeColor);>普通</font><img onclick=f_levelChange(1); id=levelUp src=item/etc/cursor.png style=position:absolute;bottom:5%;right:5%;height:35%;>";
+   levelSentence="<img onclick=f_levelChange(-1); id=levelDown src=item/etc/cursor.png style=position:absolute;bottom:5%;left:5%;height:35%;transform:scale(-1,1);><font style=position:absolute;bottom:5%;left:30%;width:40%;height:35%;text-align:center;font-size:var(--speechFont5);backGround:#ffffff;color:var(--homeColor);>Normal</font><img onclick=f_levelChange(1); id=levelUp src=item/etc/cursor.png style=position:absolute;bottom:5%;right:5%;height:35%;>";
   break;
   case 1.5:
-   levelSentence="<img onclick=f_levelChange(-1); id=levelDown src=item/etc/cursor.png style=position:absolute;bottom:5%;left:5%;height:35%;transform:scale(-1,1);><font style=position:absolute;bottom:5%;left:30%;width:40%;height:35%;text-align:center;font-size:var(--speechFont5);backGround:#ffffff;color:var(--homeColor);>難しい</font><img onclick=f_levelChange(1); id=levelUp src=item/etc/cursor.png style=position:absolute;bottom:5%;right:5%;height:0%;>";
+   levelSentence="<img onclick=f_levelChange(-1); id=levelDown src=item/etc/cursor.png style=position:absolute;bottom:5%;left:5%;height:35%;transform:scale(-1,1);><font style=position:absolute;bottom:5%;left:30%;width:40%;height:35%;text-align:center;font-size:var(--speechFont5);backGround:#ffffff;color:var(--homeColor);>Hard</font><img onclick=f_levelChange(1); id=levelUp src=item/etc/cursor.png style=position:absolute;bottom:5%;right:5%;height:0%;>";
   break;
  }
  var fontH=35;
@@ -2034,6 +2028,7 @@ function f_arrayMake(array){
 
 function f_BGMset(){
  BGM1 = new Audio('sound/描きおろし/通常戦闘 .mp3');
+ BGM1.pause();
  BGM1.play();
  BGM1.volume=0;
  BGM1.addEventListener("ended", function () {
@@ -2041,6 +2036,7 @@ function f_BGMset(){
   BGM1.play();
  }, false);
  BGM2 = new Audio('sound/描きおろし/休息 .mp3');
+ BGM2.pause();
  BGM2.play();
  BGM2.volume=0;
  BGM2.addEventListener("ended", function () {
@@ -2048,6 +2044,7 @@ function f_BGMset(){
   BGM2.play();
  }, false);
  BGM3 = new Audio('sound/描きおろし/ボス .mp3');
+ BGM3.pause();
  BGM3.play();
  BGM3.volume=0;
  BGM3.addEventListener("ended", function () {
@@ -2055,6 +2052,7 @@ function f_BGMset(){
   BGM3.play();
  }, false);
  BGM4 = new Audio('sound/描きおろし/ボス2 .mp3');
+ BGM4.pause();
  BGM4.play();
  BGM4.volume=0;
  BGM4.addEventListener("ended", function () {
@@ -2062,6 +2060,7 @@ function f_BGMset(){
   BGM4.play();
  }, false);
  BGM5 = new Audio('sound/描きおろし/ボス3 .mp3');
+ BGM5.pause();
  BGM5.play();
  BGM5.volume=0;
  BGM5.addEventListener("ended", function () {
@@ -2070,7 +2069,7 @@ function f_BGMset(){
  }, false);
 }
 
-window.addEventListener('load', (event) => {console.log("ver.00.39");
+window.addEventListener('load', (event) => {console.log("ver.19.12");
  
  f_stageReset();
  phase=1;
@@ -2198,7 +2197,7 @@ function f_firstCheck(number){
   document.documentElement.style.setProperty('--blackout', "100%");
   document.documentElement.style.setProperty('--checkScreen', "100%");
   var myh = document.getElementById("checkScreen");
-  myh.innerHTML = "<div style=position:absolute;top:20%;left:5%;height:60%;width:90%;text-align:center;color:#ffffff;backGround:var(--homeColor);border-radius:10%;font-size:var(--speechFont5);><br>難易度を選んでください<br>※後からメニュー→オプション→設定で再設定可能<div id=veryEasyButton onclick=selectSE.play();f_popUpYesNo('null','この難易度はほぼアクションゲームとしての側面を失いますが大丈夫ですか（ほぼ無敵になります）','level=0.1;f_firstCheck(3);'); style=position:absolute;top:60%;left:5%;height:30%;width:20%; class=buttonA><div class=buttonB>接待<br>プレイ</div></div><div id=easyButton onclick=selectSE.play();level=0.5;f_firstCheck(3); style=position:absolute;top:60%;left:27.5%;height:30%;width:20%; class=buttonA><div class=buttonB>かんたん</div></div><div id=normalButton onclick=selectSE.play();level=1;f_firstCheck(3); style=position:absolute;top:60%;left:52.5%;height:30%;width:20%; class=buttonA><div class=buttonB>普通</div></div><div id=hardButton onclick=selectSE.play();level=1.5;f_firstCheck(3); style=position:absolute;top:60%;left:75%;height:30%;width:20%; class=buttonA><div class=buttonB>難しい</div></div></div>";
+  myh.innerHTML = "<div style=position:absolute;top:20%;left:5%;height:60%;width:90%;text-align:center;color:#ffffff;backGround:var(--homeColor);border-radius:10%;font-size:var(--speechFont5);><br>難易度を選んでください<br>※後からいつでも<br>メニュー→オプション→設定で再設定可能<div id=veryEasyButton onclick=selectSE.play();f_popUpYesNo('null','この難易度はほぼアクションゲームとしての側面を失いますが大丈夫ですか（ほぼ無敵になります）','level=0.1;f_firstCheck(3);'); style=position:absolute;top:60%;left:5%;height:30%;width:20%; class=buttonA><div class=buttonB>Very　Easy</div></div><div id=easyButton onclick=selectSE.play();level=0.5;f_firstCheck(3); style=position:absolute;top:60%;left:27.5%;height:30%;width:20%; class=buttonA><div class=buttonB>Easy</div></div><div id=normalButton onclick=selectSE.play();level=1;f_firstCheck(3); style=position:absolute;top:60%;left:52.5%;height:30%;width:20%; class=buttonA><div class=buttonB>Normal</div></div><div id=hardButton onclick=selectSE.play();level=1.5;f_firstCheck(3); style=position:absolute;top:60%;left:75%;height:30%;width:20%; class=buttonA><div class=buttonB>Hard</div></div></div>";
   f_opacityButton("veryEasyButton");
   f_opacityButton("easyButton");
   f_opacityButton("normalButton");
@@ -2624,6 +2623,7 @@ function makeStage(backArray,gimmickArray,hitArray,frontArray,stageName){
 }
 
 function f_checkPoint(){
+ popUpScreenN.style.opacity=0;
  BGM2.volume=0.6;
  f_BGM();
  restPosi=[heroPosi[0],heroPosi[1],selectStage];
@@ -2727,6 +2727,7 @@ function f_costumeChange(){
 }
 
 function f_menue(){
+ popUpScreenN.style.opacity=0;
  selectSE.play();
  f_dataReflect();
  phase=3;
@@ -3338,7 +3339,7 @@ function f_whiteScreen(time){
  }
 }
 
-function f_restartA(){
+function f_restartA(){console.log("a");
  localSave();
  selectStage="coclicoDream8";
  heroPosi[4,18];
@@ -3366,9 +3367,6 @@ function f_speech(sentence){
   timeStop=0;
   heroActControl=0;
   f_dataReflect();
-  if(getItem=="懐中時計のパーツ"&&partNum>=15){
-   f_speech("clockClear1");
-  }
   if(selectStage=="coclicoDream1Boss"||selectStage=="coclicoDream8Boss"||selectStage=="coclicoDream10Boss"){
    BGM5.volume=0.6;
   }
@@ -3414,6 +3412,7 @@ function f_speech(sentence){
   f_stageChange();
  }
  else if(sentence=="endE"){
+  popUpScreenN.style.opacity=0;
   skipTime=1;
   speechBase.style.zIndex=0;
   speechTouch.style.zIndex=0;
@@ -3427,7 +3426,7 @@ function f_speech(sentence){
   document.documentElement.style.setProperty('--blackout', "100%");
   document.documentElement.style.setProperty('--checkScreen', "100%");
   var myh = document.getElementById("checkScreen");
-  myh.innerHTML = "<div style=position:absolute;top:5%;left:0%;width:100%;text-align:center;font-size:var(--speechFont4_5);color:#ffffff;>ゲームクリア<br><br><font style=font-size:var(--speechFont6);>ゲームクリア率："+Math.round(clearRate)+"%</font></div><div id=restartA onclick=f_popUpYesNo('null','ラスボス手前の状態に戻ります。よろしいですか？','f_restartA();'); style=position:absolute;top:50%;left:6.25%;height:30%;width:25%;backGround:var(--homeColor);border-radius:10%;><div class=buttonA><div class=buttonB>ラスボス前<br>から再開</div></div></div><div id=restartB onclick=f_popUpYesNo('null','全ヒーローと装備解放状態で最初の地点からやり直します。よろしいですか？','f_restartB();'); style=position:absolute;top:50%;left:37.5%;height:30%;width:25%;backGround:var(--homeColor);border-radius:10%;><div class=buttonA><div class=buttonB>強くて<br>ニューゲーム</div></div></div><div id=restart onclick=f_popUpYesNo('null','データの進行状況をすべて破棄して最初からやり直します。よろしいですか？','f_restartCalarm();'); style=position:absolute;top:50%;right:6.25%;height:30%;width:25%;backGround:var(--homeColor);border-radius:10%;><div class=buttonA><div class=buttonB>最初から</div></div></div>";
+  myh.innerHTML = "<div style=position:absolute;top:5%;left:0%;width:100%;text-align:center;font-size:var(--speechFont4_5);color:#ffffff;>ゲームクリア<br><br><font style=font-size:var(--speechFont6);>ゲームクリア率："+Math.round(clearRate)+"%</font></div><div id=restartA onclick=f_popUpYesNo('null','ラスボス手前の状態に戻ります。よろしいですか？','f_restartA();'); style=position:absolute;top:50%;left:6.25%;height:30%;width:25%;backGround:var(--homeColor);border-radius:10%;><div class=buttonA><div class=buttonB>ラスボス前<br>から再開</div></div></div><div id=restartB onclick=f_popUpYesNo('null','全ヒーローと装備解放状態で最初の地点からやり直します。よろしいですか？','f_restartB();'); style=position:absolute;top:50%;left:37.5%;height:30%;width:25%;backGround:var(--homeColor);border-radius:10%;><div class=buttonA><div class=buttonB>強くて<br>ニューゲーム</div></div></div><div id=restart onclick=f_popUpYesNo('null','データの進行状況をすべて破棄して最初からやり直します。よろしいですか？','f_restartCalarm();'); style=position:absolute;top:50%;right:6.25%;height:30%;width:25%;backGround:var(--homeColor);border-radius:10%;><div class=buttonA><div class=buttonB>最初から</div></div></div><div style=position:absolute;bottom:2%;left:0%;height:auto;width:100%;text-align:center;font-size:var(--speechFont3);color:#ffffff;>ーセーブしましたー</div>";
   f_opacityButton("restartA");
   f_opacityButton("restartB");
   f_opacityButton("restart");
@@ -5706,14 +5705,14 @@ function f_niziiro(){
       var effectR=-(beforePoint-attackPoint);
       var effectW=beforePoint-attackPoint;
       if(heroPosi[0]>=5.5){
-       if(heroPosi[1]>=attackPoint&&heroPosi[1]<beforePoint){f_damage(enemies["niziiro"].attack);}
+       if(heroPosi[1]>=attackPoint&&heroPosi[1]<=beforePoint){f_damage(enemies["niziiro"].attack);}
       }
      }
      else{
       var effectR=1;
       var effectW=attackPoint-beforePoint;
       if(heroPosi[0]>=5.5){
-       if(heroPosi[1]<=attackPoint&&heroPosi[1]>beforePoint){f_damage(enemies["niziiro"].attack);}
+       if(heroPosi[1]<=attackPoint&&heroPosi[1]>=beforePoint){f_damage(enemies["niziiro"].attack);}
       }
      }
      enemyArray[elem][1]=attackPoint;
@@ -5736,12 +5735,12 @@ function f_niziiro(){
      if(enemyArray[elem][1]>=heroPosi[1]){
       var myh = document.getElementById("selectGimmickX"+Math.floor(enemyArray[elem][1])+"Y"+enemyArray[elem][0]);
       myh.innerHTML = "<img src=item/stage/niziiroA.png style=position:absolute;bottom:0%;right:0%;height:100%;width:100%;transform:scale("+niziiroDire+",1);><img src=item/stage/niziiroD.png style=position:absolute;bottom:0%;right:100%;height:200%;width:100%;transform:scale("+niziiroDire+",1);><style>#selectGimmickX"+Math.floor(enemyArray[elem][1])+"Y"+enemyArray[elem][0]+"{position:absolute;top:"+12.5*(enemyArray[elem][0])+"%;left:"+6.9*(enemyArray[elem][1])+"%;height:12.5%;width:6.9%;}</style>";
-      if(heroPosi[0]>=4.5&&Math.abs((enemyArray[elem][1]-1)-heroPosi[1])<=0.5){f_damage(enemies["niziiro"].attack);}
+      if(heroPosi[0]>=4.5&&Math.abs((enemyArray[elem][1]-1)-heroPosi[1])<=1){f_damage(enemies["niziiro"].attack);}
      }
      else{
       var myh = document.getElementById("selectGimmickX"+Math.floor(enemyArray[elem][1])+"Y"+enemyArray[elem][0]);
       myh.innerHTML = "<img src=item/stage/niziiroA.png style=position:absolute;bottom:0%;right:0%;height:100%;width:100%;transform:scale("+niziiroDire+",1);><img src=item/stage/niziiroD.png style=position:absolute;bottom:0%;right:-100%;height:200%;width:100%;transform:scale("+niziiroDire+",1);><style>#selectGimmickX"+Math.floor(enemyArray[elem][1])+"Y"+enemyArray[elem][0]+"{position:absolute;top:"+12.5*(enemyArray[elem][0])+"%;left:"+6.9*(enemyArray[elem][1])+"%;height:12.5%;width:6.9%;}</style>";
-      if(heroPosi[0]>=4.5&&Math.abs((enemyArray[elem][1]+1)-heroPosi[1])<=0.5){f_damage(enemies["niziiro"].attack);}
+      if(heroPosi[0]>=4.5&&Math.abs((enemyArray[elem][1]+1)-heroPosi[1])<=1){f_damage(enemies["niziiro"].attack);}
      }
      enemyArray[elem][3]=0;
     }

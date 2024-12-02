@@ -342,6 +342,7 @@ function f_stageChange(){
    setTimeout(function(){
     //↓returnAdventure
      phase=1;
+     heroMoveSide=0;heroAction=0;heroWalk=0;heroActW=0;heroActJ=0;
      heroActControl=0;
      fallOK=1;
      timeStop=0;

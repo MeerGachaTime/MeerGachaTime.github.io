@@ -14,6 +14,9 @@ function keydown(event){
  if(event.keyCode==67){if(phase==2||phase==3){costumeButton.style.opacity=0.2;}}
  if(event.keyCode==13){if(enterCheck==0){enterCheck=1;if(playerActControl==0&&phase!=0){f_speech(enterKeySentence);}else{popUpBack("null");}}}
  if(event.keyCode==32){if(phase==2||phase==3){returnAdventure.style.opacity=0.2;}else if(phase==4||phase==5){dataBaseListReturn.style.opacity=0.2;}else if(phase==6||phase==7){dataBaseListReturn.style.opacity=0.2;}}
+ 
+ if(event.keyCode==89){if(yesNoShootCut==1){f_yesNo(1);}}
+ if(event.keyCode==78){if(yesNoShootCut==1){f_yesNo(2);}}
 }
 
 function keyup(event){
@@ -29,6 +32,9 @@ function keyup(event){
  if(event.keyCode==67){if(phase==2||phase==3){costumeButton.style.opacity=1;f_costumeChange();}}
  if(event.keyCode==32){if(phase==1){if(!heroActControl){f_menue();}}else if(phase==2||phase==3){returnAdventure.style.opacity=1;f_returnAdventure();}else if(phase==4){dataBaseListReturn.style.opacity=1;f_checkPoint();}else if(phase==5){dataBaseListReturn.style.opacity=1;f_menue();}else if(phase==6){dataBaseListReturn.style.opacity=1;f_option(4);}else if(phase==7){dataBaseListReturn.style.opacity=1;f_option(5);}}
  if(event.keyCode==13){enterCheck=0;}
+ 
+ if(event.keyCode==89){if(yesNoShootCut==1){f_yesNo(3);}}
+ if(event.keyCode==78){if(yesNoShootCut==1){f_yesNo(4);}}
 }
 
 function f_key39(){
