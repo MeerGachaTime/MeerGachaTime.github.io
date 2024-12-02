@@ -2069,7 +2069,7 @@ function f_BGMset(){
  }, false);
 }
 
-window.addEventListener('load', (event) => {console.log("ver.19.12");
+window.addEventListener('load', (event) => {console.log("ver.19.39");
  
  f_stageReset();
  phase=1;
@@ -2623,7 +2623,7 @@ function makeStage(backArray,gimmickArray,hitArray,frontArray,stageName){
 }
 
 function f_checkPoint(){
- popUpScreenN.style.opacity=0;
+ popUpScreenN.style.zIndex=0;
  BGM2.volume=0.6;
  f_BGM();
  restPosi=[heroPosi[0],heroPosi[1],selectStage];
@@ -2727,7 +2727,7 @@ function f_costumeChange(){
 }
 
 function f_menue(){
- popUpScreenN.style.opacity=0;
+ popUpScreenN.style.zIndex=0;
  selectSE.play();
  f_dataReflect();
  phase=3;
@@ -3412,7 +3412,7 @@ function f_speech(sentence){
   f_stageChange();
  }
  else if(sentence=="endE"){
-  popUpScreenN.style.opacity=0;
+  popUpScreenN.style.zIndex=0;
   skipTime=1;
   speechBase.style.zIndex=0;
   speechTouch.style.zIndex=0;

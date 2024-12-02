@@ -170,7 +170,7 @@ function f_restartB(){
  setTimeout(function(){f_returnAdventure();lacalSave();},1300);
 }
 
-function f_restartC(){
+function f_restartC(){console.log("c");
 blocks={"0"         :{name:"0"           },
         "alice"     :{name:"alice"       },
         "amairo"     :{name:"amairo"     },

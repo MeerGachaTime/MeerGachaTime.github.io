@@ -105,7 +105,6 @@ function f_popUpYesNo(imgName,sentence,f_yes){
  popUpScreenN.style.zIndex=40;console.log("path:"+path+",imgName:"+imgName);
  
  
- var yesNoKeySentence="<script>window.addEventListener('keydown',if(event.keyCode==89){"+imgName+"popUpYes.style.opacity=0.2;});window.addEventListener('keyup',if(event.keyCode==89){"+imgName+"popUpYes.style.opacity=1;});window.addEventListener('keydown',if(event.keyCode==78){"+imgName+"popUpNo.style.opacity=0.2;});window.addEventListener('keyup',if(event.keyCode==78){"+imgName+"popUpYes.style.opacity=0.2;});</script>";
  
  let nodeheroLiberateImgBase=document.createElement('div');
  nodeheroLiberateImgBase.setAttribute('id',imgName+"popUpScreen");
