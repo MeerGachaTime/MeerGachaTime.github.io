@@ -3838,6 +3838,7 @@ function f_HPcheck(){
   var SE = new Audio('sound/powerdown07.mp3');SE.pause();SE.currentTime=0;SE.play();
   timeStop=1;
   heroActControl=1;
+  lastBossCheck=0;
   var myh = document.getElementById("player1Base");
   myh.innerHTML = " ";
   f_natadecoco(heroPosi[0]+0.5,heroPosi[1]+0.5,2);
